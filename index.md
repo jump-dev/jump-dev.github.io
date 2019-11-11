@@ -30,6 +30,9 @@ There are also a number of tutorials available at [JuMPTutorials.jl](https://git
 If you need help, search the [Forum](https://discourse.julialang.org/c/domain/opt)
 for similar questions, or open a new one.
 
+There is also an excellent book, [Julia Programming for Operations Research](http://www.chkwon.net/julia/), which covers a variety of topics on optimization, with an emphasis on
+solving practical problems using JuMP and Julia.
+
 ## NumFOCUS
 
 ![NumFOCUS logo](/assets/numfocus-logo.png)
