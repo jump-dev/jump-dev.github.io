@@ -29,3 +29,22 @@ There are also a number of tutorials available at [JuMPTutorials.jl](https://git
 
 If you need help, search the [Forum](https://discourse.julialang.org/c/domain/opt)
 for similar questions, or open a new one.
+
+## NumFOCUS
+
+![NumFOCUS logo](/assets/numfocus-logo.png)
+
+JuMP is a Sponsored Project of NumFOCUS, a 501(c)(3) nonprofit charity in the
+United States. NumFOCUS provides JuMP with fiscal, legal, and administrative
+support to help ensure the health and sustainability of the project. Visit
+[numfocus.org](https://numfocus.org) for more information.
+
+You can support JuMP by [donating](https://numfocus.salsalabs.org/donate-to-jump/index.html).
+
+Donations to JuMP are managed by NumFOCUS. For donors in the United States,
+your gift is tax-deductible to the extent provided by law. As with any donation,
+you should consult with your tax adviser about your particular tax situation.
+
+JuMP's largest expense is the annual JuMP-dev workshop. Donations will help us
+provide travel support for JuMP-dev attendees and take advantage of other
+opportunities that arise to support JuMP development.
