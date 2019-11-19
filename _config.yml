@@ -111,8 +111,14 @@ css_inline: false # Will insert all styles into a single <style> block in the <h
 navigation_header:
 - title: Home
   url: /
+- title: Code
+  url: /pages/code/
+- title: Documentation
+  url: https://www.juliaopt.org/JuMP.jl/stable/
+- title: Forum
+  url: https://discourse.julialang.org/c/domain/opt
 - title: News
-  url: /news/
+  url: /pages/news/
 
 # TODO
 navigation_footer:
