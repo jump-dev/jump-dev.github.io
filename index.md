@@ -7,6 +7,17 @@ layout: page
 JuMP is a modeling language and supporting packages for mathematical
 optimization in [Julia](https://julialang.org).
 
+JuMP makes it easy to formulate
+and solve linear programming, semidefinite programming, integer programming,
+convex optimization, constrained nonlinear optimization, and related classes
+of optimization problems. You can use it to
+[route school buses](https://www.the74million.org/article/building-a-smarter-and-cheaper-school-bus-system-how-a-boston-mit-partnership-led-to-new-routes-that-are-20-more-efficient-use-400-fewer-buses-save-5-million/),
+[schedule trains](https://www.sciencedirect.com/science/article/pii/S0191261516304830),
+[plan power grid expansion](https://juliacomputing.com/case-studies/psr.html),
+or even
+[optimize milk output](https://juliacomputing.com/case-studies/moo.html).
+
+
 ## 4th annual JuMP-dev
 
 We are pleased to announce that the 4th annual JuMP-dev workshop will be held
