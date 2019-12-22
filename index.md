@@ -4,6 +4,8 @@ layout: page
 
 <img width="100%" src="/assets/jump-logo-with-text.svg">
 
+**Welcome to the new website for JuMP. This site remains under construction as we transition from [juliaopt.org](http://juliaopt.org).**
+
 JuMP is a modeling language and supporting packages for mathematical
 optimization in [Julia](https://julialang.org).
 
@@ -17,15 +19,6 @@ of optimization problems. You can use it to
 or even
 [optimize milk output](https://juliacomputing.com/case-studies/moo.html).
 
-
-## 4th annual JuMP-dev
-
-We are pleased to announce that the 4th annual JuMP-dev workshop will be held
-June 15-17 2020 in [Louvain-la-Neuve, Belgium](https://goo.gl/maps/fyxqevrKn76nvhwq9),
-in conjunction with UCLouvain. Further details, including a call for speakers,
-will be announced shortly. For information on the previous JuMP-dev workshops,
-see: [2019](meetings/santiago2019/), [2018](meetings/bordeaux2018/),
-[2017](meetings/mit2017/).
 
 ## Getting started
 
