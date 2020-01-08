@@ -116,7 +116,7 @@ navigation_header:
 - title: Documentation
   url: https://www.juliaopt.org/JuMP.jl/stable/
 - title: JuMP-dev Workshop 2020
-  url: /jump-dev/2020/01/07/jump_dev_2020/
+  url: /meetings/louvain2020
 - title: Forum
   url: https://discourse.julialang.org/c/domain/opt
 - title: News
