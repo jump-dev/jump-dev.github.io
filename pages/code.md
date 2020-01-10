@@ -1,5 +1,4 @@
 ---
-layout: page
 title:  "The JuMP ecosystem"
 ---
 
@@ -19,4 +18,3 @@ MathOptInterface.
 
 A non-exhaustive list of solvers available through JuMP is available in the
 [JuMP documentation](https://www.juliaopt.org/JuMP.jl/stable/installation/).
-

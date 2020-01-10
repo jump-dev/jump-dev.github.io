@@ -72,12 +72,13 @@ collections:
     description: "JuMP News" # The post list page content
 
 # 6. Jekyll collections settings
-#defaults:
-#  -
-#    scope:
-#      path: ""
-#    values:
-#      image: "/assets/default-social-image.png" # Default image for sharing
+defaults:
+  -
+    scope:
+      path: ""
+      types: "pages"
+    values:
+      layout: "page-with-notification"
 
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
@@ -121,6 +122,12 @@ navigation_header:
   url: https://discourse.julialang.org/c/domain/opt
 - title: News
   url: /pages/news/
+- title: "Parent item"
+  items:
+   - title: Child link
+     url: /pages/news/
+   - title: Child link 2
+     url: /pages/code/
 
 # TODO
 navigation_footer:
@@ -138,4 +145,3 @@ sharing_links: # Appear at the bottom of single blog posts, add as desired. The 
   Twitter: "#0d94e7"
   facebook: "#3B5998"
   Email: true
-

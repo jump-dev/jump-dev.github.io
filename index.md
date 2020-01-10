@@ -1,5 +1,4 @@
 ---
-layout: page
 ---
 
 <img width="100%" src="/assets/jump-logo-with-text.svg">
