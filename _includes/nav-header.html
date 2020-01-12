@@ -20,7 +20,7 @@
         <li class="item  item--nav item--parent">
           <span>{{ item.title }}</span>
           {% if item.items %}
-            <ul class="list list--nav list--nested">
+            <ul class="list list--nested">
               {% for child in item.items %}
 
                 {% if child.url contains '://' %}

@@ -8,10 +8,10 @@ styles: true
 // Notification bar
 .notification-bar {
   text-align: center;
-  padding: .75rem 1.25rem;
+  padding-top: .75rem;
   margin-bottom: 1rem;
-  background-color: $codeBackgroundColour;
-  border-bottom: 1px solid darken($codeBackgroundColour, 10%);
+  background-color: #ffc107;
+  border-bottom: 1px solid darken(#ffc107, 10%);
 }
 
 // Increase main container width

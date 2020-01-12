@@ -2,15 +2,13 @@
 layout: default
 ---
 
-{%- capture notification %}
-Testing
-{% endcapture -%}
-
-<aside class="notification-bar">
-  <div class="container">
-    <p>{{ notification }}</p>
-  </div>
-</aside>
+{% if site.notification %}
+  <aside class="notification-bar">
+    <div class="container typeset">
+      {{ site.notification | markdownify }}
+    </div>
+  </aside>
+{% endif %}
 
 {% include site-header.html %}
 
