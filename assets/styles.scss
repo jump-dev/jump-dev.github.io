@@ -5,13 +5,22 @@ styles: true
 
 @import "alembic";
 
+$colour-notification-banner: #ffc107;
+
 // Notification bar
 .notification-bar {
   text-align: center;
   padding-top: .75rem;
   margin-bottom: 1rem;
-  background-color: #ffc107;
-  border-bottom: 1px solid darken(#ffc107, 10%);
+  background-color: $colour-notification-banner;
+  border-bottom: 1px solid darken($colour-notification-banner, 10%);
+  p a {
+    text-shadow:
+      0.1rem 0 $colour-notification-banner,
+      0.15rem 0 $colour-notification-banner,
+      -0.1rem 0 $colour-notification-banner,
+      -0.15rem 0 $colour-notification-banner;
+  }
 }
 
 // Increase main container width
