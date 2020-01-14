@@ -115,18 +115,20 @@ navigation_header:
   url: /pages/code/
 - title: Documentation
   url: https://www.juliaopt.org/JuMP.jl/stable/
-- title: JuMP-dev Workshop 2020
-  url: /meetings/louvain2020
+- title: JuMP-dev Workshops
+  items:
+   - title: 2020
+     url: /meetings/louvain2020
+   - title: 2019
+     url: /meetings/santiago2019
+   - title: 2018
+     url: /meetings/bordeaux2018
+   - title: 2017
+     url: /meetings/mit2017
 - title: Forum
   url: https://discourse.julialang.org/c/domain/opt
 - title: News
   url: /pages/news/
-- title: "Parent item"
-  items:
-   - title: Child link
-     url: /pages/news/
-   - title: Child link 2
-     url: /pages/code/
 
 # TODO
 navigation_footer:
@@ -147,4 +149,4 @@ sharing_links: # Appear at the bottom of single blog posts, add as desired. The 
 
 # Site header notification content
 notification: |
-  **Hello** and welcome to this site, this is an _important_ message
+  Abstract submission for JuMP-dev 2020 is now open! [Read more.](/meetings/louvain2020)

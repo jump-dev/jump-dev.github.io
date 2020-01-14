@@ -15,6 +15,7 @@ $colour-notification-banner: #ffc107;
   background-color: $colour-notification-banner;
   border-bottom: 1px solid darken($colour-notification-banner, 10%);
   p a {
+    color: black;
     text-shadow:
       0.1rem 0 $colour-notification-banner,
       0.15rem 0 $colour-notification-banner,
