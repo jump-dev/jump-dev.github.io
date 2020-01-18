@@ -1,0 +1,106 @@
+---
+title: false
+styles: true
+---
+
+@import "alembic";
+
+$colour-notification-banner: #ffc107;
+
+// Notification bar
+.notification-bar {
+  text-align: center;
+  padding-top: .75rem;
+  margin-bottom: 1rem;
+  background-color: $colour-notification-banner;
+  border-bottom: 1px solid darken($colour-notification-banner, 10%);
+  p a {
+    color: black;
+    text-shadow:
+      0.1rem 0 $colour-notification-banner,
+      0.15rem 0 $colour-notification-banner,
+      -0.1rem 0 $colour-notification-banner,
+      -0.15rem 0 $colour-notification-banner;
+  }
+}
+
+// Increase main container width
+.container {
+  max-width: 1500px;
+}
+
+// Decrease font size
+:root {
+  font-size: 70%; // 0px                    ~ Mobile first
+  @include breakpoint(break-1) { // 640px   ~ Small tablet up
+    font-size: 70%;
+  }
+  @include breakpoint(break-2) { // 800px   ~ Large tablet up
+    font-size: 80%;
+  }
+  @include breakpoint(break-3) { // 1024px  ~ Desktop up
+    font-size: 90%;
+  }
+  @include breakpoint(break-4) { // 1600px  ~ Large desktop up
+    font-size: 100%;
+  }
+}
+
+// Dropdown nav
+.item--parent {
+  color: $captionColour;
+}
+
+.list--nested {
+  border-right: 1px solid $captionColour;
+  padding-right: .7rem;
+}
+
+@media screen and (min-width: 40em) {
+  .header .nav,
+  .header .list--nav {
+    overflow: visible;
+  }
+
+  .item--child {
+    margin: 0;
+  }
+
+  .item--parent {
+    position: relative;
+    cursor: pointer;
+    color: $linkColour;
+    display: inline-flex;
+    align-items: center;
+    &:hover .list--nested {
+      visibility: visible;
+      opacity: 1;
+    }
+    &::after {
+      content: "";
+      display: block;
+      transform: rotate(-45deg);
+      width: .3em;
+      height: .3em;
+      margin: .4em;
+      border: 1px solid transparent;
+      border-left-color: $captionColour;
+      border-bottom-color: $captionColour;
+    }
+  }
+
+  .list--nested {
+    border-right: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: max-content;
+    background: $backgroundColour;
+  }
+}
