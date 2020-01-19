@@ -46,6 +46,14 @@ $colour-notification-banner: #ffc107;
   }
 }
 
+// Only show logo on desktop.
+.home-page-logo {
+    display: none;
+    @include breakpoint(break-3) { // 1024px  ~ Desktop up
+      display: inline;
+    }
+}
+
 // Dropdown nav
 .item--parent {
   color: $captionColour;

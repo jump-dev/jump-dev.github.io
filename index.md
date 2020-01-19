@@ -1,7 +1,9 @@
 ---
 ---
 
-<img width="100%" src="/assets/jump-logo-with-text.svg">
+<div class="home-page-logo">
+    <img width="100%" src="/assets/jump-logo-with-text.svg">
+</div>
 
 **Welcome to the new website for JuMP. This site remains under construction as we transition from [juliaopt.org](http://juliaopt.org).**
 
