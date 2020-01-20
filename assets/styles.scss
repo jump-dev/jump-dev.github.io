@@ -46,12 +46,12 @@ $colour-notification-banner: #ffc107;
   }
 }
 
-// Only show logo on desktop.
+// Only show logo on tablets and larger.
 .home-page-logo {
-    display: none;
-    @include breakpoint(break-3) { // 1024px  ~ Desktop up
-      display: inline;
-    }
+  display: none;
+  @include breakpoint(break-2) { // 800px   ~ Large tablet up
+    display: inline;
+  }
 }
 
 // Dropdown nav
