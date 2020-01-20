@@ -46,6 +46,14 @@ $colour-notification-banner: #ffc107;
   }
 }
 
+// Only show logo on tablets and larger.
+.home-page-logo {
+  display: none;
+  @include breakpoint(break-2) { // 800px   ~ Large tablet up
+    display: inline;
+  }
+}
+
 // Dropdown nav
 .item--parent {
   color: $captionColour;
