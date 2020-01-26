@@ -90,7 +90,7 @@ baseurl: ""
 #repo: "https://github.com/daviddarnes/alembic"
 #email: "me@daviddarnes.com"
 # disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
-google_analytics: 'UA-44252521-2'
+google_analytics: 'UA-44252521-7'
 # google_analytics_anonymize_ip: ''
 service_worker: false # Will turn off the service worker if set to false
 css_inline: false # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
