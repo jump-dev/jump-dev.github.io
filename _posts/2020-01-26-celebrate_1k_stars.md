@@ -37,4 +37,4 @@ This will be added to the greatest moments timeline:
 * 12 Mar 2019 - Third JuMP developers meeting in Santiago, Chile (XX participants) (701 stars)
 * 23 Jan 2019 - First 1000 stars in the JuMP.jl repository on GitHub
 
-We thank our user for all of the stars! Keep staring, opening issues and posting questions on discourse. This is the best way to keep our community growing and making JuMP closer and closer to 1.0!
+We thank our users and contributors for all the stars! Keep staring, opening (and solving) issues and posting questions on discourse. This is the best way to keep our community growing and making JuMP closer and closer to 1.0!
