@@ -22,17 +22,17 @@ Milestones like reaching 1000 stars are proud moments for the developers and hel
 This will be added to the greatest moments timeline:
 
 * 09 Oct 2012 - First commit to JuMP.jl repo
-* 15 Dec 2013 - JuMP 0.2.0 - First support for solver callbacks (XXX stars)
-* 02 May 2014 - JuMP 0.5.0 - First support for nonlinear optimization (XXX stars)
+* 15 Dec 2013 - JuMP 0.2.0 - First support for solver callbacks (28 stars)
+* 02 May 2014 - JuMP 0.5.0 - First support for nonlinear optimization (49 stars)
 * 10 Dec 2014 - First 100 stars!
-* 26 Jun 2015 - First [JuMP presentation in JuliaCon 2015](https://youtu.be/7LNeR299q88) (XXX stars)
 * 16 Mar 2015 - First JuMP paper published: [Computing in Operations Research Using Julia](https://pubsonline.informs.org/doi/abs/10.1287/ijoc.2014.0623?journalCode=ijoc) (117 stars)
-* 31 Aug 2015 - JuMP 0.10.0 - First support for semidefinite optimization (XXX stars)
+* 26 Jun 2015 - First [JuMP presentation in JuliaCon 2015](https://youtu.be/7LNeR299q88) (152 stars)
+* 31 Aug 2015 - JuMP 0.10.0 - First support for semidefinite optimization (161 stars)
 * 15 Dec 2016 - [INFORMS Computing Society (ICS) Prize](https://connect.informs.org/computing/awards/ics-prize) (290 stars)
 * 05 May 2017 - Second JuMP paper published: [JuMP: A Modeling Language for Mathematical Optimization](https://epubs.siam.org/doi/abs/10.1137/15M1020575?journalCode=siread) (330 stars)
 * 12 Jun 2017 - [First JuMP-dev workshop](https://jump.dev/meetings/mit2017/) in Cambridge, USA (~20 participants) (339 stars)
 * 27 Jun 2018 - [Second JuMP-dev workshop](https://jump.dev/meetings/bordeaux2018/) in Bordeaux, France (~40 participants) (479 stars)
-* 15 Feb 2019 - JuMP 0.19.0 - Migrate from [MathProgBase](https://github.com/JuliaOpt/MathProgBase.jl) to [MathOptInterface](https://github.com/JuliaOpt/MathOptInterface.jl) (XXX stars)
+* 15 Feb 2019 - JuMP 0.19.0 - Migrate from [MathProgBase](https://github.com/JuliaOpt/MathProgBase.jl) to [MathOptInterface](https://github.com/JuliaOpt/MathOptInterface.jl) (667 stars)
 * 12 Mar 2019 - [Third JuMP-dev workshop](https://jump.dev/meetings/santiago2019/) in Santiago, Chile (-70 participants) (701 stars)
 * 23 Jan 2019 - First 1000 stars in the JuMP.jl repository on GitHub
 
