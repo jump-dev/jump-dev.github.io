@@ -33,7 +33,7 @@ This will be added to the greatest moments timeline:
 * 12 Jun 2017 - [First JuMP-dev workshop](https://jump.dev/meetings/mit2017/) in Cambridge, USA (~20 participants) (339 stars)
 * 27 Jun 2018 - [Second JuMP-dev workshop](https://jump.dev/meetings/bordeaux2018/) in Bordeaux, France (~40 participants) (479 stars)
 * 15 Feb 2019 - JuMP 0.19.0 - Migration from [MathProgBase](https://github.com/JuliaOpt/MathProgBase.jl) to [MathOptInterface](https://github.com/JuliaOpt/MathOptInterface.jl) (667 stars)
-* 12 Mar 2019 - [Third JuMP-dev workshop](https://jump.dev/meetings/santiago2019/) in Santiago, Chile (-70 participants) (701 stars)
+* 12 Mar 2019 - [Third JuMP-dev workshop](https://jump.dev/meetings/santiago2019/) in Santiago, Chile (~70 participants) (701 stars)
 * 23 Jan 2020 - First 1000 stars in the JuMP.jl repository on GitHub
 
 We thank our users and contributors for all the stars! Keep staring, opening (and solving) issues and posting questions on discourse. This is the best way to keep our community growing and making JuMP closer and closer to 1.0!
