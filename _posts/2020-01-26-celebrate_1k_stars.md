@@ -10,7 +10,7 @@ JuMP just received its 1000th star on GitHub! We will use this milestone to reca
 
 While tracking the success of an open-source project is known to be a hard problem, we have a few metrics available to us.
 The number of citations of the two main JuMP papers are 253+428 (with some possible double counting).
-Currently 71 developers have added some contribution in some of the 3747 commits of the JuMP repository made available in 67 releases. And this is only data from the main JuMP repo. The ecosystem has many other repos ranging from [MathOptInteface](https://github.com/JuliaOpt/MathOptInterface.jl) (the interface on which JuMP is built) to solver wrappers.
+Currently 71 developers have added some contribution in some of the 3747 commits of the JuMP repository made available in 67 releases. And this is only data from the main JuMP repo. The ecosystem has many other repos ranging from [MathOptInteface](https://github.com/JuliaOpt/MathOptInterface.jl) (the abstraction on which JuMP is built) to solver wrappers.
 
 The number of stars of a GitHub project is yet another indicator, because it means people are adding the project to their list of favorites. However, people that starred JuMP are not necessarily users and many users don't star JuMP (if that applies to you, consider giving us a star!), therefore its not a precise metric.
 
@@ -32,7 +32,7 @@ This will be added to the greatest moments timeline:
 * 05 May 2017 - Second JuMP paper published: [JuMP: A Modeling Language for Mathematical Optimization](https://epubs.siam.org/doi/abs/10.1137/15M1020575?journalCode=siread) (330 stars)
 * 12 Jun 2017 - [First JuMP-dev workshop](https://jump.dev/meetings/mit2017/) in Cambridge, USA (~20 participants) (339 stars)
 * 27 Jun 2018 - [Second JuMP-dev workshop](https://jump.dev/meetings/bordeaux2018/) in Bordeaux, France (~40 participants) (479 stars)
-* 15 Feb 2019 - JuMP 0.19.0 - Migrate from [MathProgBase](https://github.com/JuliaOpt/MathProgBase.jl) to [MathOptInterface](https://github.com/JuliaOpt/MathOptInterface.jl) (667 stars)
+* 15 Feb 2019 - JuMP 0.19.0 - Migration from [MathProgBase](https://github.com/JuliaOpt/MathProgBase.jl) to [MathOptInterface](https://github.com/JuliaOpt/MathOptInterface.jl) (667 stars)
 * 12 Mar 2019 - [Third JuMP-dev workshop](https://jump.dev/meetings/santiago2019/) in Santiago, Chile (-70 participants) (701 stars)
 * 23 Jan 2020 - First 1000 stars in the JuMP.jl repository on GitHub
 
