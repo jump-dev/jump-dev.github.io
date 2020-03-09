@@ -148,5 +148,5 @@ sharing_links: # Appear at the bottom of single blog posts, add as desired. The 
   Email: true
 
 # Site header notification content
-# notification: |
-#   Abstract submission for JuMP-dev 2020 is now open! [Read more.](/meetings/louvain2020)
+notification: |
+  [COVID-19 update for JuMP-dev 2020.](/meetings/louvain2020)
