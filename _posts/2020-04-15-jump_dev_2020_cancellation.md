@@ -1,12 +1,13 @@
 ---
 layout: post
 title:  "Cancelled: JuMP-dev 2020"
-date:   2020-04-14
+date:   2020-04-15
 categories: [jump-dev]
 ---
 
-We regret to annouce that we have decided to cancel [JuMP-dev 2020](/meetings/louvain2020)
-due to the ongoing travel restrictions.
+First, we hope that everyone is safe in these uncertain times. Our first
+priority will always be the health and well-being of the JuMP community.
+Therefore, we regret to annouce that we have decided to cancel [JuMP-dev 2020](/meetings/louvain2020).
 
 Even though there are conceivable scenarios in which travel restrictions are
 lifted in Europe before June 15th, we feel that there would not be sufficient
