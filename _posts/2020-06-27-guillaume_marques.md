@@ -5,9 +5,9 @@ date:   2020-06-27
 categories: [jump-dev]
 ---
 
-Guillaume Marques, a Ph.D. student at the Université de Bordeaux gave a talk at
-the JuMP-dev monthly meeting on the design and features of the [Coluna.jl](https://github.com/atoptima/Coluna.jl)
-package.
+Guillaume Marques, a Ph.D. student at the Université de Bordeaux, gave his talk
+that was accepted for JuMP-dev 2020 on the design and features of the [Coluna.jl](https://github.com/atoptima/Coluna.jl)
+package during June 2020's JuMP monthly developer call.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Elfgz9vgkPE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
