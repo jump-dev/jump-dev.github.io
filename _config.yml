@@ -114,7 +114,7 @@ navigation_header:
 - title: Code
   url: /pages/code/
 - title: Documentation
-  url: https://www.juliaopt.org/JuMP.jl/stable/
+  url: https://jump.dev/JuMP.jl/stable/
 - title: JuMP-dev Workshops
   items:
    - title: 2020
