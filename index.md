@@ -40,6 +40,24 @@ the book,
 which covers a variety of topics on optimization, with an emphasis on solving
 practical problems using JuMP and Julia.
 
+## See also
+
+The JuMP ecosystem includes [Convex.jl](https://github.com/jump-dev/Convex.jl),
+an algebraic modeling language for convex optimization based on the concept of
+[Disciplined Convex Programming](https://dcp.stanford.edu/). Outside of the
+JuMP organization:
+
+- [JuliaSmoothOptimizers](https://github.com/JuliaSmoothOptimizers) provides a
+  collection of tools primarily designed for developing solvers for smooth
+  nonlinear optimization.
+
+- [JuliaNLSolvers](https://github.com/JuliaNLSolvers) offers implementations in
+  Julia of standard standard optimization algorithms for unconstrained or
+  box-constrained problems such as BFGS, Nelder-Mead, conjugate gradient, etc.
+
+- JuliaHub lists 70+
+  [optimization packages in Julia](https://juliahub.com/ui/Packages?t=optimization)!
+
 ## NumFOCUS
 
 ![NumFOCUS logo](/assets/numfocus-logo.png)
