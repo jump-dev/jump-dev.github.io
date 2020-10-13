@@ -111,6 +111,8 @@ css_inline: false # Will insert all styles into a single <style> block in the <h
 navigation_header:
 - title: Home
   url: /
+- title: Governance
+  url: /pages/governance
 - title: Code
   url: /pages/code/
 - title: Documentation
