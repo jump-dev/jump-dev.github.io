@@ -209,15 +209,15 @@ The JuMP project highly values the contributions made by members of the
 community. As an open-source project, JuMP is both made for the community, and
 by the community.
 
-There are four main channels that JuMP uses to engage with the community.
+There are five main channels that JuMP uses to engage with the community.
 
 ### Community Forum
 
 The community forum is a place for community members to post questions and
 receive help.
 
-The current forum is the "Optimization (Mathematical)" section of the
-[Julia Discourse Forum](https://discourse.julialang.org/c/domain/opt/13).
+The current forum is the ["Optimization (Mathematical)" section of the
+Julia Discourse Forum](https://discourse.julialang.org/c/domain/opt/13).
 
 ### Developer Chatroom
 
@@ -246,7 +246,12 @@ Previous workshops include [Santiago, 2019](https://jump.dev/meetings/santiago20
 [Bordeaux, 2018](https://jump.dev/meetings/bordeaux2018/), and [Boston, 2017](https://jump.dev/meetings/mit2017/).
 
 Announcements of future workshops will be communicated through the
-[community forum] and via the [jump.dev](https://jump.dev) website.
+[community forum], [social media](#social-media), and via the
+[jump.dev](https://jump.dev) website.
+
+### Social Media
+
+The JuMP Twitter handle is [@JuMPjl](https://twitter.com/JuMPjl).
 
 ## Transferring repositories to jump-dev
 
@@ -272,12 +277,12 @@ Community members wishing to transfer a repository from their personal account
 to the [JuMP-dev Github organization] should contact the [core contributors]
 via the [developer chatroom].
 
-[community forum]: https://discourse.julialang.org/c/domain/opt/13
-[developer chatroom]: https://gitter.im/JuliaOpt/JuMP-dev
 [JuMP-dev Github organization]: https://github.com/jump-dev
 [permissions]: https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#repository-access-for-each-permission-level
 [owner-permission]: https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-organizations-and-teams/permission-levels-for-an-organization#permission-levels-for-an-organization
 
+[community forum]: #community-forum
+[developer chatroom]: #developer-chatroom
 [core contributors]: #core-contributors
 [repository maintainers]: #repository-maintainers
 [Steering Council]: #steering-council
