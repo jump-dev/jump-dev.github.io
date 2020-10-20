@@ -60,8 +60,8 @@ The emeritus core contributors are:
 
 * Iain Dunning (@iainnz)
 
-A core contributor may choose to switch to emeritus status by informing the
-other [core contributors] and the [Steering Council].
+A [core contributor](#core-contributors) may choose to switch to emeritus status
+by informing the other [core contributors] and the [Steering Council].
 
 ### Repository Maintainers
 
@@ -69,9 +69,9 @@ Repository maintainers are trusted members of the community who help the [core
 contributors] by managing a limited number of repositories in the [JuMP-dev
 Github organization].
 
-Any core contributor has individual authority to appoint a community member as a
-repository maintainer of a repository with notification to the other [core
-contributors].
+Any [core contributor](#core-contributors) has individual authority to appoint a
+community member as a repository maintainer of a repository with notification to
+the other [core contributors].
 
 Before becoming a repository maintainer, it is expected that the community
 member will have been an active participant in the development and maintenance
@@ -82,8 +82,9 @@ needed.
 Community members may be maintainers of multiple repositories at the same time.
 
 Repository maintainers can step back from their role at any time by informing a
-core developer. Furthermore, [core contributors], by consensus, can choose to
-remove repository maintainers for any reason (typically inactivity).
+[core contributor](#core-contributors). Furthermore, [core contributors], by
+consensus, can choose to remove repository maintainers for any reason (typically
+inactivity).
 
 ### NumFOCUS
 
@@ -95,8 +96,9 @@ sustainability of the project.
 ### Steering Council
 
 The Steering Council supports the [core contributors] by representing JuMP in
-all interactions with [NumFOCUS](#numfocus), e.g., by attending NumFOCUS's
-annual summit. In addition, the Steering Council:
+all interactions with [NumFOCUS](#numfocus), e.g., by attending [NumFOCUS's
+annual summit](https://numfocus.org/blog/numfocus-summit-2019). In addition, the
+Steering Council:
 
 * Approves expenditures related to JuMP and paid through the NumFOCUS account.
 * Negotiates and approves contracts between NumFOCUS and external contractors
@@ -104,16 +106,16 @@ annual summit. In addition, the Steering Council:
 
 The current members of the Steering Council are:
 
-* Miles Lubin, Google (@mlubin)
-* Juan Pablo Vielma, Google (@juan-pablo-vielma)
-* Joey Huchette, Rice University (@joehuchette)
+* Miles Lubin, _Google_ (@mlubin)
+* Juan Pablo Vielma, _Google_ (@juan-pablo-vielma)
+* Joey Huchette, _Rice University_ (@joehuchette)
 * Oscar Dowson (@odow)
-* Changhyun Kwon, U. South Florida (@chkwon)
+* Changhyun Kwon, _U. South Florida_ (@chkwon)
 
 A member of the Steering Council may leave the council by notifying the Steering
-Council and [core contributors]. The remaining members, in consultation with the
-[core contributors], will invite a member of the community to join in order to
-maintain a quorum of five members.
+Council and [core contributors]. The remaining Steering Council members, in
+consultation with the [core contributors], will invite a member of the community
+to join in order to maintain a quorum of five members.
 
 ## Decision Making Process
 
@@ -128,7 +130,7 @@ decisions require majority approval by [Steering Council] members.
 
 Community members proposing decisions with a financial aspect should contact the
 [Steering Council] directly, or table their proposal as an agenda item for
-discussion on a [monthly developer call](#monthly-developer-call).
+discussion on a [monthly developer call].
 
 ### Non-financial Decisions
 
@@ -139,15 +141,15 @@ are not considered to be [core contributors] for this purpose.
 Code-related decisions, such when a pull request is ready to be accepted and
 merged, should be discussed via the relevant Github issues and pull requests. If
 consensus cannot be achieved, the community member proposing the change may be
-invited by a core contributor to present their proposal at a [monthly developer
-call](#monthly-developer-call) for further discussion and community input.
+invited by a [core contributor](#core-contributors) to present their proposal at
+a [monthly developer call] for further discussion and community input.
 
 Non-code-related decisions, such long-term strategic planning for JuMP, should
 either be discussed in a Github issue, or tabled as an agenda item and discussed
-on a [monthly developer call](#monthly-developer-call).
+on a [monthly developer call].
 
 If consensus on a non-financial decision cannot be achieved, the final decision
-will be made by the [BDFL](#bdfl).
+will be made by the [BDFL](#benevolent-dictator-for-life).
 
 The [Steering Council] can gain addition decision-making power if the [core
 contributors] decide to delegate.
@@ -286,3 +288,4 @@ via the [developer chatroom].
 [core contributors]: #core-contributors
 [repository maintainers]: #repository-maintainers
 [Steering Council]: #steering-council
+[monthly developer call]: #monthly-developer-call
