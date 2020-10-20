@@ -9,8 +9,8 @@ For the purpose of this document, "JuMP" includes all repositories in the
 
 ## Mission
 
-The mission of the JuMP project is to provide a free, open-source, and
-high-performance software stack for mathematical optimization.
+The mission of the JuMP project is to provide a free, open-source, easy-to-use
+and powerful software stack for mathematical optimization.
 
 ## Code of Conduct
 
@@ -26,10 +26,10 @@ confidentially report a violation.
 This section outlines the different entities that exist within the JuMP project,
 their basic role, and how membership of each entity is determined.
 
-### BDFL
+### Benevolent Dictator For Life
 
 Due to his role in the creation of JuMP, [Miles Lubin](https://github.com/mlubin)
-holds the role of [BDFL](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life).
+holds the role of [Benevolent Dictator For Life (BDFL)](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life).
 
 ### Core Contributors
 
@@ -48,7 +48,8 @@ A new core contributor may be added by consensus of the current core
 contributors and notification to the [Steering Council].
 
 Before becoming a core contributor, it is expected that the community member is
-a [repository maintainer](#repository-maintainers) of several repositories.
+a [repository maintainer](#repository-maintainers) of several repositories in
+the [JuMP-dev Github organization].
 
 ### Emeritus Core Contributors
 
@@ -133,7 +134,7 @@ discussion on a [monthly developer call](#monthly-developer-call).
 
 All non-financial decisions are made via consensus of the [core contributors]
 and relevant [repository maintainers]. [Emeritus core contributors](#emeritus-core-contributors)
- are not considered to be [core contributors] for this purpose.
+are not considered to be [core contributors] for this purpose.
 
 Code-related decisions, such when a pull request is ready to be accepted and
 merged, should be discussed via the relevant Github issues and pull requests. If
@@ -233,6 +234,8 @@ business.
 The calls are currently scheduled on the fourth Thursday of every month at 14:00
 Eastern. For information on how to take part, join the [developer chatroom] and
 ask `@odow` or `@mlubin` for an invite to the monthly developer call.
+
+The invite contains information on how to table agenda items for upcoming calls.
 
 ### JuMP-dev Workshops
 
