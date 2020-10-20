@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Formalizing a governance structure"
-date:   2020-10-20
+date:   2020-10-21
 categories: [announcements]
 ---
 
@@ -33,7 +33,7 @@ The highlights include:
  * Formalizing a process for transferring repositories to the
    [jump-dev](https://github.com/jump-dev) Github organization.
 
-We belive this document strengthens the foundation of JuMP, and sets it up for
+We believe this document strengthens the foundation of JuMP, and sets it up for
 a sustainable, long-term future.
 
 Stay tuned for more progress!
