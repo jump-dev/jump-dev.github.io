@@ -45,6 +45,16 @@ $colour-notification-banner: #ffc107;
     font-size: 100%;
   }
 }
+// Over-ride default indendation.
+:root {
+  p{
+    margin-bottom: 0rem;
+  }
+  ul{
+    margin-bottom: 0rem;
+    margin-left: 1em;
+  }
+}
 
 // Only show logo on tablets and larger.
 .home-page-logo {
