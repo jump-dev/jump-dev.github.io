@@ -144,14 +144,14 @@ consensus cannot be achieved, the community member proposing the change may be
 invited by a [core contributor](#core-contributors) to present their proposal at
 a [monthly developer call] for further discussion and community input.
 
-Non-code-related decisions, such long-term strategic planning for JuMP, should
-either be discussed in a Github issue, or tabled as an agenda item and discussed
-on a [monthly developer call].
+Non-code-related decisions, such as long-term strategic planning for JuMP,
+should either be discussed in a Github issue, or tabled as an agenda item and
+discussed on a [monthly developer call].
 
 If consensus on a non-financial decision cannot be achieved, the final decision
 will be made by the [BDFL](#benevolent-dictator-for-life).
 
-The [Steering Committee] can gain addition decision-making power if the [core
+The [Steering Committee] can gain additional decision-making power if the [core
 contributors] decide to delegate.
 
 ### Conflict of Interest
