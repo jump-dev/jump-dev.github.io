@@ -267,12 +267,13 @@ should first add their package to the list of supported solvers in the
 of the JuMP documentation.
 
 Note that when developing a new solver or JuMP-extension, the [core
-contributors] request that you not use "JuMP" in the name without prior consent.
+contributors] request that you do not use "JuMP" in the name without prior
+consent.
 
 Even once a package has matured, the bar for transferring repositories to the
 [JuMP-dev Github organization] is high, and can be summarized by the following:
 
-* The maintainance of the package would be simplified if [core contributors]
+* The maintenance of the package would be simplified if [core contributors]
   have [Admin permission][permissions] to the repository.
 
 Community members wishing to transfer a repository from their personal account
