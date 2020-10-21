@@ -29,7 +29,7 @@ their basic role, and how membership of each entity is determined.
 ### Benevolent Dictator For Life
 
 Due to his role in the creation of JuMP, [Miles Lubin](https://github.com/mlubin)
-holds the role of [Benevolent Dictator For Life (BDFL)](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life).
+holds the title of [Benevolent Dictator For Life (BDFL)](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life).
 
 ### Core Contributors
 
