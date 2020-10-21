@@ -18,8 +18,8 @@ The highlights include:
  * Appointing Miles Lubin as our [BDFL](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life).
 
  * Defining entities such as the core contributors, emeritus core contributors,
-   repository maintainers, and the Steering Council, along with their roles, and
-   how membership is determined for each entity.
+   repository maintainers, and the Steering Committee, along with their roles,
+   and how membership is determined for each entity.
 
  * Clarifying our decision-making process, by describing who gets to decide what
    when.

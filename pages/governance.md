@@ -45,7 +45,7 @@ The current core contributors are:
 * Oscar Dowson (@odow)
 
 A new core contributor may be added by consensus of the current core
-contributors and notification to the [Steering Council].
+contributors and notification to the [Steering Committee].
 
 Before becoming a core contributor, it is expected that the community member is
 a [repository maintainer](#repository-maintainers) of several repositories in
@@ -61,7 +61,7 @@ The emeritus core contributors are:
 * Iain Dunning (@iainnz)
 
 A [core contributor](#core-contributors) may choose to switch to emeritus status
-by informing the other [core contributors] and the [Steering Council].
+by informing the other [core contributors] and the [Steering Committee].
 
 ### Repository Maintainers
 
@@ -93,18 +93,18 @@ a 501(c)(3) public charity in the United States. NumFOCUS provides JuMP with
 fiscal, legal, and administrative support to help ensure the health and
 sustainability of the project.
 
-### Steering Council
+### Steering Committee
 
-The Steering Council supports the [core contributors] by representing JuMP in
+The Steering Committee supports the [core contributors] by representing JuMP in
 all interactions with [NumFOCUS](#numfocus), e.g., by attending [NumFOCUS's
 annual summit](https://numfocus.org/blog/numfocus-summit-2019). In addition, the
-Steering Council:
+Steering Committee:
 
 * Approves expenditures related to JuMP and paid through the NumFOCUS account.
 * Negotiates and approves contracts between NumFOCUS and external contractors
   who provide paid work to JuMP.
 
-The current members of the Steering Council are:
+The current members of the Steering Committee are:
 
 * Miles Lubin, _Google_ (@mlubin)
 * Juan Pablo Vielma, _Google_ (@juan-pablo-vielma)
@@ -112,10 +112,10 @@ The current members of the Steering Council are:
 * Oscar Dowson (@odow)
 * Changhyun Kwon, _U. South Florida_ (@chkwon)
 
-A member of the Steering Council may leave the council by notifying the Steering
-Council and [core contributors]. The remaining Steering Council members, in
-consultation with the [core contributors], will invite a member of the community
-to join in order to maintain a quorum of five members.
+A member of the Steering Committee may leave the committee by notifying the
+Steering Committee and [core contributors]. The remaining Steering Committee
+members, in consultation with the [core contributors], will invite a member of
+the community to join in order to maintain a quorum of five members.
 
 ## Decision Making Process
 
@@ -124,12 +124,12 @@ JuMP project.
 
 ### Financial Decisions
 
-All financial decisions are made by the [Steering Council] to ensure any funds
+All financial decisions are made by the [Steering Committee] to ensure any funds
 are spent in a manner that furthers the [mission](#mission) of JuMP. Financial
-decisions require majority approval by [Steering Council] members.
+decisions require majority approval by [Steering Committee] members.
 
 Community members proposing decisions with a financial aspect should contact the
-[Steering Council] directly, or table their proposal as an agenda item for
+[Steering Committee] directly, or table their proposal as an agenda item for
 discussion on a [monthly developer call].
 
 ### Non-financial Decisions
@@ -151,7 +151,7 @@ on a [monthly developer call].
 If consensus on a non-financial decision cannot be achieved, the final decision
 will be made by the [BDFL](#benevolent-dictator-for-life).
 
-The [Steering Council] can gain addition decision-making power if the [core
+The [Steering Committee] can gain addition decision-making power if the [core
 contributors] decide to delegate.
 
 ### Conflict of Interest
@@ -166,10 +166,10 @@ interest include, but are not limited to:
 * Access to proprietary information of their employer that could potentially
   leak into their work with JuMP.
 
-All members of the [Steering Council] shall disclose to the [Steering Council]
-any conflict of interest they may have. Members with a conflict of interest in a
-particular issue may participate in [Steering Council] discussions on that
-issue, but must recuse themselves from voting.
+All members of the [Steering Committee] shall disclose to the [Steering
+Committee] any conflict of interest they may have. Members with a conflict of
+interest in a particular issue may participate in [Steering Committee]
+discussions on that issue, but must recuse themselves from voting.
 
 [Core contributors](#core-contributors) and [repository maintainers] should also
 disclose conflicts of interest with other [core contributors] and step back from
@@ -230,7 +230,7 @@ The current chatroom is the [JuMP-dev Gitter channel](https://gitter.im/JuliaOpt
 
 ### Monthly Developer Call
 
-The [Steering Council] hosts a monthly developer call to discuss JuMP-related
+The [Steering Committee] hosts a monthly developer call to discuss JuMP-related
 business.
 
 The calls are currently scheduled on the fourth Thursday of every month at 14:00
@@ -241,7 +241,7 @@ The invite contains information on how to table agenda items for upcoming calls.
 
 ### JuMP-dev Workshops
 
-The [Steering Council] will periodically choose a Chair to organize a JuMP-dev
+The [Steering Committee] will periodically choose a Chair to organize a JuMP-dev
 workshop.
 
 Previous workshops include [Santiago, 2019](https://jump.dev/meetings/santiago2019/),
@@ -287,5 +287,5 @@ via the [developer chatroom].
 [developer chatroom]: #developer-chatroom
 [core contributors]: #core-contributors
 [repository maintainers]: #repository-maintainers
-[Steering Council]: #steering-council
+[Steering Committee]: #steering-committee
 [monthly developer call]: #monthly-developer-call
