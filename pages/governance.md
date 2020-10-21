@@ -181,7 +181,7 @@ decisions when conflicts of interests are in play.
 the [JuMP-dev Github organization].
 
 Anyone with commit access to a repository is trusted to use it in a way that is
-consistent with the [non-financial decisions](#non-financial-decisions) process.
+consistent with the [Decision Making Process](#decision-making-process).
 Those with permissions should prefer pull requests over direct pushes, ask for
 feedback on changes if they are not sure there is a consensus, and follow JuMP's
 [style guide](https://jump.dev/JuMP.jl/stable/style/) and development processes.
