@@ -9,8 +9,8 @@ For the purpose of this document, "JuMP" includes all repositories in the
 
 ## Mission
 
-The mission of the JuMP project is to provide a free, open-source, easy-to-use
-and powerful software stack for mathematical optimization.
+The mission of the JuMP project is to provide a free, open-source software stack
+for mathematical optimization based on the JuMP modeling language.
 
 ## Code of Conduct
 
