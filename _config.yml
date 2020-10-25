@@ -117,8 +117,6 @@ navigation_header:
   items:
   - title: Forum
     url: https://discourse.julialang.org/c/domain/opt
-  - title: Chatroom
-    url: https://gitter.im/JuliaOpt/jump-dev
   - title: Ecosystem
     url: /pages/code/
 - title: Workshops
