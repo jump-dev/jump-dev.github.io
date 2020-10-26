@@ -17,7 +17,7 @@ This document lists community members who are [repository maintainers](/pages/go
   - [JuMPTutorials.jl](https://github.com/jump-dev/JuMPTutorials.jl)
   - [MathOptInterface.jl](https://github.com/jump-dev/MathOptInterface.jl)
   - [Pavito.jl](https://github.com/jump-dev/Pavito.jl)
-  - [PolyJumP.jl](https://github.com/jump-dev/PolyJuMP.jl)
+  - [PolyJuMP.jl](https://github.com/jump-dev/PolyJuMP.jl)
   - [SumOfSquares.jl](https://github.com/jump-dev/SumOfSquares.jl)
 * Eric Hanson (@ericphanson)
   - [Convex.jl](https://github.com/jump-dev/Convex.jl)
