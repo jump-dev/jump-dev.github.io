@@ -81,6 +81,8 @@ needed.
 
 Community members may be maintainers of multiple repositories at the same time.
 
+The list of repository maintainers is [available here](/pages/maintainers).
+
 Repository maintainers can step back from their role at any time by informing a
 [core contributor](#core-contributors). Furthermore, [core contributors], by
 consensus, can choose to remove repository maintainers for any reason (typically
