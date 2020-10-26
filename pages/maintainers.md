@@ -43,6 +43,8 @@ This document lists community members who are [repository maintainers](/pages/go
   - [HiGHS.jl](https://github.com/jump-dev/HiGHS.jl)
   - [HiGHSBuilder](https://github.com/jump-dev/HiGHSBuilder)
   - [JuMPTutorials.jl](https://github.com/jump-dev/JuMPTutorials.jl)
+* Rafael Benchimol Klausner (@rafabench)
+  - [Xpress.jl](https://github.com/jump-dev/Xpress.jl)
 * Robin Deits (@rdeits)
   - [GLPK.jl](https://github.com/jump-dev/GLPK.jl)
   - [Gurobi.jl](https://github.com/jump-dev/Gurobi.jl)
