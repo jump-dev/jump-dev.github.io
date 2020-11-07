@@ -33,7 +33,6 @@ This document lists community members who are [repository maintainers](/pages/go
   - [Xpress.jl](https://github.com/jump-dev/Xpress.jl)
 * Juan Pablo Vielma (@juan-pablo-vielma)
   - [Pavito.jl](https://github.com/jump-dev/Pavito.jl)
-  - [SDPA.jl](https://github.com/jump-dev/SDPA.jl)
 * Marek Kaluba (@kalmarek)
   - [SCS.jl](https://github.com/jump-dev/SCS.jl)
 * Dheepak Krishnamurthy (@kdheepak)
