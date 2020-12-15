@@ -28,8 +28,8 @@ A non-exhaustive list of solvers available through JuMP is available in the
 
 ## JuMP extensions
 
-JuMP extensions are Julia packages which extend JuMP by providing additional
-functionality for specific problem classes.
+JuMP extensions are Julia packages which extend JuMP's algebraic modeling language
+by providing additional syntax and functionality for specific problem classes.
 
 A non-exhaustive list of examples include:
  * [InfiniteOpt](https://github.com/pulsipher/InfiniteOpt.jl), which extends 
