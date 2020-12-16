@@ -32,14 +32,25 @@ JuMP extensions are Julia packages which extend JuMP's algebraic modeling langua
 by providing additional syntax and functionality for specific problem classes.
 
 Examples of JuMP extensions include:
+ * [BilevelJuMP](https://github.com/joaquimg/BilevelJuMP.jl), which extends JuMP
+   to support bi-level programs.
+ * [Coluna.jl](https://github.com/atoptima/Coluna.jl), which extends JuMP to 
+   support a branch-and-cut-and-price solution framework.
  * [InfiniteOpt](https://github.com/pulsipher/InfiniteOpt.jl), which extends 
    JuMP to support infinite-dimensional optimization problems.
+ * [Plasmo.jl](https://github.com/zavalab/Plasmo.jl), which extends JuMP to
+   support a graph-based algebraic modeling framework.
  * [SDDP.jl](https://github.com/odow/SDDP.jl), which extends JuMP to support 
    multistage stochastic programs.
+ * [StochasticPrograms.jl](https://github.com/mbiel/StochasticPrograms.jl), which
+   extends JuMP to support stochastic programs.
  * [SumOfSquares](https://github.com/jump-dev/SumOfSquares.jl), which extends
    JuMP to support polynomial optimization.
  * [vOptGeneric.jl](https://github.com/vOptSolver/vOptGeneric.jl), which extends 
    JuMP to support multiobjective programs.
+
+Note that with the exception of SumOfSquares, these JuMP extensions are not part of 
+the core JuMP-dev ecosystem, but are developed independently by the community.
  
 (This list of JuMP extensions is open to new contributions! If you know one that 
 isn't listed here, tell us by making a pull-request to edit the file [code.md](https://github.com/jump-dev/jump-dev.github.io/blob/master/pages/code.md).)
