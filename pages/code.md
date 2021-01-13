@@ -42,7 +42,7 @@ Examples of JuMP extensions include:
    support a graph-based algebraic modeling framework.
  * [SDDP.jl](https://github.com/odow/SDDP.jl), which extends JuMP to support 
    multistage stochastic programs.
- * [StochasticPrograms.jl](https://github.com/mbiel/StochasticPrograms.jl), which
+ * [StochasticPrograms.jl](https://github.com/martinbiel/StochasticPrograms.jl), which
    extends JuMP to support stochastic programs.
  * [SumOfSquares](https://github.com/jump-dev/SumOfSquares.jl), which extends
    JuMP to support polynomial optimization.
