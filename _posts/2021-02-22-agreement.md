@@ -50,5 +50,5 @@ up for a sustainable, long-term future.
 _Miles Lubin, Joey Huchette, and Changhyun Kwon_
 
 (Per our [conflict of interest policy](/pages/governance/#conflict-of-interest),
-Oscar, who is funded by the grant, and Juan Pablo Vielma, who is a PI of the NSF
+Oscar, who is funded by the grant, and Juan Pablo Vielma, who is a co-PI of the NSF
 grant, recused themselves from Steering Committee votes on this agreement.)
