@@ -19,6 +19,8 @@ This document lists community members who are [repository maintainers](/pages/go
   - [Pavito.jl](https://github.com/jump-dev/Pavito.jl)
   - [PolyJuMP.jl](https://github.com/jump-dev/PolyJuMP.jl)
   - [SumOfSquares.jl](https://github.com/jump-dev/SumOfSquares.jl)
+* Thibaut Cuvelier (@dourouc05)
+  - [CPLEX.jl](https://github.com/jump-dev/CPLEX.jl)
 * Eric Hanson (@ericphanson)
   - [Convex.jl](https://github.com/jump-dev/Convex.jl)
 * François Pacaud (@frapac)
