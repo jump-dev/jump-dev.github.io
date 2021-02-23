@@ -7,7 +7,7 @@ categories: [announcements]
 
 The [JuMP Steering Committee](/pages/governance/#steering-committee) is pleased
 to announce that we, through [NumFOCUS](https://numfocus.org), have signed an
-agreement with [MIT](https://mit.edu) to providing ongoing maintenance and
+agreement with [MIT](https://mit.edu) to provide ongoing maintenance and
 support of JuMP as part of the
 [National Science Foundation award OAC1835443](https://nsf.gov/awardsearch/showAward?AWD_ID=1835443&HistoricalAwards=false).
 The agreement may be renewed on an annual basis through December 2023.
