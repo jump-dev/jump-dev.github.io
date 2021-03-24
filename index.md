@@ -14,9 +14,9 @@ convex optimization, constrained nonlinear optimization, and related classes
 of optimization problems. You can use it to
 [route school buses](https://www.the74million.org/article/building-a-smarter-and-cheaper-school-bus-system-how-a-boston-mit-partnership-led-to-new-routes-that-are-20-more-efficient-use-400-fewer-buses-save-5-million/),
 [schedule trains](https://www.sciencedirect.com/science/article/pii/S0191261516304830),
-[plan power grid expansion](https://juliacomputing.com/case-studies/psr.html),
+[plan power grid expansion](https://juliacomputing.com/case-studies/psr/),
 or even
-[optimize milk output](https://juliacomputing.com/case-studies/moo.html).
+[optimize milk output](https://juliacomputing.com/case-studies/moo/).
 
 
 ## Getting started
