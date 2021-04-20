@@ -121,6 +121,8 @@ navigation_header:
     url: /pages/code/
 - title: Workshops
   items:
+   - title: 2021
+     url: /meetings/juliacon2021
    - title: 2020
      url: /meetings/louvain2020
    - title: 2019
@@ -152,5 +154,5 @@ sharing_links: # Appear at the bottom of single blog posts, add as desired. The 
   Email: true
 
 # Site header notification content
-# notification: |
-#   [JuMP-dev 2020 cancelled.](/jump-dev/2020/04/15/jump_dev_2020_cancellation/)
+notification: |
+  Abstract submissions for [JuMP-dev 2021](/meetings/juliacon2021/) are now open.
