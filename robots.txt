@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /JuMP.jl
+Allow: /JuMP.jl/stable
+Disallow: /MathOptInterface.jl
+Allow: /MathOptInterface.jl/stable
