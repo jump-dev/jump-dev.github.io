@@ -110,7 +110,7 @@ The current members of the Steering Committee are:
 
 * Miles Lubin, _Google_ (@mlubin)
 * Juan Pablo Vielma, _Google_ (@juan-pablo-vielma)
-* Joey Huchette, _Rice University_ (@joehuchette)
+* Carleton Coffrin, _Los Alamos National Laboratory_ (@ccoffrin)
 * Oscar Dowson (@odow)
 * Changhyun Kwon, _U. South Florida_ (@chkwon)
 
