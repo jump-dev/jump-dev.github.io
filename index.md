@@ -5,32 +5,29 @@
     <img width="100%" src="/assets/jump-logo-with-text.svg">
 </div>
 
-JuMP is a modeling language and supporting packages for mathematical
-optimization in [Julia](https://julialang.org).
+## What is JuMP?
 
-JuMP makes it easy to formulate
-and solve linear programming, semidefinite programming, integer programming,
-convex optimization, constrained nonlinear optimization, and related classes
-of optimization problems. You can use it to
+JuMP is a modeling language and collection of supporting packages for
+mathematical optimization in [Julia](https://julialang.org).
+
+JuMP makes it easy to formulate and solve a range of problem classes, including
+linear programs, integer programs, conic programs, semidefinite programs, and
+constrained nonlinear programs.
+
+You can use it to
 [route school buses](https://www.the74million.org/article/building-a-smarter-and-cheaper-school-bus-system-how-a-boston-mit-partnership-led-to-new-routes-that-are-20-more-efficient-use-400-fewer-buses-save-5-million/),
 [schedule trains](https://www.sciencedirect.com/science/article/pii/S0191261516304830),
-[plan power grid expansion](https://juliacomputing.com/case-studies/psr/),
-or even
-[optimize milk output](https://juliacomputing.com/case-studies/moo/).
+[plan power grid expansion](https://juliacomputing.com/case-studies/psr/), or
+even [optimize milk output](https://juliacomputing.com/case-studies/moo/).
 
+## Resources for getting started
 
-## Getting started
-
-To get started, read the
-[Installation Guide](https://www.juliaopt.org/JuMP.jl/stable/installation/)
-in the JuMP documentation. Once you've installed JuMP, a good next step is the
-[Quickstart Guide](https://www.juliaopt.org/JuMP.jl/stable/quickstart/).
-There are also a number of tutorials available at
-[JuMPTutorials.jl](https://github.com/JuliaOpt/JuMPTutorials.jl).
-For materials on learning Julia, see [here](https://julialang.org/learning/).
-
-If you need help, search the [Forum](https://discourse.julialang.org/c/domain/opt)
-for similar questions, or open a new one.
+ * Decide if you should use JuMP by reading [Should I use JuMP?](https://jump.dev/JuMP.jl/stable/background/should_i_use/)
+ * Install JuMP and Julia by reading the [Installation Guide](https://jump.dev/JuMP.jl/stable/installation/)
+ * Learn Julia by reading [Getting started with Julia](https://jump.dev/JuMP.jl/stable/tutorials/Getting%20started/an_introduction_to_julia/)
+ * Solve your first JuMP model by reading [Getting started with JuMP](https://jump.dev/JuMP.jl/stable/tutorials/Getting%20started/getting_started_with_JuMP/)
+ * Get help by joining the [community forum](https://discourse.julialang.org/c/domain/opt/13)
+  to search for answers to commonly asked questions.
 
 There is a growing collection of third-party materials about JuMP. This includes
 the book,
@@ -42,17 +39,15 @@ practical problems using JuMP and Julia.
 
 The JuMP ecosystem includes [Convex.jl](https://github.com/jump-dev/Convex.jl),
 an algebraic modeling language for convex optimization based on the concept of
-[Disciplined Convex Programming](https://dcp.stanford.edu/). Outside of the
-JuMP organization:
+[Disciplined Convex Programming](https://dcp.stanford.edu/).
 
+Outside of the JuMP organization:
 - [JuliaSmoothOptimizers](https://github.com/JuliaSmoothOptimizers) provides a
   collection of tools primarily designed for developing solvers for smooth
   nonlinear optimization.
-
 - [JuliaNLSolvers](https://github.com/JuliaNLSolvers) offers implementations in
   Julia of standard standard optimization algorithms for unconstrained or
   box-constrained problems such as BFGS, Nelder-Mead, conjugate gradient, etc.
-
 - JuliaHub lists 70+
   [optimization packages in Julia](https://juliahub.com/ui/Packages?t=optimization)!
 
