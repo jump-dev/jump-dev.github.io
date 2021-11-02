@@ -1,4 +1,10 @@
-# Finding multiple feasible solutions
+---
+layout: post
+title: "Finding multiple feasible solutions"
+date: 2021-11-02
+categories: [tutorials]
+permalink: /blog/finding-multiple-feasible-solutions/
+---
 
 _Author: James Foster (@jd-foster)_
 
