@@ -18,25 +18,28 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  #src
 # SOFTWARE.                                                                      #src
 
-# # Finding multiple feasible solutions 
-
 # _Author: James Foster (@jd-foster)_
 
 # This tutorial demonstrates how to formulate and solve a combinatorial problem
-# with multiple feasible solutions. In fact, we will see how to find _all_ feasible solutions to our problem.
-# We will also see how to enforce an "all-different" constraint on a set of integer variables.
+# with multiple feasible solutions. In fact, we will see how to find _all_
+# feasible solutions to our problem. We will also see how to enforce an
+# "all-different" constraint on a set of integer variables.
 
-# This post is in the same form as tutorials in the JuMP 
-# [documentation](https://jump.dev/JuMP.jl/stable/tutorials/Getting%20started/getting_started_with_JuMP/) 
-# but is hosted here since we depend on using some commercial solvers (Gurobi and/or CPLEX) that are not
-# currently accomodated by the JuMP GitHub repository.
+# This post is in the same form as tutorials in the JuMP
+# [documentation](https://jump.dev/JuMP.jl/stable/tutorials/Getting%20started/getting_started_with_JuMP/)
+# but is hosted here since we depend on using some commercial solvers (Gurobi
+# and CPLEX) that are not currently accomodated by the JuMP GitHub repository.
+
+# ## Symmetric number squares
 
 # Symmetric [number squares](https://www.futilitycloset.com/2012/12/05/number-squares/)
 # and their sums often arise in recreational mathematics. Here are a few examples:
-         1 5 2 9       2 3 1 8        5 2 1 9
-         5 8 3 7       3 7 9 0        2 3 8 4
-      +  2 3 4 0     + 1 9 5 6      + 1 8 6 7
-      =  9 7 0 6     = 8 0 6 4      = 9 4 7 0
+# ```
+#    1 5 2 9       2 3 1 8        5 2 1 9
+#    5 8 3 7       3 7 9 0        2 3 8 4
+# +  2 3 4 0     + 1 9 5 6      + 1 8 6 7
+# =  9 7 0 6     = 8 0 6 4      = 9 4 7 0
+# ```
 
 # Notice how all the digits 0 to 9 are used at least once,
 # the first three rows sum to the last row,
@@ -48,9 +51,10 @@
 using JuMP
 import Gurobi
 
-# Here we are using [Gurobi](https://github.com/jump-dev/Gurobi.jl) 
-# since it provides the required functionality
-# for this example (i.e. finding multiple feasible solutions).
+# We are using [Gurobi](https://github.com/jump-dev/Gurobi.jl) because it
+# provides the required functionality for this example (i.e. finding multiple
+# feasible solutions).
+
 # Gurobi is a commercial solver, that is, a paid license is needed
 # for those using the solver for commercial purposes. However there are
 # trial and/or free licenses available for academic and student users.
@@ -59,16 +63,20 @@ import Gurobi
 # ### Model Specifics
 
 # We start by creating a JuMP model:
-model = JuMP.Model(Gurobi.Optimizer)
+
+model = Model(Gurobi.Optimizer)
 
 # We then need to set specific Gurobi parameters to enable the
 # [multiple solution functionality](https://www.gurobi.com/documentation/9.0/refman/finding_multiple_solutions.html).
 
 # The first setting turns on the exhaustive search mode for multiple solutions:
-JuMP.set_optimizer_attribute(model, "PoolSearchMode", 2)
+
+set_optimizer_attribute(model, "PoolSearchMode", 2)
 
 # The second sets a limit for the number of solutions found:
-JuMP.set_optimizer_attribute(model, "PoolSolutions", 100)
+
+set_optimizer_attribute(model, "PoolSolutions", 100)
+
 # Here the value 100 is an "arbitrary but large enough" whole number
 # for our particular model (and in general will depend on the application).
 
@@ -76,32 +84,40 @@ JuMP.set_optimizer_attribute(model, "PoolSolutions", 100)
 # ### Setting up the model
 
 # We are going to use 4-digit numbers:
+
 number_of_digits = 4
 
 # Let's define the index sets for our variables and constraints.
 # We keep track of each "place" (units, tens, one-hundreds, one-thousands):
+
 PLACES = 0:(number_of_digits-1)
-# The number of rows of the symmetric square sums are the same as the number of digits:
+
+# The number of rows of the symmetric square sums are the same as the number of
+# digits:
+
 ROWS = 1:number_of_digits
 
 # Next, we define the model's core variables.
-# Here a given digit between 0 and 9 is found in the `i`-th row at the `j`-th place:
-@variable(model, 0 <= Digit[i = ROWS, j = PLACES] <= 9, Int)
-# We also need a higher level "term" variable that represents the actual number in each row:
-@variable(model, Term[ROWS] >= 1, Int)
-# The lower bound of 1 is because we want to get back non-zero solutions.
+# Here a given digit between 0 and 9 is found in the `i`-th row at the `j`-th
+# place:
 
-# We could define an objective function, but since this is a feasibility problem,
-# it can just be left unset.
-# @objective(model, Max, 0) #src
-# @objective(model, Max, Digit[1,0]) #src
+@variable(model, 0 <= Digit[i = ROWS, j = PLACES] <= 9, Int)
+
+# We also need a higher level "term" variable that represents the actual number
+# in each row:
+
+@variable(model, Term[ROWS] >= 1, Int)
+
+# The lower bound of 1 is because we want to get back non-zero solutions.
 
 # Now for the constraints.
 
 # Make sure the leading digit of each row is not zero:
+
 @constraint(model, NonZeroLead[i in ROWS], Digit[i, (number_of_digits-1)] >= 1)
 
 # Define the terms from the digits:
+
 @constraint(
     model,
     TermDef[i in ROWS],
@@ -109,22 +125,27 @@ ROWS = 1:number_of_digits
 )
 
 # The sum of the first three terms equals the last term:
+
 @constraint(
     model,
     SumHolds,
     Term[number_of_digits] == sum(Term[i] for i in 1:(number_of_digits-1))
 )
 
-# The square is symmetric, that is, the sum should work either row-wise or column-wise:
+# The square is symmetric, that is, the sum should work either row-wise or
+# column-wise:
+
 @constraint(
     model,
     Symmetry[i in ROWS, j in PLACES; i + j <= (number_of_digits - 1)],
     Digit[i, j] == Digit[number_of_digits-j, number_of_digits-i]
 )
 
-# We also want to make sure we use each digit exactly once on the diagonal or upper triangular region.
-# The following set, along with the collection of binary variables and constraints, ensures this property
-# by keeping track of the right comparisons to make.
+# We also want to make sure we use each digit exactly once on the diagonal or
+# upper triangular region. The following set, along with the collection of
+# binary variables and constraints, ensures this property by keeping track of
+# the right comparisons to make.
+
 COMPS = [
     (i, j, k, m) for i in ROWS for j in PLACES for k in ROWS for m in PLACES
     if (
@@ -148,20 +169,20 @@ COMPS = [
     Digit[i, j] >= Digit[k, m] + 1 - 42 * (1 - BinDiffs[(i, j, k, m)])
 )
 
-# Note that the constant 42 is a "big enough" number to make these valid constraints; see 
-# [this paper](https://doi.org/10.1287/ijoc.13.2.96.10515) and 
+# Note that the constant 42 is a "big enough" number to make these valid
+# constraints; see [this paper](https://doi.org/10.1287/ijoc.13.2.96.10515) and
 # [blog](https://yetanothermathprogrammingconsultant.blogspot.com/2016/05/all-different-and-mixed-integer.html)
 # for more information.
 
-##%% #src
 # We can then call `optimize!` and view the results.
+
 optimize!(model)
 solution_summary(model)
 
-##%% #src
 # Let's check it worked:
-@assert JuMP.termination_status(model) == MOI.OPTIMAL
-@assert JuMP.primal_status(model) == MOI.FEASIBLE_POINT
+
+@assert termination_status(model) == MOI.OPTIMAL
+@assert primal_status(model) == MOI.FEASIBLE_POINT
 
 value.(Digit)
 
@@ -171,20 +192,25 @@ value.(Digit)
 
 # Now that we have results, we can access the feasible solutions
 # by using the `value` function with the `result` keyword:
+
 TermSolutions = Dict()
 for i in 1:result_count(model)
     TermSolutions[i] = convert.(Int64, round.(value.(Term; result = i).data))
 end
+
 # Here we have converted the solution to an integer after rounding off very
 # small numerical tolerances.
 
 # An example of one feasible solution is:
+
 a_feasible_solution = TermSolutions[1]
+
 # and we can print out all the feasible solutions with
+
 for i in 1:result_count(model)
     @assert has_values(model; result = i)
     println("Solution $(i): ")
-    display(TermSolutions[i])
+    println(TermSolutions[i])
     print("\n")
 end
 
@@ -194,41 +220,45 @@ end
 # ## Appendix: Using CPLEX instead...
 
 # If you have access to CPLEX instead of Gurobi, a similar workflow can
-# be used. Here we show how to use the low-level API functions in 
+# be used. Here we show how to use the low-level API functions in
 # [CPLEX.jl](https://github.com/jump-dev/CPLEX.jl)
 # to achieve the same thing as above.
 
-##%% #src
 using JuMP
 import CPLEX
 
-model = JuMP.direct_model(CPLEX.Optimizer())
+model = direct_model(CPLEX.Optimizer())
 
-# The settings here turn on the exhaustive search mode for finding multiple solutions:
-JuMP.set_optimizer_attribute(model, "CPX_PARAM_SOLNPOOLAGAP", 0.0)
-JuMP.set_optimizer_attribute(model, "CPX_PARAM_SOLNPOOLINTENSITY", 4)
-JuMP.set_optimizer_attribute(model, "CPX_PARAM_POPULATELIM", 100)
+# The settings here turn on the exhaustive search mode for finding multiple
+# solutions:
 
-# The third sets a limit for the number of solutions found; 
+set_optimizer_attribute(model, "CPX_PARAM_SOLNPOOLAGAP", 0.0)
+set_optimizer_attribute(model, "CPX_PARAM_SOLNPOOLINTENSITY", 4)
+set_optimizer_attribute(model, "CPX_PARAM_POPULATELIM", 100)
+
+# The third sets a limit for the number of solutions found;
 # again, the value 100 is an arbitrary but large enough whole number
 # for our particular model.
 
-## %% #src
 # Now create all the model constraints as above, and optimize!
 
 # We now access the MOI backend to interface directly with the CPLEX API.
+
 backend_model = backend(model)
 env = backend_model.env
 lp = backend_model.lp
 
 # Multiple solutions are generated by CPLEX using the `populate` routine
 # and added to the "solution pool":
+
 CPLEX.CPXpopulate(env, lp)
 
 # The number of results should equal the above (i.e. 20):
+
 N_results = CPLEX.CPXgetsolnpoolnumsolns(env, lp)
 
 # We can obtain the actual values of the feasible solutions as follows:
+
 TermSolutions2 = Dict()
 for sn in 0:N_results-1
     TermSolutions2[sn] = Int[]
@@ -240,6 +270,11 @@ for sn in 0:N_results-1
     end
 end
 
-# Finally, if you have run with both CPLEX and Gurobi, 
+# Finally, if you have run with both CPLEX and Gurobi,
 # we can check the same solutions were found:
-@assert Set(values(TermSolutions2)) == Set(values(TermSolutions))
+
+Set(values(TermSolutions2))
+
+#-
+
+@show Set(values(TermSolutions))
