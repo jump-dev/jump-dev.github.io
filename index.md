@@ -24,8 +24,8 @@ even [optimize milk output](https://juliacomputing.com/case-studies/moo/).
 
  * Decide if you should use JuMP by reading [Should I use JuMP?](https://jump.dev/JuMP.jl/stable/background/should_i_use/)
  * Install JuMP and Julia by reading the [Installation Guide](https://jump.dev/JuMP.jl/stable/installation/)
- * Learn Julia by reading [Getting started with Julia](https://jump.dev/JuMP.jl/stable/tutorials/Getting%20started/an_introduction_to_julia/)
- * Solve your first JuMP model by reading [Getting started with JuMP](https://jump.dev/JuMP.jl/stable/tutorials/Getting%20started/getting_started_with_JuMP/)
+ * Learn Julia by reading [Getting started with Julia](https://jump.dev/JuMP.jl/stable/tutorials/getting_started/getting_started_with_julia/)
+ * Solve your first JuMP model by reading [Getting started with JuMP](https://jump.dev/JuMP.jl/stable/tutorials/getting_started/getting_started_with_JuMP/)
  * Get help by joining the [community forum](https://discourse.julialang.org/c/domain/opt/13)
   to search for answers to commonly asked questions.
 
