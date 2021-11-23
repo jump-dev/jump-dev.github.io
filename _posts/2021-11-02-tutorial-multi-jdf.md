@@ -33,64 +33,14 @@ and the columns in each are the same as the corresponding rows (forming a symmet
 
 We will answer the question: how many such squares are there?
 
-This tutorial uses the following packages:
-
-````julia
-using JuMP
-import Gurobi
-````
-
-We are using [Gurobi](https://github.com/jump-dev/Gurobi.jl) because it
-provides the required functionality for this example (i.e. finding multiple
-feasible solutions).
-
-Gurobi is a commercial solver, that is, a paid license is needed
-for those using the solver for commercial purposes. However there are
-trial and/or free licenses available for academic and student users.
-There is also an appendix covering [CPLEX](https://github.com/jump-dev/CPLEX.jl).
-
 ### Model Specifics
 
 We start by creating a JuMP model:
 
 ````julia
-model = Model(Gurobi.Optimizer)
+using JuMP
+model = Model();
 ````
-
-````
-A JuMP Model
-Feasibility problem with:
-Variables: 0
-Model mode: AUTOMATIC
-CachingOptimizer state: EMPTY_OPTIMIZER
-Solver name: Gurobi
-````
-
-We then need to set specific Gurobi parameters to enable the
-[multiple solution functionality](https://www.gurobi.com/documentation/9.0/refman/finding_multiple_solutions.html).
-
-The first setting turns on the exhaustive search mode for multiple solutions:
-
-````julia
-set_optimizer_attribute(model, "PoolSearchMode", 2)
-````
-
-````
-2
-````
-
-The second sets a limit for the number of solutions found:
-
-````julia
-set_optimizer_attribute(model, "PoolSolutions", 100)
-````
-
-````
-100
-````
-
-Here the value 100 is an "arbitrary but large enough" whole number
-for our particular model (and in general will depend on the application).
 
 ### Setting up the model
 
@@ -135,10 +85,10 @@ place:
 ````
 
 ````
-2-dimensional DenseAxisArray{JuMP.VariableRef,2,...} with index sets:
+2-dimensional DenseAxisArray{VariableRef,2,...} with index sets:
     Dimension 1, 1:4
     Dimension 2, 0:3
-And data, a 4×4 Matrix{JuMP.VariableRef}:
+And data, a 4×4 Matrix{VariableRef}:
  Digit[1,0]  Digit[1,1]  Digit[1,2]  Digit[1,3]
  Digit[2,0]  Digit[2,1]  Digit[2,2]  Digit[2,3]
  Digit[3,0]  Digit[3,1]  Digit[3,2]  Digit[3,3]
@@ -153,9 +103,9 @@ in each row:
 ````
 
 ````
-1-dimensional DenseAxisArray{JuMP.VariableRef,1,...} with index sets:
+1-dimensional DenseAxisArray{VariableRef,1,...} with index sets:
     Dimension 1, 1:4
-And data, a 4-element Vector{JuMP.VariableRef}:
+And data, a 4-element Vector{VariableRef}:
  Term[1]
  Term[2]
  Term[3]
@@ -173,9 +123,9 @@ Make sure the leading digit of each row is not zero:
 ````
 
 ````
-1-dimensional DenseAxisArray{JuMP.ConstraintRef{JuMP.Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.GreaterThan{Float64}}, JuMP.ScalarShape},1,...} with index sets:
+1-dimensional DenseAxisArray{ConstraintRef{Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.GreaterThan{Float64}}, ScalarShape},1,...} with index sets:
     Dimension 1, 1:4
-And data, a 4-element Vector{JuMP.ConstraintRef{JuMP.Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.GreaterThan{Float64}}, JuMP.ScalarShape}}:
+And data, a 4-element Vector{ConstraintRef{Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.GreaterThan{Float64}}, ScalarShape}}:
  NonZeroLead[1] : Digit[1,3] ≥ 1.0
  NonZeroLead[2] : Digit[2,3] ≥ 1.0
  NonZeroLead[3] : Digit[3,3] ≥ 1.0
@@ -193,9 +143,9 @@ Define the terms from the digits:
 ````
 
 ````
-1-dimensional DenseAxisArray{JuMP.ConstraintRef{JuMP.Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.EqualTo{Float64}}, JuMP.ScalarShape},1,...} with index sets:
+1-dimensional DenseAxisArray{ConstraintRef{Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.EqualTo{Float64}}, ScalarShape},1,...} with index sets:
     Dimension 1, 1:4
-And data, a 4-element Vector{JuMP.ConstraintRef{JuMP.Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.EqualTo{Float64}}, JuMP.ScalarShape}}:
+And data, a 4-element Vector{ConstraintRef{Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.EqualTo{Float64}}, ScalarShape}}:
  TermDef[1] : -Digit[1,0] - 10 Digit[1,1] - 100 Digit[1,2] - 1000 Digit[1,3] + Term[1] = 0.0
  TermDef[2] : -Digit[2,0] - 10 Digit[2,1] - 100 Digit[2,2] - 1000 Digit[2,3] + Term[2] = 0.0
  TermDef[3] : -Digit[3,0] - 10 Digit[3,1] - 100 Digit[3,2] - 1000 Digit[3,3] + Term[3] = 0.0
@@ -228,7 +178,7 @@ column-wise:
 ````
 
 ````
-JuMP.Containers.SparseAxisArray{JuMP.ConstraintRef{JuMP.Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.EqualTo{Float64}}, JuMP.ScalarShape}, 2, Tuple{Int64, Int64}} with 6 entries:
+JuMP.Containers.SparseAxisArray{ConstraintRef{Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.EqualTo{Float64}}, ScalarShape}, 2, Tuple{Int64, Int64}} with 6 entries:
   [1, 0]  =  Symmetry[1,0] : Digit[1,0] - Digit[4,3] = 0.0
   [1, 1]  =  Symmetry[1,1] : Digit[1,1] - Digit[3,3] = 0.0
   [1, 2]  =  Symmetry[1,2] : Digit[1,2] - Digit[2,3] = 0.0
@@ -250,78 +200,67 @@ COMPS = [
         k + m <= number_of_digits &&
         (i, j) < (k, m)
     )
-]
+];
 
-@variable(model, BinDiffs[COMPS], Bin)
+@variable(model, BinDiffs[COMPS], Bin);
 
 @constraint(
     model,
     AllDiffLo[(i, j, k, m) in COMPS],
     Digit[i, j] <= Digit[k, m] - 1 + 42 * BinDiffs[(i, j, k, m)]
-)
+);
 
 @constraint(
     model,
     AllDiffHi[(i, j, k, m) in COMPS],
     Digit[i, j] >= Digit[k, m] + 1 - 42 * (1 - BinDiffs[(i, j, k, m)])
-)
-````
-
-````
-1-dimensional DenseAxisArray{JuMP.ConstraintRef{JuMP.Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.GreaterThan{Float64}}, JuMP.ScalarShape},1,...} with index sets:
-    Dimension 1, [(1, 0, 1, 1), (1, 0, 1, 2), (1, 0, 1, 3), (1, 0, 2, 0), (1, 0, 2, 1), (1, 0, 2, 2), (1, 0, 3, 0), (1, 0, 3, 1), (1, 0, 4, 0), (1, 1, 1, 2)  …  (2, 1, 2, 2), (2, 1, 3, 0), (2, 1, 3, 1), (2, 1, 4, 0), (2, 2, 3, 0), (2, 2, 3, 1), (2, 2, 4, 0), (3, 0, 3, 1), (3, 0, 4, 0), (3, 1, 4, 0)]
-And data, a 45-element Vector{JuMP.ConstraintRef{JuMP.Model, MathOptInterface.ConstraintIndex{MathOptInterface.ScalarAffineFunction{Float64}, MathOptInterface.GreaterThan{Float64}}, JuMP.ScalarShape}}:
- AllDiffHi[(1, 0, 1, 1)] : Digit[1,0] - Digit[1,1] - 42 BinDiffs[(1, 0, 1, 1)] ≥ -41.0
- AllDiffHi[(1, 0, 1, 2)] : Digit[1,0] - Digit[1,2] - 42 BinDiffs[(1, 0, 1, 2)] ≥ -41.0
- AllDiffHi[(1, 0, 1, 3)] : Digit[1,0] - Digit[1,3] - 42 BinDiffs[(1, 0, 1, 3)] ≥ -41.0
- AllDiffHi[(1, 0, 2, 0)] : Digit[1,0] - Digit[2,0] - 42 BinDiffs[(1, 0, 2, 0)] ≥ -41.0
- AllDiffHi[(1, 0, 2, 1)] : Digit[1,0] - Digit[2,1] - 42 BinDiffs[(1, 0, 2, 1)] ≥ -41.0
- AllDiffHi[(1, 0, 2, 2)] : Digit[1,0] - Digit[2,2] - 42 BinDiffs[(1, 0, 2, 2)] ≥ -41.0
- AllDiffHi[(1, 0, 3, 0)] : Digit[1,0] - Digit[3,0] - 42 BinDiffs[(1, 0, 3, 0)] ≥ -41.0
- AllDiffHi[(1, 0, 3, 1)] : Digit[1,0] - Digit[3,1] - 42 BinDiffs[(1, 0, 3, 1)] ≥ -41.0
- AllDiffHi[(1, 0, 4, 0)] : Digit[1,0] - Digit[4,0] - 42 BinDiffs[(1, 0, 4, 0)] ≥ -41.0
- AllDiffHi[(1, 1, 1, 2)] : Digit[1,1] - Digit[1,2] - 42 BinDiffs[(1, 1, 1, 2)] ≥ -41.0
- AllDiffHi[(1, 1, 1, 3)] : Digit[1,1] - Digit[1,3] - 42 BinDiffs[(1, 1, 1, 3)] ≥ -41.0
- AllDiffHi[(1, 1, 2, 0)] : -Digit[2,0] + Digit[1,1] - 42 BinDiffs[(1, 1, 2, 0)] ≥ -41.0
- AllDiffHi[(1, 1, 2, 1)] : Digit[1,1] - Digit[2,1] - 42 BinDiffs[(1, 1, 2, 1)] ≥ -41.0
- AllDiffHi[(1, 1, 2, 2)] : Digit[1,1] - Digit[2,2] - 42 BinDiffs[(1, 1, 2, 2)] ≥ -41.0
- AllDiffHi[(1, 1, 3, 0)] : -Digit[3,0] + Digit[1,1] - 42 BinDiffs[(1, 1, 3, 0)] ≥ -41.0
- AllDiffHi[(1, 1, 3, 1)] : Digit[1,1] - Digit[3,1] - 42 BinDiffs[(1, 1, 3, 1)] ≥ -41.0
- AllDiffHi[(1, 1, 4, 0)] : -Digit[4,0] + Digit[1,1] - 42 BinDiffs[(1, 1, 4, 0)] ≥ -41.0
- AllDiffHi[(1, 2, 1, 3)] : Digit[1,2] - Digit[1,3] - 42 BinDiffs[(1, 2, 1, 3)] ≥ -41.0
- AllDiffHi[(1, 2, 2, 0)] : -Digit[2,0] + Digit[1,2] - 42 BinDiffs[(1, 2, 2, 0)] ≥ -41.0
- AllDiffHi[(1, 2, 2, 1)] : -Digit[2,1] + Digit[1,2] - 42 BinDiffs[(1, 2, 2, 1)] ≥ -41.0
- AllDiffHi[(1, 2, 2, 2)] : Digit[1,2] - Digit[2,2] - 42 BinDiffs[(1, 2, 2, 2)] ≥ -41.0
- AllDiffHi[(1, 2, 3, 0)] : -Digit[3,0] + Digit[1,2] - 42 BinDiffs[(1, 2, 3, 0)] ≥ -41.0
- AllDiffHi[(1, 2, 3, 1)] : -Digit[3,1] + Digit[1,2] - 42 BinDiffs[(1, 2, 3, 1)] ≥ -41.0
- AllDiffHi[(1, 2, 4, 0)] : -Digit[4,0] + Digit[1,2] - 42 BinDiffs[(1, 2, 4, 0)] ≥ -41.0
- AllDiffHi[(1, 3, 2, 0)] : -Digit[2,0] + Digit[1,3] - 42 BinDiffs[(1, 3, 2, 0)] ≥ -41.0
- AllDiffHi[(1, 3, 2, 1)] : -Digit[2,1] + Digit[1,3] - 42 BinDiffs[(1, 3, 2, 1)] ≥ -41.0
- AllDiffHi[(1, 3, 2, 2)] : -Digit[2,2] + Digit[1,3] - 42 BinDiffs[(1, 3, 2, 2)] ≥ -41.0
- AllDiffHi[(1, 3, 3, 0)] : -Digit[3,0] + Digit[1,3] - 42 BinDiffs[(1, 3, 3, 0)] ≥ -41.0
- AllDiffHi[(1, 3, 3, 1)] : -Digit[3,1] + Digit[1,3] - 42 BinDiffs[(1, 3, 3, 1)] ≥ -41.0
- AllDiffHi[(1, 3, 4, 0)] : -Digit[4,0] + Digit[1,3] - 42 BinDiffs[(1, 3, 4, 0)] ≥ -41.0
- AllDiffHi[(2, 0, 2, 1)] : Digit[2,0] - Digit[2,1] - 42 BinDiffs[(2, 0, 2, 1)] ≥ -41.0
- AllDiffHi[(2, 0, 2, 2)] : Digit[2,0] - Digit[2,2] - 42 BinDiffs[(2, 0, 2, 2)] ≥ -41.0
- AllDiffHi[(2, 0, 3, 0)] : Digit[2,0] - Digit[3,0] - 42 BinDiffs[(2, 0, 3, 0)] ≥ -41.0
- AllDiffHi[(2, 0, 3, 1)] : Digit[2,0] - Digit[3,1] - 42 BinDiffs[(2, 0, 3, 1)] ≥ -41.0
- AllDiffHi[(2, 0, 4, 0)] : Digit[2,0] - Digit[4,0] - 42 BinDiffs[(2, 0, 4, 0)] ≥ -41.0
- AllDiffHi[(2, 1, 2, 2)] : Digit[2,1] - Digit[2,2] - 42 BinDiffs[(2, 1, 2, 2)] ≥ -41.0
- AllDiffHi[(2, 1, 3, 0)] : -Digit[3,0] + Digit[2,1] - 42 BinDiffs[(2, 1, 3, 0)] ≥ -41.0
- AllDiffHi[(2, 1, 3, 1)] : Digit[2,1] - Digit[3,1] - 42 BinDiffs[(2, 1, 3, 1)] ≥ -41.0
- AllDiffHi[(2, 1, 4, 0)] : -Digit[4,0] + Digit[2,1] - 42 BinDiffs[(2, 1, 4, 0)] ≥ -41.0
- AllDiffHi[(2, 2, 3, 0)] : -Digit[3,0] + Digit[2,2] - 42 BinDiffs[(2, 2, 3, 0)] ≥ -41.0
- AllDiffHi[(2, 2, 3, 1)] : -Digit[3,1] + Digit[2,2] - 42 BinDiffs[(2, 2, 3, 1)] ≥ -41.0
- AllDiffHi[(2, 2, 4, 0)] : -Digit[4,0] + Digit[2,2] - 42 BinDiffs[(2, 2, 4, 0)] ≥ -41.0
- AllDiffHi[(3, 0, 3, 1)] : Digit[3,0] - Digit[3,1] - 42 BinDiffs[(3, 0, 3, 1)] ≥ -41.0
- AllDiffHi[(3, 0, 4, 0)] : Digit[3,0] - Digit[4,0] - 42 BinDiffs[(3, 0, 4, 0)] ≥ -41.0
- AllDiffHi[(3, 1, 4, 0)] : -Digit[4,0] + Digit[3,1] - 42 BinDiffs[(3, 1, 4, 0)] ≥ -41.0
+);
 ````
 
 Note that the constant 42 is a "big enough" number to make these valid
 constraints; see [this paper](https://doi.org/10.1287/ijoc.13.2.96.10515) and
 [blog](https://yetanothermathprogrammingconsultant.blogspot.com/2016/05/all-different-and-mixed-integer.html)
 for more information.
+
+We are using [Gurobi](https://github.com/jump-dev/Gurobi.jl) as the solver
+because it provides the required functionality for this example
+(i.e. finding multiple feasible solutions).
+There is also an appendix covering [CPLEX](https://github.com/jump-dev/CPLEX.jl).
+
+Gurobi and CPLEX are commercial solvers, that is, a paid license is needed
+for those using the solvers for commercial purposes. However there are
+trial and/or free licenses available for academic and student users.
+
+````julia
+import Gurobi
+set_optimizer(model,Gurobi.Optimizer)
+````
+
+We then need to set specific Gurobi parameters to enable the
+[multiple solution functionality](https://www.gurobi.com/documentation/9.0/refman/finding_multiple_solutions.html).
+
+The first setting turns on the exhaustive search mode for multiple solutions:
+
+````julia
+set_optimizer_attribute(model, "PoolSearchMode", 2)
+````
+
+````
+2
+````
+
+The second sets a limit for the number of solutions found:
+
+````julia
+set_optimizer_attribute(model, "PoolSolutions", 100)
+````
+
+````
+100
+````
+
+Here the value 100 is an "arbitrary but large enough" whole number
+for our particular model (and in general will depend on the application).
 
 We can then call `optimize!` and view the results.
 
@@ -346,10 +285,10 @@ solution_summary(model)
   Dual objective value : 0.0
 
 * Work counters
-  Solve time (sec)   : 0.32207
+  Solve time (sec)   : 0.25970
   Simplex iterations : 0
-  Barrier iterations : 47287
-  Node count         : 5677
+  Barrier iterations : 56476
+  Node count         : 7551
 
 ````
 
@@ -410,71 +349,131 @@ and we can print out all the feasible solutions with
 for i in 1:result_count(model)
     @assert has_values(model; result = i)
     println("Solution $(i): ")
-    println(TermSolutions[i])
+    for i in TermSolutions[i]; println(i) end
     print("\n")
 end
 ````
 
 ````
 Solution 1: 
-[5139, 1406, 3082, 9627]
+5139
+1406
+3082
+9627
 
 Solution 2: 
-[3217, 2945, 1406, 7568]
+5139
+1046
+3487
+9672
 
 Solution 3: 
-[5219, 2687, 1834, 9740]
+2148
+1967
+4635
+8750
 
 Solution 4: 
-[5219, 2384, 1867, 9470]
+3216
+2047
+1495
+6758
 
 Solution 5: 
-[1529, 5746, 2408, 9683]
+1237
+2968
+3645
+7850
 
 Solution 6: 
-[1529, 5837, 2340, 9706]
+5219
+2743
+1406
+9368
 
 Solution 7: 
-[2169, 1305, 6074, 9548]
+1529
+5746
+2408
+9683
 
 Solution 8: 
-[1259, 2430, 5387, 9076]
+5219
+2687
+1834
+9740
 
 Solution 9: 
-[2148, 1967, 4635, 8750]
+2318
+3790
+1956
+8064
 
 Solution 10: 
-[1237, 2968, 3645, 7850]
+1237
+2564
+3689
+7490
 
 Solution 11: 
-[1428, 4756, 2509, 8693]
+2317
+3564
+1608
+7489
 
 Solution 12: 
-[5139, 1046, 3487, 9672]
+1327
+3654
+2508
+7489
 
 Solution 13: 
-[1259, 2643, 5478, 9380]
+3217
+2945
+1406
+7568
 
 Solution 14: 
-[2317, 3564, 1608, 7489]
+5219
+2384
+1867
+9470
 
 Solution 15: 
-[1327, 3654, 2508, 7489]
+1529
+5837
+2340
+9706
 
 Solution 16: 
-[5219, 2743, 1406, 9368]
+1259
+2430
+5387
+9076
 
 Solution 17: 
-[2148, 1563, 4679, 8390]
+1428
+4756
+2509
+8693
 
 Solution 18: 
-[3216, 2047, 1495, 6758]
+1259
+2643
+5478
+9380
 
 Solution 19: 
-[1237, 2564, 3689, 7490]
+2148
+1563
+4679
+8390
 
 Solution 20: 
-[2318, 3790, 1956, 8064]
+2169
+1305
+6074
+9548
 
 
 ````
@@ -490,18 +489,34 @@ be used. Here we show how to use the low-level API functions in
 to achieve the same thing as above.
 
 ````julia
-using JuMP
+##%%
 import CPLEX
-
-model = direct_model(CPLEX.Optimizer())
+set_optimizer(model,CPLEX.Optimizer);
+optimize!(model)
+solution_summary(model)
 ````
 
 ````
-A JuMP Model
-Feasibility problem with:
-Variables: 0
-Model mode: DIRECT
-Solver name: CPLEX
+* Solver : CPLEX
+
+* Status
+  Termination status : OPTIMAL
+  Primal status      : FEASIBLE_POINT
+  Dual status        : NO_SOLUTION
+  Message from the solver:
+  "integer optimal solution"
+
+* Candidate solution
+  Objective value      : 0.0
+  Objective bound      : 0.0
+  Dual objective value : 0.0
+
+* Work counters
+  Solve time (sec)   : 0.03898
+  Simplex iterations : 0
+  Barrier iterations : 0
+  Node count         : 1244
+
 ````
 
 The settings here turn on the exhaustive search mode for finding multiple
@@ -513,33 +528,98 @@ set_optimizer_attribute(model, "CPX_PARAM_SOLNPOOLINTENSITY", 4)
 set_optimizer_attribute(model, "CPX_PARAM_POPULATELIM", 100)
 ````
 
+````
+100
+````
+
 The third sets a limit for the number of solutions found;
 again, the value 100 is an arbitrary but large enough whole number
 for our particular model.
 
-Now create all the model constraints as above, and optimize!
-
 We now access the MOI backend to interface directly with the CPLEX API.
 
 ````julia
-backend_model = backend(model)
-env = backend_model.env
-lp = backend_model.lp
-````
-
-````
-Ptr{Nothing} @0x00007fb6bae1bd50
+backend_model = model.moi_backend.optimizer.model;
+env = backend_model.env;
+lp = backend_model.lp;
 ````
 
 Multiple solutions are generated by CPLEX using the `populate` routine
 and added to the "solution pool":
 
 ````julia
-CPLEX.CPXpopulate(env, lp)
+CPLEX.CPXpopulate(env, lp);
 ````
 
 ````
-3003
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de
+CPXPARAM_MIP_Pool_Intensity                      4
+CPXPARAM_MIP_Limits_Populate                     100
+CPXPARAM_MIP_Pool_AbsGap                         0
+
+Populate: phase I 
+2 of 2 MIP starts provided solutions.
+MIP start 'm1' defined initial solution with objective 0.0000.
+Tried aggregator 2 times.
+MIP Presolve eliminated 4 rows and 0 columns.
+MIP Presolve modified 170 coefficients.
+Aggregator did 10 substitutions.
+Reduced MIP has 91 rows, 55 columns, and 280 nonzeros.
+Reduced MIP has 45 binaries, 10 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.24 ticks)
+Probing fixed 3 vars, tightened 4 bounds.
+Probing time = 0.00 sec. (0.08 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 3 rows and 3 columns.
+MIP Presolve modified 39 coefficients.
+Reduced MIP has 88 rows, 52 columns, and 268 nonzeros.
+Reduced MIP has 42 binaries, 10 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.11 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.00 sec. (0.52 ticks)
+Parallel b&c, 12 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.00 sec. (0.52 ticks)
+
+Populate: phase II 
+Probing time = 0.00 sec. (0.06 ticks)
+Clique table members: 2.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 12 threads.
+Root relaxation solution time = 0.00 sec. (0.17 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000        0.0000             0.00%
+      0     0        0.0000    19        0.0000        0.0000       43    0.00%
+      0     0        0.0000    19        0.0000       Cuts: 3       65    0.00%
+      0     0        0.0000    19        0.0000      Cuts: 18       83    0.00%
+      0     0        0.0000    19        0.0000       Cuts: 6       86    0.00%
+      0     0        0.0000    19        0.0000       Cuts: 3       92    0.00%
+      0     0        0.0000    19        0.0000   ZeroHalf: 3       96    0.00%
+      0     2        0.0000     7        0.0000        0.0000       96    0.00%
+Elapsed time = 0.01 sec. (4.36 ticks, tree = 0.02 MB, solutions = 2)
+
+Implied bound cuts applied:  77
+Mixed integer rounding cuts applied:  3
+Zero-half cuts applied:  3
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.01 sec. (3.81 ticks)
+Parallel b&c, 12 threads:
+  Real time             =    0.05 sec. (27.03 ticks)
+  Sync time (average)   =    0.02 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.06 sec. (30.84 ticks)
+
 ````
 
 The number of results should equal the above (i.e. 20):
@@ -549,7 +629,7 @@ N_results = CPLEX.CPXgetsolnpoolnumsolns(env, lp)
 ````
 
 ````
-0
+20
 ````
 
 We can obtain the actual values of the feasible solutions as follows:
@@ -571,39 +651,59 @@ Finally, if you have run with both CPLEX and Gurobi,
 we can check the same solutions were found:
 
 ````julia
-Set(values(TermSolutions2))
+@show sort(collect(values(TermSolutions2)))
 ````
 
 ````
-Set{Any}()
+20-element Vector{Any}:
+ [1237, 2564, 3689, 7490]
+ [1237, 2968, 3645, 7850]
+ [1259, 2430, 5387, 9076]
+ [1259, 2643, 5478, 9380]
+ [1327, 3654, 2508, 7489]
+ [1428, 4756, 2509, 8693]
+ [1529, 5746, 2408, 9683]
+ [1529, 5837, 2340, 9706]
+ [2148, 1563, 4679, 8390]
+ [2148, 1967, 4635, 8750]
+ [2169, 1305, 6074, 9548]
+ [2317, 3564, 1608, 7489]
+ [2318, 3790, 1956, 8064]
+ [3216, 2047, 1495, 6758]
+ [3217, 2945, 1406, 7568]
+ [5139, 1046, 3487, 9672]
+ [5139, 1406, 3082, 9627]
+ [5219, 2384, 1867, 9470]
+ [5219, 2687, 1834, 9740]
+ [5219, 2743, 1406, 9368]
 ````
 
 ````julia
-@show Set(values(TermSolutions))
+@show sort(collect(values(TermSolutions)))
 ````
 
 ````
-Set{Any} with 20 elements:
-  [1237, 2968, 3645, 7850]
-  [5219, 2743, 1406, 9368]
-  [2318, 3790, 1956, 8064]
-  [5219, 2384, 1867, 9470]
-  [2317, 3564, 1608, 7489]
-  [5139, 1046, 3487, 9672]
-  [2148, 1563, 4679, 8390]
-  [5139, 1406, 3082, 9627]
-  [3216, 2047, 1495, 6758]
-  [1237, 2564, 3689, 7490]
-  [1327, 3654, 2508, 7489]
-  [1259, 2430, 5387, 9076]
-  [1428, 4756, 2509, 8693]
-  [2148, 1967, 4635, 8750]
-  [5219, 2687, 1834, 9740]
-  [1259, 2643, 5478, 9380]
-  [1529, 5746, 2408, 9683]
-  [1529, 5837, 2340, 9706]
-  [2169, 1305, 6074, 9548]
-  [3217, 2945, 1406, 7568]
+20-element Vector{Any}:
+ [1237, 2564, 3689, 7490]
+ [1237, 2968, 3645, 7850]
+ [1259, 2430, 5387, 9076]
+ [1259, 2643, 5478, 9380]
+ [1327, 3654, 2508, 7489]
+ [1428, 4756, 2509, 8693]
+ [1529, 5746, 2408, 9683]
+ [1529, 5837, 2340, 9706]
+ [2148, 1563, 4679, 8390]
+ [2148, 1967, 4635, 8750]
+ [2169, 1305, 6074, 9548]
+ [2317, 3564, 1608, 7489]
+ [2318, 3790, 1956, 8064]
+ [3216, 2047, 1495, 6758]
+ [3217, 2945, 1406, 7568]
+ [5139, 1046, 3487, 9672]
+ [5139, 1406, 3082, 9627]
+ [5219, 2384, 1867, 9470]
+ [5219, 2687, 1834, 9740]
+ [5219, 2743, 1406, 9368]
 ````
 
 ---
