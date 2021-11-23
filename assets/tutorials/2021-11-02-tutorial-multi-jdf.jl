@@ -203,12 +203,32 @@ end
 
 a_feasible_solution = TermSolutions[1]
 
-# and we can print out all the feasible solutions with
+# and we can nicely print out all the feasible solutions with
+function print_solution(x::Int)
+    for i in (1000, 100, 10, 1)
+        y = div(x, i)
+        print(y, " ")
+        x -= i * y
+    end
+    println()
+    return
+end
+
+function print_solution(x::Vector)
+    print("  ")
+    print_solution(x[1])
+    print("  ")
+    print_solution(x[2])
+    print("+ ")
+    print_solution(x[3])
+    print("= ")
+    print_solution(x[4])
+end
 
 for i in 1:result_count(model)
     @assert has_values(model; result = i)
     println("Solution $(i): ")
-    for i in TermSolutions[i]; println(i) end
+    print_solution(TermSolutions[i])
     print("\n")
 end
 
@@ -242,7 +262,7 @@ set_optimizer_attribute(model, "CPX_PARAM_POPULATELIM", 100)
 
 # We now access the MOI backend to interface directly with the CPLEX API.
 
-backend_model = model.moi_backend.optimizer.model;
+backend_model = unsafe_backend(model);
 env = backend_model.env;
 lp = backend_model.lp;
 

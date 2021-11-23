@@ -285,7 +285,7 @@ solution_summary(model)
   Dual objective value : 0.0
 
 * Work counters
-  Solve time (sec)   : 0.25970
+  Solve time (sec)   : 0.24169
   Simplex iterations : 0
   Barrier iterations : 56476
   Node count         : 7551
@@ -343,137 +343,158 @@ a_feasible_solution = TermSolutions[1]
  9627
 ````
 
-and we can print out all the feasible solutions with
+and we can nicely print out all the feasible solutions with
 
 ````julia
+function print_solution(x::Int)
+    for i in (1000, 100, 10, 1)
+        y = div(x, i)
+        print(y, " ")
+        x -= i * y
+    end
+    println()
+    return
+end
+
+function print_solution(x::Vector)
+    print("  ")
+    print_solution(x[1])
+    print("  ")
+    print_solution(x[2])
+    print("+ ")
+    print_solution(x[3])
+    print("= ")
+    print_solution(x[4])
+end
+
 for i in 1:result_count(model)
     @assert has_values(model; result = i)
     println("Solution $(i): ")
-    for i in TermSolutions[i]; println(i) end
+    print_solution(TermSolutions[i])
     print("\n")
 end
 ````
 
 ````
 Solution 1: 
-5139
-1406
-3082
-9627
+  5 1 3 9 
+  1 4 0 6 
++ 3 0 8 2 
+= 9 6 2 7 
 
 Solution 2: 
-5139
-1046
-3487
-9672
+  5 1 3 9 
+  1 0 4 6 
++ 3 4 8 7 
+= 9 6 7 2 
 
 Solution 3: 
-2148
-1967
-4635
-8750
+  2 1 4 8 
+  1 9 6 7 
++ 4 6 3 5 
+= 8 7 5 0 
 
 Solution 4: 
-3216
-2047
-1495
-6758
+  3 2 1 6 
+  2 0 4 7 
++ 1 4 9 5 
+= 6 7 5 8 
 
 Solution 5: 
-1237
-2968
-3645
-7850
+  1 2 3 7 
+  2 9 6 8 
++ 3 6 4 5 
+= 7 8 5 0 
 
 Solution 6: 
-5219
-2743
-1406
-9368
+  5 2 1 9 
+  2 7 4 3 
++ 1 4 0 6 
+= 9 3 6 8 
 
 Solution 7: 
-1529
-5746
-2408
-9683
+  1 5 2 9 
+  5 7 4 6 
++ 2 4 0 8 
+= 9 6 8 3 
 
 Solution 8: 
-5219
-2687
-1834
-9740
+  5 2 1 9 
+  2 6 8 7 
++ 1 8 3 4 
+= 9 7 4 0 
 
 Solution 9: 
-2318
-3790
-1956
-8064
+  2 3 1 8 
+  3 7 9 0 
++ 1 9 5 6 
+= 8 0 6 4 
 
 Solution 10: 
-1237
-2564
-3689
-7490
+  1 2 3 7 
+  2 5 6 4 
++ 3 6 8 9 
+= 7 4 9 0 
 
 Solution 11: 
-2317
-3564
-1608
-7489
+  2 3 1 7 
+  3 5 6 4 
++ 1 6 0 8 
+= 7 4 8 9 
 
 Solution 12: 
-1327
-3654
-2508
-7489
+  1 3 2 7 
+  3 6 5 4 
++ 2 5 0 8 
+= 7 4 8 9 
 
 Solution 13: 
-3217
-2945
-1406
-7568
+  3 2 1 7 
+  2 9 4 5 
++ 1 4 0 6 
+= 7 5 6 8 
 
 Solution 14: 
-5219
-2384
-1867
-9470
+  5 2 1 9 
+  2 3 8 4 
++ 1 8 6 7 
+= 9 4 7 0 
 
 Solution 15: 
-1529
-5837
-2340
-9706
+  1 5 2 9 
+  5 8 3 7 
++ 2 3 4 0 
+= 9 7 0 6 
 
 Solution 16: 
-1259
-2430
-5387
-9076
+  1 2 5 9 
+  2 4 3 0 
++ 5 3 8 7 
+= 9 0 7 6 
 
 Solution 17: 
-1428
-4756
-2509
-8693
+  1 4 2 8 
+  4 7 5 6 
++ 2 5 0 9 
+= 8 6 9 3 
 
 Solution 18: 
-1259
-2643
-5478
-9380
+  1 2 5 9 
+  2 6 4 3 
++ 5 4 7 8 
+= 9 3 8 0 
 
 Solution 19: 
-2148
-1563
-4679
-8390
+  2 1 4 8 
+  1 5 6 3 
++ 4 6 7 9 
+= 8 3 9 0 
 
 Solution 20: 
-2169
-1305
-6074
-9548
+  2 1 6 9 
+  1 3 0 5 
++ 6 0 7 4 
+= 9 5 4 8 
 
 
 ````
@@ -512,7 +533,7 @@ solution_summary(model)
   Dual objective value : 0.0
 
 * Work counters
-  Solve time (sec)   : 0.03898
+  Solve time (sec)   : 0.03631
   Simplex iterations : 0
   Barrier iterations : 0
   Node count         : 1244
@@ -539,7 +560,7 @@ for our particular model.
 We now access the MOI backend to interface directly with the CPLEX API.
 
 ````julia
-backend_model = model.moi_backend.optimizer.model;
+backend_model = unsafe_backend(model);
 env = backend_model.env;
 lp = backend_model.lp;
 ````
@@ -552,6 +573,22 @@ CPLEX.CPXpopulate(env, lp);
 ````
 
 ````
+
+Implied bound cuts applied:  29
+Mixed integer rounding cuts applied:  4
+Zero-half cuts applied:  3
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =    0.02 sec. (6.34 ticks)
+Parallel b&c, 12 threads:
+  Real time             =    0.02 sec. (7.97 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.04 sec. (14.31 ticks)
+CPLEX Error  1217: No solution exists.
+CPLEX Error  1217: No solution exists.
 Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de
 CPXPARAM_MIP_Pool_Intensity                      4
 CPXPARAM_MIP_Limits_Populate                     100
@@ -605,20 +642,6 @@ Root relaxation solution time = 0.00 sec. (0.17 ticks)
       0     0        0.0000    19        0.0000   ZeroHalf: 3       96    0.00%
       0     2        0.0000     7        0.0000        0.0000       96    0.00%
 Elapsed time = 0.01 sec. (4.36 ticks, tree = 0.02 MB, solutions = 2)
-
-Implied bound cuts applied:  77
-Mixed integer rounding cuts applied:  3
-Zero-half cuts applied:  3
-Gomory fractional cuts applied:  2
-
-Root node processing (before b&c):
-  Real time             =    0.01 sec. (3.81 ticks)
-Parallel b&c, 12 threads:
-  Real time             =    0.05 sec. (27.03 ticks)
-  Sync time (average)   =    0.02 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.06 sec. (30.84 ticks)
 
 ````
 
