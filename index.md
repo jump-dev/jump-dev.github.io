@@ -35,6 +35,16 @@ the book,
 which covers a variety of topics on optimization, with an emphasis on solving
 practical problems using JuMP and Julia.
 
+## Get involved
+
+Here are some things you can do to become more involved in the JuMP community:
+
+ * Help answer questions on the [community forum](https://discourse.julialang.org/c/domain/opt/13)
+ * Read the [contributing guide](https://jump.dev/JuMP.jl/stable/developers/contributing/)
+ * Read about our [governance structure](/pages/governance)
+ * Join the [developer chatroom](https://gitter.im/JuliaOpt/jump-dev)
+ * Attend [upcoming events](/pages/calendar)
+
 ## See also
 
 The JuMP ecosystem includes [Convex.jl](https://github.com/jump-dev/Convex.jl),
