@@ -32,7 +32,7 @@ The grant has three key deliverables:
 
  * Improve ComplexOptInterface.jl from a proof-of-concept into a robust,
    production-ready library
- * Integrate ComplexOptInterface into MathOptInterface and document
+ * Integrate ComplexOptInterface into MathOptInterface, test and document
  * Integrate ComplexOptInterface into JuMP and document.
 
 Benoît will be working on a part-time basis over the coming year, and will
