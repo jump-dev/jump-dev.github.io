@@ -12,7 +12,7 @@ from [NumFOCUS](https://numfocus.org) to add complex number support to JuMP.
 
 Currently, JuMP and MathOptInterface are limited to formulating optimization
 problems with real-valued decision variables. However, complex numbers appear in
-a variety of industrial optimization problems. The most important of these is
+a variety of industrial optimization problems. One of the most important of these is
 the AC optimal power flow problem (AC-OPF), which is used world-wide to optimize
 the operations of electrical power grids. Currently, users in JuMP are forced to
 decompose their problem into the real and complex parts. This leads to a
