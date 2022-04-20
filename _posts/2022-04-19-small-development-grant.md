@@ -33,7 +33,7 @@ The grant has three key deliverables:
  * Improve ComplexOptInterface.jl from a proof-of-concept into a robust,
    production-ready library
  * Integrate ComplexOptInterface into MathOptInterface, test and document
- * Integrate ComplexOptInterface into JuMP and document.
+ * Integrate ComplexOptInterface into JuMP, test and document.
 
 Benoît will be working on a part-time basis over the coming year, and will
 present an update during [JuMP-dev 2022](/meetings/juliacon2022/).
