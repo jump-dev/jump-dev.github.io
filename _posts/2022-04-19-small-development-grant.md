@@ -17,12 +17,8 @@ the AC optimal power flow problem (AC-OPF), which is used world-wide to optimize
 the operations of electrical power grids. Currently, users in JuMP are forced to
 decompose their problem into the real and complex parts. This leads to a
 duplication in which twice as many variables are needed, reducing readability
-and increasing the likelihood of bugs.
-
-Complex number support has been a common feature request for users of JuMP, and
-many users leave JuMP for alternative tools which have complex-number support. In
-addition, this has prevented users moving to JuMP from proprietary solutions such
-as MATLAB.
+and increasing the likelihood of bugs. As a result, complex number support has
+been a common feature request for users of JuMP.
 
 The person being funded is [Dr. Benoît Legat](https://github.com/blegat), a core
 contributor to JuMP, and the project builds upon his work developing
