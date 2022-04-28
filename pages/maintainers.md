@@ -4,7 +4,7 @@ title:  "Repository Maintainers"
 
 This document lists community members who are [repository maintainers](/pages/governance/#repository-maintainers).
 
-* Akshay Sharma (@be-apt)
+* Akshay Sharma (@akshay326)
   - [DiffOpt.jl](https://github.com/jump-dev/DiffOpt.jl)
 * Carlo Baldassi (@carlobaldassi)
   - [GLPK.jl](https://github.com/jump-dev/GLPK.jl)
