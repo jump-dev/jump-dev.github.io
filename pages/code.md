@@ -36,7 +36,7 @@ Examples of JuMP extensions include:
    to support bi-level programs.
  * [Coluna.jl](https://github.com/atoptima/Coluna.jl), which extends JuMP to 
    support a branch-and-cut-and-price solution framework.
- * [InfiniteOpt](https://github.com/pulsipher/InfiniteOpt.jl), which extends 
+ * [InfiniteOpt](https://github.com/infiniteopt/InfiniteOpt.jl), which extends 
    JuMP to support infinite-dimensional optimization problems.
  * [Plasmo.jl](https://github.com/zavalab/Plasmo.jl), which extends JuMP to
    support a graph-based algebraic modeling framework.
