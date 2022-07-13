@@ -44,9 +44,9 @@ formulations.
 
 ### Example
 
-This work was released in MathOptInterface v1.6.0, so they're ready to use now
-in JuMP and MathOptInterface. Here's an example using the `AllDifferent` set to
-solve a Sudoku puzzle with HiGHS:
+This work was released in MathOptInterface v1.6.0, so these sets are ready to use
+now in JuMP and MathOptInterface. Here's an example using the `AllDifferent` set
+to solve a Sudoku puzzle with HiGHS:
 
 ```julia
 using JuMP, HiGHS
@@ -121,11 +121,12 @@ julia> solve_sudoku(grid, () -> MiniZinc.Optimizer{Float64}(MiniZinc.Chuffed()))
  3  4  5  2  8  6  1  7  9
 ```
 
-### Next-steps
+### Next steps
 
-We still have a bit more work to go. We want to add support for reified
-constraints, improve the tutorials and documentation, and investigate ways that
-we can connect JuMP and MathOptInterface to boolean satisfiability solvers.
+In addition to the work already completed, the work sponsored by RelationalAI
+will allow us to add support for reified constraints, improve the tutorials
+and documentation, and investigate ways that we can connect JuMP and MathOptInterface
+to boolean satisfiability solvers.
 
 _Miles Lubin, Juan Pablo Vielma, Carleton Coffrin and Changhyun Kwon._
 
