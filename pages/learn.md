@@ -10,7 +10,15 @@ website. If you know of other materials for learning JuMP, please consider
 ## Tutorials
 
  * The [JuMP documentation](https://jump.dev/JuMP.jl/stable/tutorials/getting_started/introduction/)
-   contains a number of introductory "Getting started" tutorials.
+   contains a number of introductory "Getting started" tutorials. Start here if
+   you haven't used JuMP before.
+ * Joshua Pulsipher has a [short course on using InfiniteOpt.jl](https://github.com/infiniteopt/InfiniteOptTutorials/tree/main/short_course)
+   that includes introductions to JuMP and Julia.
+ * Xavier Gandibleux has [introductory materials on JuMP and Julia](https://julialang.univ-nantes.fr/julianantes/documents/),
+   some parts of which are in French.
+ * Abel Siqueira has a series of [YouTube tutorials in Portuguese](https://www.youtube.com/watch?v=v1hJsmMqpvw&list=PLOOY0eChA1uyjKRQDeR4-LfsObNqslIUh&index=8).
+   The tutorials cover JuMP, as well as a range of other Julia packages and
+   topics related to mathematical optimization.
 
 ## Books
 
