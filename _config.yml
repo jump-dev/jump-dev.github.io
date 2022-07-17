@@ -113,6 +113,8 @@ navigation_header:
   url: /
 - title: Documentation
   url: https://jump.dev/JuMP.jl/stable/
+- title: Learn
+  url: /pages/learn/
 - title: Community
   items:
   - title: Calendar
