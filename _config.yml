@@ -162,5 +162,5 @@ sharing_links: # Appear at the bottom of single blog posts, add as desired. The 
   Email: true
 
 # Site header notification content
-notification: |
-  [JuMP-dev 2022](/meetings/juliacon2022/) will be co-located with JuliaCon, July 27-29 2022.
+# notification: |
+#  [JuMP-dev 2022](/meetings/juliacon2022/) will be co-located with JuliaCon, July 27-29 2022.
