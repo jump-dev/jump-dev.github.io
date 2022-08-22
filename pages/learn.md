@@ -24,3 +24,5 @@ website. If you know of other materials for learning JuMP, please consider
 
  * [Julia Programming for Operations Research, 2nd Edition](https://www.chkwon.net/julia/)
    by Changhyun Kwon
+ * [Mathematical Programming with Julia](https://www.man.dtu.dk/mathprogrammingwithjulia),
+   by Richard Lusby and Thomas Stidsen
