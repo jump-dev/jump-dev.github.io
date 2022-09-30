@@ -40,6 +40,7 @@ practical problems using JuMP and Julia.
 Here are some things you can do to become more involved in the JuMP community:
 
  * Help answer questions on the [community forum](https://discourse.julialang.org/c/domain/opt/13)
+ * Star and watch the [repository](https://github.com/jump-dev/JuMP.jl)
  * Read the [contributing guide](https://jump.dev/JuMP.jl/stable/developers/contributing/)
  * Read about our [governance structure](/pages/governance)
  * Join the [developer chatroom](https://gitter.im/JuliaOpt/jump-dev)
