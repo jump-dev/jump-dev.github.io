@@ -1,6 +1,13 @@
 ---
 ---
 
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Place this tag where you want the button to render. -->
+<div style="float:right;">
+    <a class="github-button" href="https://github.com/jump-dev/JuMP.jl" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star jump-dev/JuMP.jl on GitHub">Star</a>
+</div>
+
 <div class="home-page-logo">
     <img width="100%" src="/assets/jump-logo-with-text.svg">
 </div>
