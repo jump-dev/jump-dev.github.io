@@ -108,7 +108,7 @@ Steering Committee:
 
 The current members of the Steering Committee are:
 
-* Miles Lubin, _Google_ (@mlubin)
+* Miles Lubin, _Hudson River Trading_ (@mlubin)
 * Juan Pablo Vielma, _Google_ (@juan-pablo-vielma)
 * Carleton Coffrin, _Los Alamos National Laboratory_ (@ccoffrin)
 * Oscar Dowson (@odow)
