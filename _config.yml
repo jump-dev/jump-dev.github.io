@@ -127,6 +127,8 @@ navigation_header:
     url: /pages/code/
 - title: Workshops
   items:
+   - title: 2023
+     url: /meetings/jumpdev2023
    - title: 2022
      url: /meetings/juliacon2022
    - title: 2021
@@ -162,5 +164,5 @@ sharing_links: # Appear at the bottom of single blog posts, add as desired. The 
   Email: true
 
 # Site header notification content
-# notification: |
-#  [JuMP-dev 2022](/meetings/juliacon2022/) will be co-located with JuliaCon, July 27-29 2022.
+notification: |
+ Submit talks for [JuMP-dev 2023](/meetings/jump-dev-2023/)
