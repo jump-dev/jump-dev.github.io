@@ -26,7 +26,7 @@ even [optimize milk output](https://juliacomputing.com/case-studies/moo/).
  * Install JuMP and Julia by reading the [Installation Guide](https://jump.dev/JuMP.jl/stable/installation/)
  * Learn Julia by reading [Getting started with Julia](https://jump.dev/JuMP.jl/stable/tutorials/getting_started/getting_started_with_julia/)
  * Solve your first JuMP model by reading [Getting started with JuMP](https://jump.dev/JuMP.jl/stable/tutorials/getting_started/getting_started_with_JuMP/)
- * Get help by joining the [community forum](https://discourse.julialang.org/c/domain/opt/13)
+ * Get help by joining the [community forum](/forum)
   to search for answers to commonly asked questions.
 
 There is a growing collection of third-party materials about JuMP. This includes
@@ -39,11 +39,11 @@ practical problems using JuMP and Julia.
 
 Here are some things you can do to become more involved in the JuMP community:
 
- * Help answer questions on the [community forum](https://discourse.julialang.org/c/domain/opt/13)
+ * Help answer questions on the [community forum](/forum)
  * Star and watch the [repository](https://github.com/jump-dev/JuMP.jl)
  * Read the [contributing guide](https://jump.dev/JuMP.jl/stable/developers/contributing/)
  * Read about our [governance structure](/pages/governance)
- * Join the [developer chatroom](https://gitter.im/JuliaOpt/jump-dev)
+ * Join the [developer chatroom](/chatroom)
  * Attend [upcoming events](/pages/calendar)
 
 ## See also
