@@ -221,14 +221,14 @@ The community forum is a place for community members to post questions and
 receive help.
 
 The current forum is the ["Optimization (Mathematical)" section of the
-Julia Discourse Forum](https://discourse.julialang.org/c/domain/opt/13).
+Julia Discourse Forum](/forum).
 
 ### Developer Chatroom
 
 The developer chatroom is a chatroom for developer-focused discussions about
 JuMP.
 
-The current chatroom is the [JuMP-dev Gitter channel](https://gitter.im/JuliaOpt/JuMP-dev).
+The current chatroom is the [`#jump-dev` channel of the Julia slack](/chatroom).
 
 ### Monthly Developer Call
 
