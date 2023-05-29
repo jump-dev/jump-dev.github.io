@@ -36,6 +36,8 @@ This document lists community members who are [repository maintainers](/pages/go
   - [Dualization.jl](https://github.com/jump-dev/Dualization.jl)
 * Jack Dunn (@JackDunnNZ)
   - [AmplNLWriter.jl](https://github.com/jump-dev/AmplNLWriter.jl)
+* James Foster (@jd-foster)
+  - [JuMP.jl](https://github.com/jump-dev/JuMP.jl)
 * Jose Daniel Lara (@jd-lara)
   - [Xpress.jl](https://github.com/jump-dev/Xpress.jl)
 * Juan Pablo Vielma (@juan-pablo-vielma)
