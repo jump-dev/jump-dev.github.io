@@ -1,27 +1,26 @@
 # A [recent blog post](https://www.gams.com/blog/2023/07/performance-in-optimization-models-a-comparative-analysis-of-gams-pyomo-gurobipy-and-jump)
 # by GAMS demonstrated a significant performance difference between JuMP and
 # GAMS on a model they call IJKLM. The purpose of this blog post is to explain
-# the difference and present a different formulation with much better
-# performance.
+# the difference and to present an alternative JuMP implementation that is
+# compact and readable with much better performance. In addition, we identify a
+# discrepancy that calls into question the quantitative conclusion of the blog
+# post.
+
+# ## The model and input data
 
 # Read the GAMS post for background on the model, as well as its mathematical
 # formulation.
-
-# ## The input data
 
 # Input data for the model is provided in three JSON files, labeled IJK, JKL,
 # and KLM.
 
 import JSON
-
 const DATA_DIR = joinpath(@__DIR__, "gams");
-
 struct OriginalData
     I::Vector{String}
     IJK::Vector{Vector{Any}}
     JKL::Vector{Vector{Any}}
     KLM::Vector{Vector{Any}}
-
     function OriginalData(n::Int)
         return new(
             ["i$i" for i in 1:n],
@@ -33,8 +32,8 @@ struct OriginalData
 end
 
 # The GAMS blog post generated a range of different sizes, but we'll just use
-# the `n = 2200` case for now. You can use the code in GAMS's
-# [GitHub repository](https://github.com/justine18/performance_experiment)
+# the `n = 2200` case for now, and we'll test more sizes below. You can use the
+# code in GAMS's [GitHub repository](https://github.com/justine18/performance_experiment)
 # to generate other sizes.
 
 original_data = OriginalData(2_200);
@@ -44,13 +43,12 @@ original_data = OriginalData(2_200);
 
 original_data.IJK[1]
 
-# ## The _intuitive_ formulation
+# ## The "intuitive" formulation
 
-# The _intuitive_ formulation used by GAMS in their blog post is:
+# The "intuitive" formulation used by GAMS in their blog post is:
 
 using JuMP
 import Gurobi
-
 function intuitive_formulation(data)
     x_list = [
         (i, j, k, l, m)
@@ -96,13 +94,11 @@ end
 function parsefile_tuple(filename::String)
     return [tuple(x...) for x in JSON.parsefile(filename)]
 end
-
 struct TupleData
     I::Vector{String}
     IJK::Vector{NTuple{3,String}}
     JKL::Vector{NTuple{3,String}}
     KLM::Vector{NTuple{3,String}}
-
     function TupleData(n::Int)
         return new(
             ["i$i" for i in 1:n],
@@ -112,7 +108,6 @@ struct TupleData
         )
     end
 end
-
 tuple_data = TupleData(2_200);
 
 # Now if we run the intuitive formulation, it takes around 2 seconds:
@@ -120,7 +115,7 @@ tuple_data = TupleData(2_200);
 @time intuitive_formulation(tuple_data);
 @time intuitive_formulation(tuple_data);
 
-# ## The _fast_ formulation
+# ## The "fast" formulation
 
 # Next, GAMS looked at ways to improve the JuMP code using feedback from
 # [our community forum](https://discourse.julialang.org/t/performance-julia-jump-vs-python-pyomo/92044).
@@ -163,7 +158,8 @@ end
 
 # Why, then, is GAMS so much faster in their benchmark?
 
-# The answer is the nested for-loop used to create the list of indices:
+# The answer is the nested for-loop used to create the list of indices takes
+# nearly all the total time:
 
 function x_list_only(data)
     return [
@@ -173,14 +169,12 @@ function x_list_only(data)
         for (kkk, ll, m) in data.KLM if kkk == k && ll == l
     ]
 end
-
 @time x_list_only(tuple_data);
 @time x_list_only(tuple_data);
 
-# This takes nearly all the total time. With a little effort, we can realize
-# that the for loops are equivalent to treating each of the `IJK`, `JKL`, and
-# `KLM` lists as a table in a database, and then performing an inner join
-# across the similar indices.
+# With a little effort, we can realize that the for loops are equivalent to
+# treating each of the `IJK`, `JKL`, and `KLM` lists as a table in a database
+# and performing an inner join across the similar indices.
 
 # The blog post hints at this, saying "The reason for GAMS superior performance
 # in this example is the use of relational algebra." But relational algebra,
@@ -192,20 +186,17 @@ end
 # The first step is to load the data as a dataframe instead of a list of tuples:
 
 import DataFrames
-
 function parsefile_dataframe(filename::String, indices)
     list = parsefile_tuple(filename)
     return DataFrames.DataFrame(
         [index => getindex.(list, i) for (i, index) in enumerate(indices)]...
     )
 end
-
 struct DataFrameData
     I::Vector{String}
     IJK::DataFrames.DataFrame
     JKL::DataFrames.DataFrame
     KLM::DataFrames.DataFrame
-
     function DataFrameData(n::Int)
         return new(
             ["i$i" for i in 1:n],
@@ -215,10 +206,9 @@ struct DataFrameData
         )
     end
 end
-
 dataframe_data = DataFrameData(2_200);
 
-# Using the dataframe datastructure, we can compactly write an equivalent JuMP
+# Using the dataframe data structure, we can compactly write an equivalent JuMP
 # formulation:
 
 function dataframe_formulation(data::DataFrameData)
@@ -247,99 +237,83 @@ end
 @time dataframe_formulation(dataframe_data);
 @time dataframe_formulation(dataframe_data);
 
-# And we can make it slightly faster again (using much less memory) using the
-# same tricks as before:
-
-function fast_dataframe_formulation(data::DataFrameData)
-    ijklm = DataFrames.innerjoin(
-        DataFrames.innerjoin(data.IJK, data.JKL; on = [:j, :k]),
-        data.KLM;
-        on = [:k, :l],
-    )
-    model = direct_model(Gurobi.Optimizer())
-    set_silent(model)
-    set_string_names_on_creation(model, false)
-    ijklm[!, :x] = @variable(model, x[1:size(ijklm, 1)] >= 0)
-    for df in DataFrames.groupby(ijklm, :i)
-        @constraint(model, sum(df.x) >= 0)
-    end
-    optimize!(model)
-    return model
-end
-
-@time fast_dataframe_formulation(dataframe_data);
-@time fast_dataframe_formulation(dataframe_data);
-
 # ## Scaling
 
-# Let's now compare the five different formulations over a range of `n` values:
+# Let's now compare the four different formulations over a range of `n` values:
+
+import Plots
+function timings()
+    N = [100, 200, 400, 700, 1_100, 1_600, 2_200, 2_900]
+    time_original = Float64[]
+    time_intuitive = Float64[]
+    time_fast = Float64[]
+    time_dataframe = Float64[]
+    for n in N
+        ## Original model
+        original_data = OriginalData(n)
+        start = time()
+        intuitive_formulation(original_data)
+        push!(time_original, time() - start)
+        ## Tuple models
+        tuple_data = TupleData(n)
+        start = time()
+        intuitive_formulation(tuple_data)
+        push!(time_intuitive, time() - start)
+        start = time()
+        fast_formulation(tuple_data)
+        push!(time_fast, time() - start)
+        ## DataFrame model
+        dataframe_data = DataFrameData(n)
+        start = time()
+        dataframe_formulation(dataframe_data)
+        push!(time_dataframe, time() - start)
+    end
+    return Plots.plot(
+        N,
+        [time_original time_intuitive time_fast time_dataframe];
+        labels = hcat(
+            "Intuitive (not type stable)",
+            "Intuitive (type stable)",
+            "Fast",
+            "DataFrame",
+        ),
+        xlabel = "N",
+        ylabel = "Solution time (s)",
+    )
+end
 
 # ```julia
-# import Plots
-#
-# function timings()
-#     N = [100, 200, 400, 700, 1_100, 1_600, 2_200, 2_900]
-#     time_original = Float64[]
-#     time_intuitive = Float64[]
-#     time_fast = Float64[]
-#     time_dataframe = Float64[]
-#     time_fast_dataframe = Float64[]
-#     for n in N
-#         ## Original model
-#         original_data = OriginalData(n)
-#         start = time()
-#         intuitive_formulation(original_data)
-#         push!(time_original, time() - start)
-#         ## Tuple models
-#         tuple_data = TupleData(n)
-#         start = time()
-#         intuitive_formulation(tuple_data)
-#         push!(time_intuitive, time() - start)
-#         start = time()
-#         fast_formulation(tuple_data)
-#         push!(time_fast, time() - start)
-#         ## DataFrame models
-#         dataframe_data = DataFrameData(n)
-#         start = time()
-#         dataframe_formulation(dataframe_data)
-#         push!(time_dataframe, time() - start)
-#         start = time()
-#         fast_dataframe_formulation(dataframe_data)
-#         push!(time_fast_dataframe, time() - start)
-#     end
-#     Plots.plot(
-#         N,
-#         [time_original time_intuitive time_fast time_dataframe time_fast_dataframe];
-#         labels = ["Original" "Intuitive" "Fast" "DataFrame" "Fast DataFrame"],
-#         xlabel = "N",
-#         ylabel = "Solution time (s)",
-#     )
-#     return
-# end
-#
 # timings()
 # ```
-
 # <img src="/assets/tutorials/gams/scaling.svg">
 
-# The dataframe formulations are significantly better. These results demonstrate
+# The dataframe formulation is asymptotically better. These results demonstrate
 # how benchmarking different modeling systems is difficult, and choosing an
-# appropriate datastructure for a model is too. It's likely that Pyomo and
+# appropriate data structure for a model is too. It's likely that Pyomo and
 # Gurobipy would similarly benefit from using `pandas` to perform the inner join
 # instead of using nested for-loop approach.
 
 # ## Other comments
 
-# There are a few lines in the blog post that deserve some rebuttal.
+# There are a few points in the blog post that deserve some rebuttal.
+
+# First, the quantitative results in Figure 4 are misleading because they are not
+# timing equivalent implementations in each of the modeling systems. For example,
+# as outlined above, the "Fast JuMP" implementation receives a vector of tuples
+# as input for JKL and KLM, but Pyomo and GurobiPy receive a dictionary
+# mapping the first two indices to a vector of the third index. Since the join
+# is the bottleneck, this difference has a material impact on the total solve
+# time.
 
 # > One of the key differences between GAMS and the other modeling frameworks
 # > we’ve mentioned is that GAMS is a domain-specific language
 
-# In our opinion, JuMP is a [domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language)
-# embedded in a programming language. Indeed, a key feature of JuMP is that the
-# code users write inside the modeling macros (the identifiers beginninng with
-# `@` ) is not what gets executed. Instead, JuMP parses the syntax that that the
-# user writes, and compiles it into a different form that is more efficient.
+# JuMP is, in fact, a [domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language),
+# one that is embedded in a programming language. Indeed, a key feature of JuMP
+# is that the code users write inside the modeling macros (the identifiers
+# beginning with `@`) is not what gets executed. Instead, JuMP parses the syntax
+# that that the user writes and compiles it into a different form that is more
+# efficient.
 
 # > While it’s true that general-purpose programming languages offer more
 # > flexibility and control, it’s important to consider the trade-offs. With
@@ -369,11 +343,24 @@ end
 # > alternative implementations that outperform the intuitive approach, as
 # > Figure 2 presents for JuMP.
 
-# This is a fair point. It's obviously true that the added flexibility of Julia
-# increases the risk of implementing a solution that is not efficient. But this
-# is true of any computational problem. Indeed, the bottleneck in this example
-# relates to an inner join on two tables, which would also arise if the user was
-# exploring summary statistics.
+# This is a fair point. It's obviously true that the added flexibility of a full
+# programming language increases the risk of implementing a solution that is not
+# efficient. But this is true of any computational problem. Indeed, the
+# bottleneck in this example relates to an inner join on two tables, which would
+# also arise if the user was exploring summary statistics or implementing a
+# heuristic to solve this problem.
 #
 # A feature of Julia is that you can smoothly transition from the unoptimized
 # code to the much more efficient code while staying in the same language.
+
+# ## Conclusion
+
+# Comparing the trade-offs of different modeling systems is a useful endeavor.
+# We (the JuMP developers) learnt a lot by investigating the IJKLM model, but
+# our biggest lesson is that such comparisons are difficult to engineer in a
+# fair way without open review and feedback from all sides prior to publication.
+# If anyone reading this is working on similar comparisons, the best place to
+# reach out is by starting a thread on our [community forum](https://discourse.julialang.org/c/domain/opt/13).
+
+# _The JuMP developers, Miles Lubin, Oscar Dowson, Joaquim Dias Garcia, Joey
+# Huchette, Benoît Legat_
