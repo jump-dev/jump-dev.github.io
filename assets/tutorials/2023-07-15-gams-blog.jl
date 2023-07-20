@@ -80,10 +80,10 @@ end
 
 # ## Tweaking the input data
 
-# A typical reason for poor performance in a Julia code is type instability,
+# A typical reason for poor performance in Julia code is type instability,
 # that is, code in which the Julia compiler cannot prove the type of a variable.
 #
-# You can check a fuction for type stability using
+# You can check a function for type stability using
 # `@code_warntype intuitive_formulation(original_data)` and looking for red
 # inference failures. In our example, there are a lot of issues, all stemming
 # from the use of `Vector{Any}` in our data structure.
@@ -272,9 +272,9 @@ function timings()
         N,
         [time_original time_intuitive time_fast time_dataframe];
         labels = hcat(
-            "Intuitive (not type stable)",
-            "Intuitive (type stable)",
-            "Fast",
+            "\"Intuitive\" (not type stable)",
+            "\"Intuitive\" (type stable)",
+            "\"Fast\"",
             "DataFrame",
         ),
         xlabel = "N",
@@ -287,11 +287,11 @@ end
 # ```
 # <img src="/assets/tutorials/gams/scaling.svg">
 
-# The dataframe formulation is asymptotically better. These results demonstrate
-# how benchmarking different modeling systems is difficult, and choosing an
-# appropriate data structure for a model is too. It's likely that Pyomo and
-# Gurobipy would similarly benefit from using `pandas` to perform the inner join
-# instead of using nested for-loop approach.
+# The dataframe formulation is asymptotically faster. Once one understands that
+# the bottleneck in this benchmark is equivalent to an inner join, it is not
+# difficult to address it, given that general-purpose languages like Julia and
+# Python have libraries specialized for this task. Pyomo and gurobipy would
+# likely benefit from a similar optimization.
 
 # ## Other comments
 
@@ -299,11 +299,11 @@ end
 
 # First, the quantitative results in Figure 4 are misleading because they are not
 # timing equivalent implementations in each of the modeling systems. For example,
-# as outlined above, the "Fast JuMP" implementation receives a vector of tuples
-# as input for JKL and KLM, but Pyomo and GurobiPy receive a dictionary
-# mapping the first two indices to a vector of the third index. Since the join
-# is the bottleneck, this difference has a material impact on the total solve
-# time.
+# as outlined above, the ["Fast JuMP" implementation](https://github.com/justine18/performance_experiment/blob/0aa5512e34c9041d719fa8c0763fdc892e021415/IJKLM/IJKLM.jl)
+# receives a vector of tuples as input for JKL and KLM, but the [Pyomo implementation](https://github.com/justine18/performance_experiment/blob/0aa5512e34c9041d719fa8c0763fdc892e021415/IJKLM/run_pyomo.py)
+# receives a dictionary mapping the first two indices to a vector of the third
+# index. Since the join is the bottleneck, this difference has a material impact
+# on the total solve time.
 
 # > One of the key differences between GAMS and the other modeling frameworks
 # > we’ve mentioned is that GAMS is a domain-specific language
