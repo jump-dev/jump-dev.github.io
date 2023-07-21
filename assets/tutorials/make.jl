@@ -4,7 +4,7 @@ using Literate
 
 files = Dict(
     # "2021-11-02-tutorial-multi-jdf.jl" => "Finding multiple feasible solutions",
-    "2023-07-15-gams-blog.jl" => "JuMP, GAMS, and the IJKLM model",
+    "2023-07-20-gams-blog.jl" => "JuMP, GAMS, and the IJKLM model",
 )
 
 output_dir = joinpath(@__DIR__, "..", "..", "_posts")

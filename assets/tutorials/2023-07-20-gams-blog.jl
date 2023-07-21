@@ -1,10 +1,13 @@
 # A [recent blog post](https://www.gams.com/blog/2023/07/performance-in-optimization-models-a-comparative-analysis-of-gams-pyomo-gurobipy-and-jump)
 # by GAMS demonstrated a significant performance difference between JuMP and
-# GAMS on a model they call IJKLM. The purpose of this blog post is to explain
-# the difference and to present an alternative JuMP implementation that is
-# compact and readable with much better performance. In addition, we identify a
-# discrepancy that calls into question the quantitative conclusion of the blog
-# post.
+# GAMS on a model they call IJKLM. We respond to this blog post by explaining
+# the difference in performance and presenting an alternative JuMP
+# implementation with asymptotically better performance. We also identify that
+# differences in the input data format—not anything intrinsic to the
+# respective libraries—explain the performance difference between the Pyomo
+# model and the JuMP model. Finally, we respond to general claims about domain
+# specific languages and the trade-offs of developing optimization models within
+# a fully-featured programming language like Julia or Python.
 
 # ## The model and input data
 
@@ -228,7 +231,7 @@ function dataframe_formulation(data::DataFrameData)
 end
 
 # This formulation doesn't look like the nested summation mathematics that GAMS
-# originally formulated their model as, but it arguably just as readable,
+# originally formulated their model as, but it is arguably just as readable,
 # particularly if the `IJKLM` columns were meaningfully related to the business
 # logic.
 
