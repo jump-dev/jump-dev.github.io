@@ -113,7 +113,8 @@ struct TupleData
 end
 tuple_data = TupleData(2_200);
 
-# Now if we run the intuitive formulation, it takes around 2 seconds:
+# Now if we run the “intuitive” formulation with these performance modifications,
+# it takes around 2 seconds:
 
 @time intuitive_formulation(tuple_data);
 @time intuitive_formulation(tuple_data);
