@@ -112,7 +112,7 @@ The current members of the Steering Committee are:
 * Juan Pablo Vielma, _Google_ (@juan-pablo-vielma)
 * Carleton Coffrin, _Los Alamos National Laboratory_ (@ccoffrin)
 * Oscar Dowson (@odow)
-* Changhyun Kwon, _U. South Florida_ (@chkwon)
+* Changhyun Kwon, _KAIST_ (@chkwon)
 
 A member of the Steering Committee may leave the committee by notifying the
 Steering Committee and [core contributors]. The remaining Steering Committee
