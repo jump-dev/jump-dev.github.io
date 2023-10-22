@@ -5,6 +5,10 @@ styles: true
 
 @import "alembic";
 
+.typeset pre {
+  line-height: 1rem;
+}
+
 $colour-notification-banner: #ffc107;
 
 // Notification bar
