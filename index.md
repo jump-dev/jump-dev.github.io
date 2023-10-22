@@ -12,13 +12,54 @@ mathematical optimization in [Julia](https://julialang.org).
 
 JuMP makes it easy to formulate and solve a range of problem classes, including
 linear programs, integer programs, conic programs, semidefinite programs, and
-constrained nonlinear programs.
+constrained nonlinear programs. Here's an example:
 
-You can use it to
-[route school buses](https://www.the74million.org/article/building-a-smarter-and-cheaper-school-bus-system-how-a-boston-mit-partnership-led-to-new-routes-that-are-20-more-efficient-use-400-fewer-buses-save-5-million/),
-[schedule trains](https://www.sciencedirect.com/science/article/pii/S0191261516304830),
-[plan power grid expansion](https://juliacomputing.com/case-studies/psr/), or
-even [optimize milk output](https://juliacomputing.com/case-studies/moo/).
+```julia
+julia> using JuMP, Ipopt
+
+julia> function solve_constrained_least_squares_regression(A::Matrix, b::Vector)
+           m, n = size(A)
+           model = Model(Ipopt.Optimizer)
+           set_silent(model)
+           @variable(model, x[1:n])
+           @variable(model, residuals[1:m])
+           @constraint(model, residuals == A * x - b)
+           @constraint(model, sum(x) == 1)
+           @objective(model, Min, sum(residuals.^2))
+           optimize!(model)
+           return value.(x)
+       end
+solve_constrained_least_squares_regression (generic function with 1 method)
+
+julia> A, b = rand(10, 3), rand(10);
+
+julia> x = solve_constrained_least_squares_regression(A, b)
+3-element Vector{Float64}:
+ 0.4137624719002825
+ 0.09707679853084578
+ 0.48916072956887174
+```
+
+## JuMP is used...
+
+ * to solve large-scale [inventory routing problems at Renault](https://arxiv.org/abs/2209.00412),
+   [schedule trains at Thales Inc.](https://www.sciencedirect.com/science/article/pii/S0191261516304830),
+   [plan power grid expansion at PSR](https://juliacomputing.com/case-studies/psr/),
+   and
+   [route school buses](https://www.the74million.org/article/building-a-smarter-and-cheaper-school-bus-system-how-a-boston-mit-partnership-led-to-new-routes-that-are-20-more-efficient-use-400-fewer-buses-save-5-million/)
+ * to teach optimization at universities around the world, including
+    [MIT](https://orc.mit.edu),
+    [DTU](https://www.man.dtu.dk/mathprogrammingwithjulia),
+    [U. Wisconsin-Madison](https://engineering.wisc.edu/departments/industrial-systems-engineering/),
+     and
+    [Université de Nantes](https://www.univ-nantes.fr)
+ * to build continental-scale energy system models, including
+     MIT's [GenX](https://github.com/GenXProject/GenX),
+     the National Renewable Energy Laboratory's [Sienna](https://www.nrel.gov/analysis/sienna.html),
+     and
+     Spine's [SpineOpt](https://www.tools-for-energy-system-modelling.org)
+ * to write hundreds of research papers each year, on topics such as
+   <img src="/assets/jump-word-cloud.png">
 
 ## Resources for getting started
 
