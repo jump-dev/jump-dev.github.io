@@ -1,9 +1,7 @@
 ---
 ---
 
-<div class="home-page-logo">
-    <img width="100%" src="/assets/jump-logo-with-text.svg">
-</div>
+{% include figure.html image="/assets/jump-logo-with-text.svg" %}
 
 ## What is JuMP?
 
@@ -42,6 +40,7 @@ julia> x = solve_constrained_least_squares_regression(A, b)
 
 ## JuMP is used...
 
+ * to power exa-scale research into personalized medicine as part of [PerMedCoE](https://permedcoe.eu/core-applications/)
  * to solve large-scale [inventory routing problems at Renault](https://arxiv.org/abs/2209.00412),
    [schedule trains at Thales Inc.](https://www.sciencedirect.com/science/article/pii/S0191261516304830),
    [plan power grid expansion at PSR](https://juliacomputing.com/case-studies/psr/),
@@ -56,10 +55,11 @@ julia> x = solve_constrained_least_squares_regression(A, b)
  * to build continental-scale energy system models, including
      MIT's [GenX](https://github.com/GenXProject/GenX),
      the National Renewable Energy Laboratory's [Sienna](https://www.nrel.gov/analysis/sienna.html),
-     and
-     Spine's [SpineOpt](https://www.tools-for-energy-system-modelling.org)
+     Spine's [SpineOpt](https://www.tools-for-energy-system-modelling.org),
+     and TNO's [Tulipa](https://github.com/TulipaEnergy/TulipaEnergyModel.jl)
  * to write hundreds of research papers each year, on topics such as
-   <img src="/assets/jump-word-cloud.png">
+
+{% include figure.html image="/assets/jump-word-cloud.png" %}
 
 ## Resources for getting started
 
