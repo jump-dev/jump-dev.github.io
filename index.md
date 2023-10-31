@@ -41,7 +41,7 @@ julia> x = solve_constrained_least_squares_regression(A, b)
 ## JuMP is used...
 
  * to model and solve real-world problems, including
-    * large-scale inventory routing problems at [Renault](https://arxiv.org/abs/2209.00412)
+    * large-scale inventory routing problems at [Renault](https://pubsonline.informs.org/doi/10.1287/trsc.2022.0342)
     * train scheduling at [Thales Inc.](https://www.sciencedirect.com/science/article/pii/S0191261516304830)
     * power grid expansion planning at [PSR](https://juliacomputing.com/case-studies/psr/)
     * school bus routing for [Boston Public Schools](https://www.the74million.org/article/building-a-smarter-and-cheaper-school-bus-system-how-a-boston-mit-partnership-led-to-new-routes-that-are-20-more-efficient-use-400-fewer-buses-save-5-million/)
