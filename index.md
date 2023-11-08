@@ -1,9 +1,7 @@
 ---
 ---
 
-<div class="home-page-logo">
-    <img width="100%" src="/assets/jump-logo-with-text.svg">
-</div>
+{% include figure.html image="/assets/jump-logo-with-text.svg" %}
 
 ## What is JuMP?
 
@@ -42,22 +40,32 @@ julia> x = solve_constrained_least_squares_regression(A, b)
 
 ## JuMP is used...
 
- * to solve large-scale [inventory routing problems at Renault](https://arxiv.org/abs/2209.00412),
-   [schedule trains at Thales Inc.](https://www.sciencedirect.com/science/article/pii/S0191261516304830),
-   [plan power grid expansion at PSR](https://juliacomputing.com/case-studies/psr/),
-   and
-   [route school buses](https://www.the74million.org/article/building-a-smarter-and-cheaper-school-bus-system-how-a-boston-mit-partnership-led-to-new-routes-that-are-20-more-efficient-use-400-fewer-buses-save-5-million/)
+ * to model and solve real-world problems, including
+    * large-scale inventory routing problems at [Renault](https://pubsonline.informs.org/doi/10.1287/trsc.2022.0342)
+    * train scheduling at [Thales Inc.](https://www.sciencedirect.com/science/article/pii/S0191261516304830)
+    * power grid expansion planning at [PSR](https://juliacomputing.com/case-studies/psr/)
+    * school bus routing for [Boston Public Schools](https://www.the74million.org/article/building-a-smarter-and-cheaper-school-bus-system-how-a-boston-mit-partnership-led-to-new-routes-that-are-20-more-efficient-use-400-fewer-buses-save-5-million/)
  * to teach optimization at universities around the world, including
-    [MIT](https://orc.mit.edu),
-    [DTU](https://www.man.dtu.dk/mathprogrammingwithjulia),
-    [U. Wisconsin-Madison](https://engineering.wisc.edu/departments/industrial-systems-engineering/),
-     and
-    [Université de Nantes](https://www.univ-nantes.fr)
+    * [DTU](https://www.man.dtu.dk/mathprogrammingwithjulia)
+    * [École des Ponts](https://ecoledesponts.fr)
+    * [KAIST](https://kaist.ac.kr/en/)
+    * [MIT](https://orc.mit.edu)
+    * [PUC-Rio](http://www.puc-rio.br/english/)
+    * [Université de Nantes](https://www.univ-nantes.fr)
+    * [U. Wisconsin-Madison](https://engineering.wisc.edu/departments/industrial-systems-engineering/)
  * to build continental-scale energy system models, including
-     MIT's [GenX](https://github.com/GenXProject/GenX),
-     the National Renewable Energy Laboratory's [Sienna](https://www.nrel.gov/analysis/sienna.html),
-     and
-     Spine's [SpineOpt](https://www.tools-for-energy-system-modelling.org)
+     * MIT's [GenX](https://github.com/GenXProject/GenX)
+     * the National Renewable Energy Laboratory's [Sienna](https://www.nrel.gov/analysis/sienna.html)
+     * Spine's [SpineOpt.jl](https://www.tools-for-energy-system-modelling.org)
+     * TNO's [TulipaEnergyModel.jl](https://github.com/TulipaEnergy/TulipaEnergyModel.jl)
+ * to accelerate pre-exascale metabolic modeling workflows at
+   [PerMedCoE](https://permedcoe.eu/core-applications/)
+   <!-- <img style="height: 50px;" src="https://raw.githubusercontent.com/LCSB-BioCore/COBREXA.jl/master/docs/src/assets/cobrexa.svg">
+   <img style="height: 50px;" src="https://raw.githubusercontent.com/COBREXA/ConstraintTrees.jl/master/docs/src/assets/permedcoe.svg">
+   <img style="height: 50px;" src="https://raw.githubusercontent.com/COBREXA/ConstraintTrees.jl/master/docs/src/assets/hhu.svg">
+   <img style="height: 50px;" src="https://raw.githubusercontent.com/COBREXA/ConstraintTrees.jl/master/docs/src/assets/unilu.svg">
+   <img style="height: 50px;" src="https://raw.githubusercontent.com/COBREXA/ConstraintTrees.jl/master/docs/src/assets/qtb.svg">
+   <img style="height: 50px;" src="https://raw.githubusercontent.com/COBREXA/ConstraintTrees.jl/master/docs/src/assets/lcsb.svg"> -->
  * to write hundreds of research papers each year, on topics such as
    <img src="/assets/jump-word-cloud.png">
 
