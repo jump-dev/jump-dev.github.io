@@ -58,7 +58,7 @@ julia> x = solve_constrained_least_squares_regression(A, b)
      * the National Renewable Energy Laboratory's [Sienna](https://www.nrel.gov/analysis/sienna.html)
      * Spine's [SpineOpt.jl](https://www.tools-for-energy-system-modelling.org)
      * TNO's [TulipaEnergyModel.jl](https://github.com/TulipaEnergy/TulipaEnergyModel.jl)
- * to power exa-scale research into personalized medicine at
+ * to accelerate pre-exascale metabolic modeling workflows at
    [PerMedCoE](https://permedcoe.eu/core-applications/)
    <!-- <img style="height: 50px;" src="https://raw.githubusercontent.com/LCSB-BioCore/COBREXA.jl/master/docs/src/assets/cobrexa.svg">
    <img style="height: 50px;" src="https://raw.githubusercontent.com/COBREXA/ConstraintTrees.jl/master/docs/src/assets/permedcoe.svg">
