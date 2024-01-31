@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: post
 title:  "JuMP: the year in review (2023)"
 date:   2024-01-30
+categories: [milestones]
 ---
 
 _Author: Oscar Dowson_
