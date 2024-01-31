@@ -109,7 +109,7 @@ julia> function solve_insurance_problem(; pi = 0.01, L = 0.5, γ = 0.02, ρ = -1
            MU(C) = 1 / C^2
            model = Model(PATHSolver.Optimizer)
            set_silent(model)
-           @variable(model, EU, start = 1)   # Expected utilitiy
+           @variable(model, EU, start = 1)   # Expected utility
            @variable(model, EV, start = 1)   # Equivalent variation in income
            @variable(model, C_G, start = 1)  # Consumption on a good day
            @variable(model, C_B, start = 1)  # Consumption on a bad day
