@@ -3,6 +3,7 @@ layout: post
 title:  "NumFOCUS small development grant: adding complex number support to JuMP"
 date:   2022-04-19
 categories: [announcements]
+author: "Miles Lubin, Juan Pablo Vielma, Carleton Coffrin, Oscar Dowson and Changhyun Kwon"
 ---
 
 The [JuMP Steering Committee](/pages/governance/#steering-committee) is pleased
@@ -33,5 +34,3 @@ The grant has three key deliverables:
 
 Benoît will be working on a part-time basis over the coming year, and will
 present an update during [JuMP-dev 2022](/meetings/juliacon2022/).
-
-_Miles Lubin, Juan Pablo Vielma, Carleton Coffrin, Oscar Dowson and Changhyun Kwon._
