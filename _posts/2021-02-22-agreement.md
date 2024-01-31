@@ -3,6 +3,7 @@ layout: post
 title:  "NumFOCUS signs agreement with MIT to provide ongoing maintenance and support"
 date:   2021-02-22
 categories: [announcements]
+author: "Miles Lubin, Joey Huchette, and Changhyun Kwon"
 ---
 
 The [JuMP Steering Committee](/pages/governance/#steering-committee) is pleased
@@ -46,8 +47,6 @@ tasks on the [roadmap for a JuMP 1.0 release](https://jump.dev/JuMP.jl/stable/ro
 
 Funding paid developers is a big step for JuMP, but one that we believe sets it
 up for a sustainable, long-term future.
-
-_Miles Lubin, Joey Huchette, and Changhyun Kwon_
 
 (Per our [conflict of interest policy](/pages/governance/#conflict-of-interest),
 Oscar, who is funded by the grant, and Juan Pablo Vielma, who is a co-PI of the NSF

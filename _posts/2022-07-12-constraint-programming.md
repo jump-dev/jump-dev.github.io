@@ -3,6 +3,7 @@ layout: post
 title:  "RelationalAI sponsors constraint programming support in JuMP"
 date:   2022-07-12
 categories: [announcements]
+author: "Miles Lubin, Juan Pablo Vielma, Carleton Coffrin and Changhyun Kwon"
 ---
 
 The [JuMP Steering Committee](/pages/governance/#steering-committee) is pleased
@@ -127,8 +128,6 @@ In addition to the work already completed, the work sponsored by RelationalAI
 will allow us to add support for reified constraints, improve the tutorials
 and documentation, and investigate ways that we can connect JuMP and MathOptInterface
 to boolean satisfiability solvers.
-
-_Miles Lubin, Juan Pablo Vielma, Carleton Coffrin and Changhyun Kwon._
 
 (Per our [conflict of interest policy](/pages/governance/#conflict-of-interest),
 Oscar, who is funded by the grant, recused himself from Steering Committee votes

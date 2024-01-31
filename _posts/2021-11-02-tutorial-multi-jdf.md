@@ -3,8 +3,8 @@ layout: post
 title: "Finding multiple feasible solutions"
 date: 2021-11-02
 categories: [tutorials]
+author: "James Foster (@jd-foster)"
 ---
-_Author: James Foster (@jd-foster)_
 
 This tutorial demonstrates how to formulate and solve a combinatorial problem
 with multiple feasible solutions. In fact, we will see how to find _all_
@@ -376,125 +376,125 @@ end
 ````
 
 ````
-Solution 1: 
-  5 1 3 9 
-  1 4 0 6 
-+ 3 0 8 2 
-= 9 6 2 7 
+Solution 1:
+  5 1 3 9
+  1 4 0 6
++ 3 0 8 2
+= 9 6 2 7
 
-Solution 2: 
-  5 1 3 9 
-  1 0 4 6 
-+ 3 4 8 7 
-= 9 6 7 2 
+Solution 2:
+  5 1 3 9
+  1 0 4 6
++ 3 4 8 7
+= 9 6 7 2
 
-Solution 3: 
-  2 1 4 8 
-  1 9 6 7 
-+ 4 6 3 5 
-= 8 7 5 0 
+Solution 3:
+  2 1 4 8
+  1 9 6 7
++ 4 6 3 5
+= 8 7 5 0
 
-Solution 4: 
-  3 2 1 6 
-  2 0 4 7 
-+ 1 4 9 5 
-= 6 7 5 8 
+Solution 4:
+  3 2 1 6
+  2 0 4 7
++ 1 4 9 5
+= 6 7 5 8
 
-Solution 5: 
-  1 2 3 7 
-  2 9 6 8 
-+ 3 6 4 5 
-= 7 8 5 0 
+Solution 5:
+  1 2 3 7
+  2 9 6 8
++ 3 6 4 5
+= 7 8 5 0
 
-Solution 6: 
-  5 2 1 9 
-  2 7 4 3 
-+ 1 4 0 6 
-= 9 3 6 8 
+Solution 6:
+  5 2 1 9
+  2 7 4 3
++ 1 4 0 6
+= 9 3 6 8
 
-Solution 7: 
-  1 5 2 9 
-  5 7 4 6 
-+ 2 4 0 8 
-= 9 6 8 3 
+Solution 7:
+  1 5 2 9
+  5 7 4 6
++ 2 4 0 8
+= 9 6 8 3
 
-Solution 8: 
-  5 2 1 9 
-  2 6 8 7 
-+ 1 8 3 4 
-= 9 7 4 0 
+Solution 8:
+  5 2 1 9
+  2 6 8 7
++ 1 8 3 4
+= 9 7 4 0
 
-Solution 9: 
-  2 3 1 8 
-  3 7 9 0 
-+ 1 9 5 6 
-= 8 0 6 4 
+Solution 9:
+  2 3 1 8
+  3 7 9 0
++ 1 9 5 6
+= 8 0 6 4
 
-Solution 10: 
-  1 2 3 7 
-  2 5 6 4 
-+ 3 6 8 9 
-= 7 4 9 0 
+Solution 10:
+  1 2 3 7
+  2 5 6 4
++ 3 6 8 9
+= 7 4 9 0
 
-Solution 11: 
-  2 3 1 7 
-  3 5 6 4 
-+ 1 6 0 8 
-= 7 4 8 9 
+Solution 11:
+  2 3 1 7
+  3 5 6 4
++ 1 6 0 8
+= 7 4 8 9
 
-Solution 12: 
-  1 3 2 7 
-  3 6 5 4 
-+ 2 5 0 8 
-= 7 4 8 9 
+Solution 12:
+  1 3 2 7
+  3 6 5 4
++ 2 5 0 8
+= 7 4 8 9
 
-Solution 13: 
-  3 2 1 7 
-  2 9 4 5 
-+ 1 4 0 6 
-= 7 5 6 8 
+Solution 13:
+  3 2 1 7
+  2 9 4 5
++ 1 4 0 6
+= 7 5 6 8
 
-Solution 14: 
-  5 2 1 9 
-  2 3 8 4 
-+ 1 8 6 7 
-= 9 4 7 0 
+Solution 14:
+  5 2 1 9
+  2 3 8 4
++ 1 8 6 7
+= 9 4 7 0
 
-Solution 15: 
-  1 5 2 9 
-  5 8 3 7 
-+ 2 3 4 0 
-= 9 7 0 6 
+Solution 15:
+  1 5 2 9
+  5 8 3 7
++ 2 3 4 0
+= 9 7 0 6
 
-Solution 16: 
-  1 2 5 9 
-  2 4 3 0 
-+ 5 3 8 7 
-= 9 0 7 6 
+Solution 16:
+  1 2 5 9
+  2 4 3 0
++ 5 3 8 7
+= 9 0 7 6
 
-Solution 17: 
-  1 4 2 8 
-  4 7 5 6 
-+ 2 5 0 9 
-= 8 6 9 3 
+Solution 17:
+  1 4 2 8
+  4 7 5 6
++ 2 5 0 9
+= 8 6 9 3
 
-Solution 18: 
-  1 2 5 9 
-  2 6 4 3 
-+ 5 4 7 8 
-= 9 3 8 0 
+Solution 18:
+  1 2 5 9
+  2 6 4 3
++ 5 4 7 8
+= 9 3 8 0
 
-Solution 19: 
-  2 1 4 8 
-  1 5 6 3 
-+ 4 6 7 9 
-= 8 3 9 0 
+Solution 19:
+  2 1 4 8
+  1 5 6 3
++ 4 6 7 9
+= 8 3 9 0
 
-Solution 20: 
-  2 1 6 9 
-  1 3 0 5 
-+ 6 0 7 4 
-= 9 5 4 8 
+Solution 20:
+  2 1 6 9
+  1 3 0 5
++ 6 0 7 4
+= 9 5 4 8
 
 
 ````
@@ -594,7 +594,7 @@ CPXPARAM_MIP_Pool_Intensity                      4
 CPXPARAM_MIP_Limits_Populate                     100
 CPXPARAM_MIP_Pool_AbsGap                         0
 
-Populate: phase I 
+Populate: phase I
 2 of 2 MIP starts provided solutions.
 MIP start 'm1' defined initial solution with objective 0.0000.
 Tried aggregator 2 times.
@@ -622,7 +622,7 @@ Parallel b&c, 12 threads:
                           ------------
 Total (root+branch&cut) =    0.00 sec. (0.52 ticks)
 
-Populate: phase II 
+Populate: phase II
 Probing time = 0.00 sec. (0.06 ticks)
 Clique table members: 2.
 MIP emphasis: balance optimality and feasibility.
