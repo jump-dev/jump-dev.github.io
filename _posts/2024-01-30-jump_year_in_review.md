@@ -164,7 +164,7 @@ We also developed the [MultiObjectiveAlgorithms.jl](https://github.com/jump-dev/
 programs.
 
 The optimizer returns a set of points from the efficient frontier (exactly what
-and now many depend on the solution algorithm), which you can access with the
+and how many depend on the solution algorithm), which you can access with the
 `result` keyword argument to functions like `JuMP.value` and `JuMP.objective_value`.
 
 An example is:
