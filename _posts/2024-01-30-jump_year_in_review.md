@@ -19,12 +19,12 @@ improved over the past year.
  - [About JuMP](#about-jump)
  - [Nonlinear](#nonlinear)
  - [Complementarity](#complementarity)
- - [Constraint programming](#constraint-programming)
  - [Multi-objective](#multi-objective)
  - [Complex numbers](#complex-numbers)
  - [Generic numbers](#generic-numbers)
+ - [Constraint programming](#constraint-programming)
  - [Time-to-first-solve](#time-to-first-solve)
- - [Future plans](#future-planns)
+ - [Future plans](#future-plans)
 
 ## About JuMP
 
@@ -277,7 +277,7 @@ julia> objective_value(model)
 See the [documentation](https://jump.dev/JuMP.jl/dev/tutorials/conic/arbitrary_precision/)
 for more details.
 
-## Constraint programminng
+## Constraint programming
 
 The nonlinear improvements and generic number support combine to enable some
 nice improvements to constraint programming. Although JuMP isn't a fully-fledged
