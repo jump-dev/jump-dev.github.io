@@ -8,9 +8,9 @@ _Author: Oscar Dowson_
 
 At the end of last year, I gave a talk at the 55th [Operations Research Society of New Zealand](http://orsnz.org.nz)
 annual conference ([slides](/assets/ORSNZ_2023.pdf)). It proved to be a good
-excuse to summarize the progress we made in JuMP over the year, and, since we
-didn't record the talks, the President of ORSNZ, Andrea Raith, suggested a blog
-post might be in order.
+excuse to summarize the progress we made in JuMP over the past year, and, since
+we didn't record the talks, the President of ORSNZ, Andrea Raith, suggested a
+blog post might be in order.
 
 Each of the following sections is a brief summary of a part of JuMP that we
 improved over the past year.
@@ -73,7 +73,7 @@ julia> @objective(model, Min, exp(x[1]) - sqrt(x[2]))
 exp(x[1]) - sqrt(x[2])
 ```
 
-Previously unsupported features, such as array operations like broadcasting now
+Previously unsupported features, such as array operations and broadcasting, now
 work just like they do for linear and quadratic expressions:
 ```julia
 julia> @expression(model, log(sum(exp.(x))))
@@ -84,10 +84,10 @@ The [JuMP documentation](https://jump.dev/JuMP.jl/stable/manual/nonlinear/) has
 more examples of the new syntax.
 
 Behind the scenes, a lot of work went in to identify a suitable data structure
-for representing the nonlinear expressions, and to refactor the various parts
-of JuMP and MathOptInterface, and to update solvers like Ipopt to the new
-syntax. You can find out more of the details by watching talks I gave at
-JuMP-dev in 2022 and 2023, both helpfully called the same thing:
+for representing the nonlinear expressions, to refactor the various parts of
+JuMP and MathOptInterface, and to update solvers like Ipopt to the new syntax.
+You can find out more of the details by watching talks I gave at JuMP-dev in
+2022 and 2023, both helpfully called the same thing:
 
  * [Improving nonlinear programming support in JuMP (2022)](https://www.youtube.com/watch?v=d_X3gj3Iz-k)
  * [Improving nonlinear programming support in JuMP (2023)](https://www.youtube.com/watch?v=6q76umkG-34)
@@ -280,8 +280,9 @@ for more details.
 
 The nonlinear improvements and generic number support combine to enable some
 nice improvements to constraint programming. Although JuMP isn't a fully-fledged
-constraint programming language like MiniZinc, with help from [Chris Coey](https://github.com/chriscoey),
-it is now possible to build and solve models like this:
+constraint programming language like [MiniZinc](https://www.minizinc.org), with
+help from [Chris Coey](https://github.com/chriscoey), it is now possible to
+build and solve models like this:
 
 ```julia
 julia> using JuMP, MiniZinc
