@@ -3,18 +3,26 @@ title: false
 styles: true
 ---
 
+$julia_blue: #4063D8;
+$julia_green: #389826;
+$julia_purple: #9558B2;
+$julia_red: #CB3C33;
+
+$linkColour: $julia_green;
+
+$colour-notification-banner: #ffc107;
+
 @import "alembic";
 
 .typeset pre {
   line-height: 1rem;
 }
 
-$colour-notification-banner: #ffc107;
-
 // Notification bar
 .notification-bar {
   text-align: center;
-  padding-top: .75rem;
+  padding-top: .5rem;
+  padding-bottom: .75rem;
   margin-bottom: 1rem;
   background-color: $colour-notification-banner;
   border-bottom: 1px solid darken($colour-notification-banner, 10%);
