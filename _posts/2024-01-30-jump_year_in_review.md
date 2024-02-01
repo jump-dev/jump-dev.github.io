@@ -3,9 +3,8 @@ layout: post
 title:  "JuMP: the year in review (2023)"
 date:   2024-01-30
 categories: [milestones]
+author: "Oscar Dowson"
 ---
-
-_Author: Oscar Dowson_
 
 At the end of last year, I gave a talk at the 55th [Operations Research Society of New Zealand](http://orsnz.org.nz)
 annual conference ([slides](/assets/ORSNZ_2023.pdf)). It proved to be a good
