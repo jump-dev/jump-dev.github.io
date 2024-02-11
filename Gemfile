@@ -7,17 +7,13 @@ source "https://rubygems.org"
 #     bundle exec jekyll serve
 #
 
-# See https://github.com/jekyll/jekyll/issues/9544
-gem "jekyll", "~>3.9.3"
-
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2"
 
 gem "jekyll-remote-theme"
 
 group :jekyll_plugins do
-  # Pinned to v228 because of https://github.com/jekyll/jekyll/issues/9544
-  gem "github-pages", "= 228"
+  gem "github-pages", "= 229"
   gem "jekyll-feed", "~> 0.6"
 end
 
