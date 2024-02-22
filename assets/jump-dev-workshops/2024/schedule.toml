@@ -1,0 +1,291 @@
+
+days = ["Friday 19th", "Saturday 20th", "Sunday 21st"]
+
+[talks]
+
+[talks.1_08_45]
+title = "Introduction and welcome"
+type = "organization"
+
+[talks.1_09_00]
+speaker = "Miles Lubin"
+title = "The state of JuMP"
+type = "long"
+
+[talks.1_09_15]
+type = "long"
+
+[talks.1_09_30]
+speaker = "Andrew Rosemberg"
+title = "Bridging ML and Optimization with JuMP"
+
+[talks.1_09_45]
+speaker = "Joaquim Dias Garcia"
+title = "Differentiating Parametric JuMP Models"
+
+[talks.1_10_00]
+speaker = "Warren Ochibobo"
+title = "LearnieCP (An implementation of MiniCP from a Julia programmer's view)"
+
+[talks.1_10_15]
+speaker = "Jad Wehbeh"
+title = "LoReSIO.jl: Using JuMP for Semi-Infinite Optimization"
+
+[talks.1_10_30]
+title = "Morning tea"
+type = "break"
+
+[talks.1_10_45]
+title = "Coffee and pastries provided."
+type = "break"
+
+[talks.1_11_00]
+speaker = "Truls Flatberg"
+title = "Applied optimization with JuMP at SINTEF"
+type = "long"
+
+[talks.1_11_15]
+type = "long"
+
+[talks.1_11_30]
+speaker = "Ni Wang"
+title = "Introduction of TulipaEnergyModel.jl"
+
+[talks.1_11_45]
+speaker = "Diego Tejada"
+title = "SpineOpt.jl: A highly adaptable modelling framework for multi-energy systems"
+
+[talks.1_12_00]
+speaker = "Jose Daniel Lara"
+title = "Solving the Market-to-Market Problem in Large Scale Power Systems"
+type = "long"
+
+[talks.1_12_15]
+type = "long"
+
+[talks.1_12_30]
+title = "Lunch"
+type = "break"
+
+[talks.1_12_45]
+title = "You are resposible for your own lunch. There is a cafeteria on-site, and a <a href=\"https://www.google.com/maps/search/Restaurants/@45.4996315,-73.6275257,15z?entry=ttu\">number of restaurants</a> within walking distance."
+type = "break"
+
+[talks.1_13_00]
+type = "break"
+
+[talks.1_13_15]
+type = "break"
+
+[talks.1_13_30]
+type = "break"
+
+[talks.1_13_45]
+type = "break"
+
+[talks.1_14_00]
+speaker = "Benoît Legat"
+title = "Why you should stop using the monomial basis"
+
+[talks.1_14_15]
+
+[talks.1_14_30]
+speaker = "Alexis Montoison"
+title = "libHSL: the ultimate collection for large-scale scientific computation"
+
+[talks.1_14_45]
+speaker = "Willem van Osselaer"
+title = "Solving Matching Problems in Practical Applications Using JuMP "
+
+[talks.1_15_00]
+speaker = "Bernardo Freitas Paulo da Costa"
+title = "Teaching Optimization: cvxpy, pyomo, JuMP"
+
+[talks.1_15_15]
+speaker = "Valeri Vasquez"
+title = "Optimal deployment of genetic biocontrol under environmental uncertainty"
+
+[talks.1_15_30]
+speaker = "Theo Diamandis"
+title = "Convex Network Flows"
+
+[talks.1_16_00]
+title = "Wrap up"
+type = "organization"
+
+[talks.2_08_45]
+title = "Introduction and welcome"
+type = "organization"
+
+[talks.2_09_00]
+speaker = "Joshua Pulsipher"
+title = "Accelerating Automatic Differentiation with InfiniteExaModels.jl"
+
+[talks.2_09_30]
+speaker = "Francis Gagnon"
+title = "ModelPredictiveControl.jl: advanced process control made easy using JuMP"
+
+[talks.2_09_45]
+speaker = "Mario Souto"
+title = "JuMP for Model Predictive Control"
+
+[talks.2_10_00]
+speaker = "Davi Michel Valladão"
+title = "Time series modeling via JuMP"
+
+[talks.2_10_15]
+speaker = "Bernardo Freitas Paulo da Costa"
+title = "LinearDecisionRules.jl"
+
+[talks.2_10_30]
+title = "Morning tea"
+type = "break"
+
+[talks.2_10_45]
+title = "Coffee and pastries provided."
+type = "break"
+
+[talks.2_11_00]
+speaker = "Charlie Vanaret"
+title = "Invited talk: Unifying nonlinearly constrained nonconvex optimization"
+
+[talks.2_11_30]
+speaker = "Dimitri Alston"
+title = "Recent Advances in EAGO.jl and its Use With JuMP.jl"
+
+[talks.2_11_45]
+speaker = "David Cole"
+title = "Graph-based Decomposition Approaches through Plasmo.jl"
+
+[talks.2_12_00]
+speaker = "Joshua Pulsipher"
+title = "The New DisjunctiveProgramming.jl"
+
+[talks.2_12_15]
+speaker = "Lars Hellemo"
+title = "PiecewiseAffineApprox.jl"
+
+[talks.2_12_30]
+title = "Lunch"
+type = "break"
+
+[talks.2_12_45]
+title = "You are resposible for your own lunch. There are a <a href=\"https://www.google.com/maps/search/Restaurants/@45.4996315,-73.6275257,15z?entry=ttu\">number of restaurants</a> within walking distance"
+type = "break"
+
+[talks.2_13_00]
+type = "break"
+
+[talks.2_13_15]
+type = "break"
+
+[talks.2_13_30]
+type = "break"
+
+[talks.2_13_45]
+type = "break"
+
+[talks.2_14_00]
+type = "break"
+
+[talks.2_14_15]
+type = "break"
+
+[talks.2_14_30]
+speaker = "Pedro Maciel Xavier"
+title = "QUBO.jl: A Julia ecosystem for Quadratic Unconstrained Binary Optimization"
+
+[talks.2_15_00]
+speaker = "Jean-Francois Baffier"
+title = "Harnessing the Power of Quantum Annealing with Julia: A User-Friendly Pipeline for Nonlinear Optimization"
+
+[talks.2_15_15]
+speaker = "Zedong Peng"
+title = "Hybrid Quantum Branch-and-Bound Method for Quadratic Unconstrained Binary Optimization"
+
+[talks.2_15_30]
+speaker = "Tangi Migot"
+title = "Recent Advances in Optimization Solvers within JuliaSmoothOptimizers"
+
+[talks.2_15_45]
+
+[talks.2_16_00]
+title = "Wrap up and thanks"
+type = "organization"
+
+[talks.3_10_00]
+title = "Hackathon. Details to be confirmed."
+type = "organization"
+
+[talks.3_10_15]
+type = "organization"
+
+[talks.3_10_30]
+type = "organization"
+
+[talks.3_10_45]
+type = "organization"
+
+[talks.3_11_00]
+type = "organization"
+
+[talks.3_11_15]
+type = "organization"
+
+[talks.3_11_30]
+type = "organization"
+
+[talks.3_11_45]
+type = "organization"
+
+[talks.3_12_00]
+type = "organization"
+
+[talks.3_12_15]
+type = "organization"
+
+[talks.3_12_30]
+type = "organization"
+
+[talks.3_12_45]
+type = "organization"
+
+[talks.3_13_00]
+type = "organization"
+
+[talks.3_13_15]
+type = "organization"
+
+[talks.3_13_30]
+type = "organization"
+
+[talks.3_13_45]
+type = "organization"
+
+[talks.3_14_00]
+type = "organization"
+
+[talks.3_14_15]
+type = "organization"
+
+[talks.3_14_30]
+type = "organization"
+
+[talks.3_14_45]
+type = "organization"
+
+[talks.3_15_00]
+type = "organization"
+
+[talks.3_15_15]
+type = "organization"
+
+[talks.3_15_30]
+type = "organization"
+
+[talks.3_15_45]
+type = "organization"
+
+[talks.3_16_00]
+title = "Wrap up and thanks"
+type = "organization"
