@@ -136,3 +136,26 @@ $colour-notification-banner: #ffc107;
     background: $backgroundColour;
   }
 }
+
+
+.talk-table {
+  padding: 5px;
+  vertical-align: top;
+}
+
+// .talk-long {
+//   vertical-align: top;
+//   background-color: #38982633;
+// }
+
+.talk-break {
+  background-color: #CB3C3333;
+}
+
+.talk-organization {
+  background-color: #9558B233;
+}
+
+.talk-speaker {
+  color: $captionColour;
+}
