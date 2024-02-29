@@ -10,10 +10,8 @@ type = "organization"
 [talks.1_09_00]
 speaker = "Miles Lubin"
 title = "The state of JuMP"
-type = "long"
 
 [talks.1_09_15]
-type = "long"
 
 [talks.1_09_30]
 speaker = "Andrew Rosemberg"
@@ -42,10 +40,8 @@ type = "break"
 [talks.1_11_00]
 speaker = "Truls Flatberg"
 title = "Applied optimization with JuMP at SINTEF"
-type = "long"
 
 [talks.1_11_15]
-type = "long"
 
 [talks.1_11_30]
 speaker = "Ni Wang"
@@ -58,10 +54,8 @@ title = "SpineOpt.jl: A highly adaptable modelling framework for multi-energy sy
 [talks.1_12_00]
 speaker = "Jose Daniel Lara"
 title = "Solving the Market-to-Market Problem in Large Scale Power Systems"
-type = "long"
 
 [talks.1_12_15]
-type = "long"
 
 [talks.1_12_30]
 title = "Lunch"
