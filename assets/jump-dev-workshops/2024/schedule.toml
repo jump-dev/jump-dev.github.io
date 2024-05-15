@@ -140,8 +140,8 @@ title = "Coffee and pastries provided."
 type = "break"
 
 [talks.2_11_00]
-speaker = "Charlie Vanaret"
-title = "Invited talk: Unifying nonlinearly constrained nonconvex optimization"
+speaker = "Bethany Nicholson"
+title = "<b>Invited talk</b>: The Pyomo modeling language"
 
 [talks.2_11_30]
 speaker = "Dimitri Alston"
