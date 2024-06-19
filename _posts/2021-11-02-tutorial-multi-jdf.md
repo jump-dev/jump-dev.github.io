@@ -14,7 +14,7 @@ feasible solutions to our problem. We will also see how to enforce an
 This post is in the same form as tutorials in the JuMP
 [documentation](https://jump.dev/JuMP.jl/stable/tutorials/Getting%20started/getting_started_with_JuMP/)
 but is hosted here since we depend on using some commercial solvers (Gurobi
-and CPLEX) that are not currently accomodated by the JuMP GitHub repository.
+and CPLEX) that are not currently accommodated by the JuMP GitHub repository.
 
 ## Symmetric number squares
 

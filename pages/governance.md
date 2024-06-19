@@ -5,7 +5,7 @@ title:  "Governance Structure"
 This document describes the formal governance structure of the JuMP project.
 
 For the purpose of this document, "JuMP" includes all repositories in the
-[JuMP-dev Github organization].
+[JuMP-dev GitHub organization].
 
 ## Mission
 
@@ -49,7 +49,7 @@ contributors and notification to the [Steering Committee].
 
 Before becoming a core contributor, it is expected that the community member is
 a [repository maintainer](#repository-maintainers) of several repositories in
-the [JuMP-dev Github organization].
+the [JuMP-dev GitHub organization].
 
 ### Emeritus Core Contributors
 
@@ -67,7 +67,7 @@ by informing the other [core contributors] and the [Steering Committee].
 
 Repository maintainers are trusted members of the community who help the [core
 contributors] by managing a limited number of repositories in the [JuMP-dev
-Github organization].
+GitHub organization].
 
 Any [core contributor](#core-contributors) has individual authority to appoint a
 community member as a repository maintainer of a repository with notification to
@@ -141,13 +141,13 @@ and relevant [repository maintainers]. [Emeritus core contributors](#emeritus-co
 are not considered to be [core contributors] for this purpose.
 
 Code-related decisions, such when a pull request is ready to be accepted and
-merged, should be discussed via the relevant Github issues and pull requests. If
+merged, should be discussed via the relevant GitHub issues and pull requests. If
 consensus cannot be achieved, the community member proposing the change may be
 invited by a [core contributor](#core-contributors) to present their proposal at
 a [monthly developer call] for further discussion and community input.
 
 Non-code-related decisions, such as long-term strategic planning for JuMP,
-should either be discussed in a Github issue, or tabled as an agenda item and
+should either be discussed in a GitHub issue, or tabled as an agenda item and
 discussed on a [monthly developer call].
 
 If consensus on a non-financial decision cannot be achieved, the final decision
@@ -159,7 +159,7 @@ contributors] decide to delegate.
 ### Conflict of Interest
 
 It is expected that community members will be employed at a wide range of
-companies, universities and non-profit organizations. Because of this, it is
+companies, universities, and non-profit organizations. Because of this, it is
 possible that members will have conflicts of interest. Such conflicts of
 interest include, but are not limited to:
 
@@ -177,10 +177,10 @@ discussions on that issue, but must recuse themselves from voting.
 disclose conflicts of interest with other [core contributors] and step back from
 decisions when conflicts of interests are in play.
 
-## Github Permissions
+## GitHub Permissions
 
-[Github permissions][permissions] are used to control access to repositories in
-the [JuMP-dev Github organization].
+[GitHub permissions][permissions] are used to control access to repositories in
+the [JuMP-dev GitHub organization].
 
 Anyone with commit access to a repository is trusted to use it in a way that is
 consistent with the [Decision Making Process](#decision-making-process).
@@ -191,7 +191,7 @@ feedback on changes if they are not sure there is a consensus, and follow JuMP's
 ### Core Contributors
 
 [Core contributors](#core-contributors) are added as [Owners][owner-permission]
-of the [JuMP-dev Github organization] and have [Admin][permissions] permission
+of the [JuMP-dev GitHub organization] and have [Admin][permissions] permission
 to every repository.
 
 ### Emeritus Core Contributors
@@ -204,7 +204,7 @@ rights as [core contributors], unless they choose to surrender them.
 [Repository maintainers](#repository-maintainers) have [Maintain][permissions]
 rights to an individual repository as an outside collaborator. Among other
 rights, this allows them to push code to a branch in the
-[JuMP-dev Github organization] instead of their personal fork, merge pull
+[JuMP-dev GitHub organization] instead of their personal fork, merge pull
 requests, and close issues.
 
 ## Community Involvement
@@ -259,7 +259,7 @@ The JuMP Twitter handle is [@JuMPjl](https://twitter.com/JuMPjl).
 
 ## Transferring repositories to jump-dev
 
-The [JuMP-dev Github organization] exists to simplify the management of Github
+The [JuMP-dev GitHub organization] exists to simplify the management of GitHub
 permissions on JuMP-related repositories. It is not a curation of all
 JuMP-compatible solvers and supporting packages.
 
@@ -273,16 +273,16 @@ contributors] request that you do not use "JuMP" in the name without prior
 consent.
 
 Even once a package has matured, the bar for transferring repositories to the
-[JuMP-dev Github organization] is high, and can be summarized by the following:
+[JuMP-dev GitHub organization] is high, and can be summarized by the following:
 
 * The maintenance of the package would be simplified if [core contributors]
   have [Admin permission][permissions] to the repository.
 
 Community members wishing to transfer a repository from their personal account
-to the [JuMP-dev Github organization] should contact the [core contributors]
+to the [JuMP-dev GitHub organization] should contact the [core contributors]
 via the [developer chatroom].
 
-[JuMP-dev Github organization]: https://github.com/jump-dev
+[JuMP-dev GitHub organization]: https://github.com/jump-dev
 [permissions]: https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#repository-access-for-each-permission-level
 [owner-permission]: https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-organizations-and-teams/permission-levels-for-an-organization#permission-levels-for-an-organization
 
