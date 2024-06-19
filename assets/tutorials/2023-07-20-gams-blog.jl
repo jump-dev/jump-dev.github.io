@@ -316,7 +316,7 @@ end
 # one that is embedded in a programming language. Indeed, a key feature of JuMP
 # is that the code users write inside the modeling macros (the identifiers
 # beginning with `@`) is not what gets executed. Instead, JuMP parses the syntax
-# that that the user writes and compiles it into a different form that is more
+# that the user writes and compiles it into a different form that is more
 # efficient.
 
 # > While it’s true that general-purpose programming languages offer more

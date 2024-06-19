@@ -137,7 +137,7 @@ The new complementarity support is helping others in the community.
 at UC Berkeley are working on [MPSGE.jl](https://github.com/anthofflab/MPSGE.jl),
 a reimplementation of [Tom Rutherford's](https://windc.wisc.edu/people.html)
 [MPSGE](https://www.gams.com/solvers/mpsge/index.htm) from GAMS into JuMP. Tom's
-group is also looking at adopting JuMP for their [offical WiNDC model](https://github.com/uw-windc/WiNDC.jl).
+group is also looking at adopting JuMP for their [official WiNDC model](https://github.com/uw-windc/WiNDC.jl).
 
 ## Multi-objective
 
@@ -229,7 +229,7 @@ At present, JuMP implements the rectangular formulation, where two real-valued
 decision variables are added to the model, one each for the real and imaginary
 components.
 
-You can also create Hermian matrices via:
+You can also create Hermitian matrices via:
 ```julia
 julia> @variable(model, H[1:3, 1:3] in HermitianPSDCone());
 ```
@@ -279,7 +279,7 @@ for more details.
 ## Constraint programming
 
 The nonlinear improvements and generic number support combine to enable some
-nice improvements to constraint programming. Although JuMP isn't a fully-fledged
+nice improvements to constraint programming. Although JuMP isn't a fully fledged
 constraint programming language like [MiniZinc](https://www.minizinc.org), with
 help from [Chris Coey](https://github.com/chriscoey), it is now possible to
 build and solve models like this:

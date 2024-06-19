@@ -24,14 +24,14 @@ The highlights include:
  * Clarifying our decision-making process, by describing who gets to decide what
    when.
 
- * Listing what Github permissions different entities have to the repositories
-   in the [jump-dev](https://github.com/jump-dev) Github organization.
+ * Listing what GitHub permissions different entities have to the repositories
+   in the [jump-dev](https://github.com/jump-dev) GitHub organization.
 
  * Outlining channels of community involvement, including the poorly publicized
    fact that we hold a monthly developer call.
 
  * Formalizing a process for transferring repositories to the
-   [jump-dev](https://github.com/jump-dev) Github organization.
+   [jump-dev](https://github.com/jump-dev) GitHub organization.
 
 We believe this document strengthens the foundation of JuMP, and sets it up for
 a sustainable, long-term future.

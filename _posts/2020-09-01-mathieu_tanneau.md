@@ -10,7 +10,7 @@ that was accepted for JuMP-dev 2020 on the design and implementation of the
 interior-point solver [Tulip.jl](https://github.com/ds4dm/Tulip.jl) during
 August 2020's JuMP monthly developer call.
 
-The talk material is available on [his Github](https://github.com/mtanneau/jump-dev_2020).
+The talk material is available on [his GitHub](https://github.com/mtanneau/jump-dev_2020).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lT1DExrUZYc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
