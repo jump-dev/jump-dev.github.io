@@ -3,6 +3,14 @@ days = ["Friday 19th", "Saturday 20th", "Sunday 21st"]
 
 [talks]
 
+[talks.1_08_15]
+title = "Light breakfast"
+type = "break"
+
+[talks.1_08_30]
+title = ""
+type = "break"
+
 [talks.1_08_45]
 title = "Introduction and welcome"
 type = "organization"
@@ -78,14 +86,13 @@ type = "break"
 type = "break"
 
 [talks.1_14_00]
+type = "break"
+
+[talks.1_14_15]
 speaker = "Benoît Legat"
 title = "Why you should stop using the monomial basis"
 
-[talks.1_14_15]
-
 [talks.1_14_30]
-speaker = "Alexis Montoison"
-title = "libHSL: the ultimate collection for large-scale scientific computation"
 
 [talks.1_14_45]
 speaker = "Willem van Osselaer"
@@ -106,6 +113,14 @@ title = "Convex Network Flows"
 [talks.1_16_00]
 title = "Wrap up"
 type = "organization"
+
+[talks.2_08_15]
+title = "Light breakfast"
+type = "break"
+
+[talks.2_08_30]
+title = ""
+type = "break"
 
 [talks.2_08_45]
 title = "Introduction and welcome"
@@ -164,7 +179,7 @@ title = "Lunch"
 type = "break"
 
 [talks.2_12_45]
-title = "You are resposible for your own lunch. There are a <a href=\"https://www.google.com/maps/search/Restaurants/@45.4996315,-73.6275257,15z?entry=ttu\">number of restaurants</a> within walking distance"
+title = "You are resposible for your own lunch. There are a <a href=\"https://www.google.com/maps/search/Restaurants/@45.4996315,-73.6275257,15z?entry=ttu\">number of restaurants</a> within walking distance. (Cafeteria is closed today)."
 type = "break"
 
 [talks.2_13_00]
@@ -190,12 +205,12 @@ speaker = "Pedro Maciel Xavier"
 title = "QUBO.jl: A Julia ecosystem for Quadratic Unconstrained Binary Optimization"
 
 [talks.2_15_00]
-speaker = "Jean-Francois Baffier"
-title = "Harnessing the Power of Quantum Annealing with Julia: A User-Friendly Pipeline for Nonlinear Optimization"
-
-[talks.2_15_15]
 speaker = "Zedong Peng"
 title = "Hybrid Quantum Branch-and-Bound Method for Quadratic Unconstrained Binary Optimization"
+
+[talks.2_15_15]
+speaker = "Alexis Montoison"
+title = "libHSL: the ultimate collection for large-scale scientific computation"
 
 [talks.2_15_30]
 speaker = "Tangi Migot"
