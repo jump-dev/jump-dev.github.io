@@ -20,6 +20,7 @@ speaker = "Miles Lubin"
 title = "The state of JuMP"
 
 [talks.1_09_15]
+title = "<br><br>"
 
 [talks.1_09_30]
 speaker = "Andrew Rosemberg"
@@ -50,6 +51,7 @@ speaker = "Truls Flatberg"
 title = "Applied optimization with JuMP at SINTEF"
 
 [talks.1_11_15]
+title = "<br><br>"
 
 [talks.1_11_30]
 speaker = "Ni Wang"
@@ -70,7 +72,7 @@ title = "Lunch"
 type = "break"
 
 [talks.1_12_45]
-title = "You are resposible for your own lunch. There is a cafeteria on-site, and a <a href=\"https://www.google.com/maps/search/Restaurants/@45.4996315,-73.6275257,15z?entry=ttu\">number of restaurants</a> within walking distance."
+title = "You are responsible for your own lunch. There is a cafeteria on-site, and a <a href=\"https://www.google.com/maps/search/Restaurants/@45.4996315,-73.6275257,15z?entry=ttu\">number of restaurants</a> within walking distance."
 type = "break"
 
 [talks.1_13_00]
@@ -89,10 +91,11 @@ type = "break"
 type = "break"
 
 [talks.1_14_15]
-speaker = "Benoît Legat"
-title = "Why you should stop using the monomial basis"
+type = "break"
 
 [talks.1_14_30]
+speaker = "Davi Michel Valladão"
+title = "Time series modeling via JuMP"
 
 [talks.1_14_45]
 speaker = "Willem van Osselaer"
@@ -109,6 +112,9 @@ title = "Optimal deployment of genetic biocontrol under environmental uncertaint
 [talks.1_15_30]
 speaker = "Theo Diamandis"
 title = "Convex Network Flows"
+
+[talks.1_15_45]
+title = "<br><br>"
 
 [talks.1_16_00]
 title = "Wrap up"
@@ -135,16 +141,14 @@ speaker = "Francis Gagnon"
 title = "ModelPredictiveControl.jl: advanced process control made easy using JuMP"
 
 [talks.2_09_45]
-speaker = "Mario Souto"
-title = "JuMP for Model Predictive Control"
-
-[talks.2_10_00]
-speaker = "Davi Michel Valladão"
-title = "Time series modeling via JuMP"
-
-[talks.2_10_15]
 speaker = "Bernardo Freitas Paulo da Costa"
 title = "LinearDecisionRules.jl"
+
+[talks.2_10_00]
+speaker = "Benoît Legat"
+title = "Why you should stop using the monomial basis"
+
+[talks.2_10_15]
 
 [talks.2_10_30]
 title = "Morning tea"
@@ -179,7 +183,7 @@ title = "Lunch"
 type = "break"
 
 [talks.2_12_45]
-title = "You are resposible for your own lunch. There are a <a href=\"https://www.google.com/maps/search/Restaurants/@45.4996315,-73.6275257,15z?entry=ttu\">number of restaurants</a> within walking distance. (Cafeteria is closed today)."
+title = "You are responsible for your own lunch. There are a <a href=\"https://www.google.com/maps/search/Restaurants/@45.4996315,-73.6275257,15z?entry=ttu\">number of restaurants</a> within walking distance. (The cafeteria is closed today)."
 type = "break"
 
 [talks.2_13_00]
