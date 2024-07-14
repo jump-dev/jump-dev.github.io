@@ -31,8 +31,8 @@ speaker = "Joaquim Dias Garcia"
 title = "Differentiating Parametric JuMP Models"
 
 [talks.1_10_00]
-speaker = "Warren Ochibobo"
-title = "LearnieCP (An implementation of MiniCP from a Julia programmer's view)"
+speaker = "Davi Michel Valladão"
+title = "Time series modeling via JuMP"
 
 [talks.1_10_15]
 speaker = "Jad Wehbeh"
@@ -94,8 +94,8 @@ type = "break"
 type = "break"
 
 [talks.1_14_30]
-speaker = "Davi Michel Valladão"
-title = "Time series modeling via JuMP"
+speaker = "Chelsea Sidrane"
+title = "Solving Difficult Reachability Problems in JuMP.jl"
 
 [talks.1_14_45]
 speaker = "Willem van Osselaer"
