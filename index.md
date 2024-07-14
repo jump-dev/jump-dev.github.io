@@ -109,7 +109,7 @@ Outside of the JuMP organization:
   Julia of standard optimization algorithms for unconstrained or
   box-constrained problems such as BFGS, Nelder-Mead, conjugate gradient, etc.
 - JuliaHub lists 200+
-  [optimization packages in Julia](https://juliahub.com/ui/Packages?t=optimization)!
+  [optimization packages in Julia](https://juliahub.com/ui/Packages?tg=optimization)!
 
 ## NumFOCUS
 
