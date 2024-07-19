@@ -91,7 +91,8 @@ type = "break"
 type = "break"
 
 [talks.1_14_15]
-type = "break"
+speaker = "Paul Raynaud"
+title = "Minimization of partially-separable problems within JuliaSmoothOptimizers with the help of JuMP"
 
 [talks.1_14_30]
 speaker = "Chelsea Sidrane"
