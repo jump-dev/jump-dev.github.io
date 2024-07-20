@@ -146,8 +146,8 @@ speaker = "Bernardo Freitas Paulo da Costa"
 title = "LinearDecisionRules.jl"
 
 [talks.2_10_00]
-speaker = "Benoît Legat"
-title = "Why you should stop using the monomial basis"
+speaker = "Bethany Nicholson"
+title = "<b>Invited talk</b>: The Pyomo modeling language"
 
 [talks.2_10_15]
 
@@ -160,16 +160,16 @@ title = "Coffee and pastries provided."
 type = "break"
 
 [talks.2_11_00]
-speaker = "Bethany Nicholson"
-title = "<b>Invited talk</b>: The Pyomo modeling language"
-
-[talks.2_11_30]
 speaker = "Dimitri Alston"
 title = "Recent Advances in EAGO.jl and its Use With JuMP.jl"
 
-[talks.2_11_45]
+[talks.2_11_15]
 speaker = "David Cole"
 title = "Graph-based Decomposition Approaches through Plasmo.jl"
+
+[talks.2_11_30]
+speaker = "Benoît Legat"
+title = "Why you should stop using the monomial basis"
 
 [talks.2_12_00]
 speaker = "Joshua Pulsipher"
