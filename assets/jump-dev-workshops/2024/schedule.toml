@@ -33,6 +33,7 @@ title = "Differentiating Parametric JuMP Models"
 [talks.1_10_00]
 speaker = "Davi Michel Valladão"
 title = "Time series modeling via JuMP"
+slides = "valladao.pdf"
 
 [talks.1_10_15]
 speaker = "Jad Wehbeh"
@@ -101,6 +102,7 @@ title = "Solving Difficult Reachability Problems in JuMP.jl"
 [talks.1_14_45]
 speaker = "Willem van Osselaer"
 title = "Solving Matching Problems in Practical Applications Using JuMP "
+slides = "osselaer.pdf"
 
 [talks.1_15_00]
 speaker = "Bernardo Freitas Paulo da Costa"
@@ -140,6 +142,7 @@ title = "Accelerating Automatic Differentiation with InfiniteExaModels.jl"
 [talks.2_09_30]
 speaker = "Francis Gagnon"
 title = "ModelPredictiveControl.jl: advanced process control made easy using JuMP"
+slides = "gagnon.pdf"
 
 [talks.2_09_45]
 speaker = "Bernardo Freitas Paulo da Costa"
@@ -148,6 +151,7 @@ title = "LinearDecisionRules.jl"
 [talks.2_10_00]
 speaker = "Bethany Nicholson"
 title = "<b>Invited talk</b>: The Pyomo modeling language"
+slides = "Nicholson.pdf"
 
 [talks.2_10_15]
 
@@ -162,10 +166,12 @@ type = "break"
 [talks.2_11_00]
 speaker = "Dimitri Alston"
 title = "Recent Advances in EAGO.jl and its Use With JuMP.jl"
+slides = "alston.pdf"
 
 [talks.2_11_15]
 speaker = "David Cole"
 title = "Graph-based Decomposition Approaches through Plasmo.jl"
+slides = "cole.pdf"
 
 [talks.2_11_30]
 speaker = "Benoît Legat"
@@ -220,6 +226,7 @@ title = "libHSL: the ultimate collection for large-scale scientific computation"
 [talks.2_15_30]
 speaker = "Tangi Migot"
 title = "Recent Advances in Optimization Solvers within JuliaSmoothOptimizers"
+slides = "migot.pdf"
 
 [talks.2_15_45]
 
@@ -228,7 +235,7 @@ title = "Wrap up and thanks"
 type = "organization"
 
 [talks.3_10_00]
-title = "Hackathon. Details to be confirmed."
+title = "Hackathon. (No catering.)"
 type = "organization"
 
 [talks.3_10_15]

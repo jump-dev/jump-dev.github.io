@@ -31,13 +31,16 @@ function print_table(io, data)
                 if haskey(item, "type")
                     talk_type = " talk-" * item["type"]
                 end
+                if haskey(item, "slides")
+                    content *= """[<a href="/assets/jump-dev-workshops/2024/$(item["slides"])">slides</a>]"""
+                end
             end
             class = "talk-table$talk_type"
             println(io, """  <td class="$class">""", content, "</td>")
         end
         println(io, "</tr>")
     end
-    println(io, "</table>")
+    println(io, "</table>&nbsp;")
     return
 end
 
