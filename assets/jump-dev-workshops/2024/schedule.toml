@@ -155,7 +155,8 @@ type = "organization"
 
 [talks.2_09_00]
 speaker = "Joshua Pulsipher"
-title = "Accelerating Automatic Differentiation with InfiniteExaModels.jl"
+title = "InfiniteExaModels.jl: Accelerating Infinite-Dimensional Optimization Problems on CPU & GPU"
+slides = "pulsipher_exa.pdf"
 url = "https://youtu.be/XBPTb_nbrUs"
 
 [talks.2_09_30]
@@ -201,11 +202,13 @@ url = "https://youtu.be/k9LAOyXgvb8"
 [talks.2_11_30]
 speaker = "Benoît Legat"
 title = "Why you should stop using the monomial basis"
+slides = "legat.html"
 url = "https://youtu.be/CGPHaHxCG2w"
 
 [talks.2_12_00]
 speaker = "Joshua Pulsipher"
 title = "The New DisjunctiveProgramming.jl"
+slides = "pulsipher_gdp.pdf"
 url = "https://youtu.be/TIJ_qpSHdm0"
 
 [talks.2_12_15]
