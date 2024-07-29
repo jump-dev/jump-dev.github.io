@@ -63,11 +63,13 @@ title = "<br><br>"
 [talks.1_11_30]
 speaker = "Ni Wang"
 title = "Introduction of TulipaEnergyModel.jl"
+slides = "wang.pdf"
 url = "https://youtu.be/r4jqVzEck28"
 
 [talks.1_11_45]
 speaker = "Diego Tejada"
 title = "SpineOpt.jl: A highly adaptable modelling framework for multi-energy systems"
+slides = "tejada.pdf"
 url = "https://youtu.be/_oJYwdKdW3E"
 
 [talks.1_12_00]
