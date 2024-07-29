@@ -34,6 +34,9 @@ function print_table(io, data)
                 if haskey(item, "slides")
                     content *= """[<a href="/assets/jump-dev-workshops/2024/$(item["slides"])">slides</a>]"""
                 end
+                if haskey(item, "url")
+                    content *= """[<a href="$(item["url"])">video</a>]"""
+                end
             end
             class = "talk-table$talk_type"
             println(io, """  <td class="$class">""", content, "</td>")

@@ -18,6 +18,7 @@ type = "organization"
 [talks.1_09_00]
 speaker = "Miles Lubin"
 title = "The state of JuMP"
+url = "https://youtu.be/cMUTdfoAMpo"
 
 [talks.1_09_15]
 title = "<br><br>"
@@ -25,19 +26,23 @@ title = "<br><br>"
 [talks.1_09_30]
 speaker = "Andrew Rosemberg"
 title = "Bridging ML and Optimization with JuMP"
+url = "https://youtu.be/JhgHKYvga2s"
 
 [talks.1_09_45]
 speaker = "Joaquim Dias Garcia"
 title = "Differentiating Parametric JuMP Models"
+url = "https://youtu.be/UwZ9EM6lKl8"
 
 [talks.1_10_00]
 speaker = "Davi Michel Valladão"
 title = "Time series modeling via JuMP"
 slides = "valladao.pdf"
+url = "https://youtu.be/RL6N4dZ5JDg"
 
 [talks.1_10_15]
 speaker = "Jad Wehbeh"
 title = "LoReSIO.jl: Using JuMP for Semi-Infinite Optimization"
+url = "https://youtu.be/_wd08Gam8zg"
 
 [talks.1_10_30]
 title = "Morning tea"
@@ -50,6 +55,7 @@ type = "break"
 [talks.1_11_00]
 speaker = "Truls Flatberg"
 title = "Applied optimization with JuMP at SINTEF"
+url = "https://youtu.be/-a9-ToFiT8E"
 
 [talks.1_11_15]
 title = "<br><br>"
@@ -57,14 +63,17 @@ title = "<br><br>"
 [talks.1_11_30]
 speaker = "Ni Wang"
 title = "Introduction of TulipaEnergyModel.jl"
+url = "https://youtu.be/r4jqVzEck28"
 
 [talks.1_11_45]
 speaker = "Diego Tejada"
 title = "SpineOpt.jl: A highly adaptable modelling framework for multi-energy systems"
+url = "https://youtu.be/_oJYwdKdW3E"
 
 [talks.1_12_00]
 speaker = "Jose Daniel Lara"
 title = "Solving the Market-to-Market Problem in Large Scale Power Systems"
+url = "https://youtu.be/N-jDHickaTc"
 
 [talks.1_12_15]
 
@@ -94,27 +103,34 @@ type = "break"
 [talks.1_14_15]
 speaker = "Paul Raynaud"
 title = "Minimization of partially-separable problems within JuliaSmoothOptimizers with the help of JuMP"
+url = "https://youtu.be/YoKV8RHBbr0"
 
 [talks.1_14_30]
 speaker = "Chelsea Sidrane"
 title = "Solving Difficult Reachability Problems in JuMP.jl"
+url = "https://youtu.be/Tqz8qBCxd4Q"
 
 [talks.1_14_45]
 speaker = "Willem van Osselaer"
 title = "Solving Matching Problems in Practical Applications Using JuMP "
 slides = "osselaer.pdf"
+url = "https://youtu.be/1gXwviRXqgg"
 
 [talks.1_15_00]
 speaker = "Bernardo Freitas Paulo da Costa"
 title = "Teaching Optimization: cvxpy, pyomo, JuMP"
+slides = "bfpc_teach.pdf"
+url = "https://youtu.be/5mZzUgfnbCw"
 
 [talks.1_15_15]
 speaker = "Valeri Vasquez"
 title = "Optimal deployment of genetic biocontrol under environmental uncertainty"
+url = "https://youtu.be/bOCVTQdHH0o"
 
 [talks.1_15_30]
 speaker = "Theo Diamandis"
 title = "Convex Network Flows"
+url = "https://youtu.be/Ug99bXXLhV0"
 
 [talks.1_15_45]
 title = "<br><br>"
@@ -138,20 +154,25 @@ type = "organization"
 [talks.2_09_00]
 speaker = "Joshua Pulsipher"
 title = "Accelerating Automatic Differentiation with InfiniteExaModels.jl"
+url = "https://youtu.be/XBPTb_nbrUs"
 
 [talks.2_09_30]
 speaker = "Francis Gagnon"
 title = "ModelPredictiveControl.jl: advanced process control made easy using JuMP"
 slides = "gagnon.pdf"
+url = "https://youtu.be/zzEC0BCCknI"
 
 [talks.2_09_45]
 speaker = "Bernardo Freitas Paulo da Costa"
 title = "LinearDecisionRules.jl"
+slides = "bfpc_ldr.pdf"
+url = "https://youtu.be/ERO6vyTOOoI"
 
 [talks.2_10_00]
 speaker = "Bethany Nicholson"
 title = "<b>Invited talk</b>: The Pyomo modeling language"
 slides = "Nicholson.pdf"
+url = "https://youtu.be/G1tW68vrOBM"
 
 [talks.2_10_15]
 
@@ -167,23 +188,28 @@ type = "break"
 speaker = "Dimitri Alston"
 title = "Recent Advances in EAGO.jl and its Use With JuMP.jl"
 slides = "alston.pdf"
+url = "https://youtu.be/r9VAFkHlr1s"
 
 [talks.2_11_15]
 speaker = "David Cole"
 title = "Graph-based Decomposition Approaches through Plasmo.jl"
 slides = "cole.pdf"
+url = "https://youtu.be/k9LAOyXgvb8"
 
 [talks.2_11_30]
 speaker = "Benoît Legat"
 title = "Why you should stop using the monomial basis"
+url = "https://youtu.be/CGPHaHxCG2w"
 
 [talks.2_12_00]
 speaker = "Joshua Pulsipher"
 title = "The New DisjunctiveProgramming.jl"
+url = "https://youtu.be/TIJ_qpSHdm0"
 
 [talks.2_12_15]
 speaker = "Lars Hellemo"
 title = "PiecewiseAffineApprox.jl"
+url = "https://youtu.be/rm292x59Yjk"
 
 [talks.2_12_30]
 title = "Lunch"
@@ -214,19 +240,23 @@ type = "break"
 [talks.2_14_30]
 speaker = "Pedro Maciel Xavier"
 title = "QUBO.jl: A Julia ecosystem for Quadratic Unconstrained Binary Optimization"
+url = "https://youtu.be/fKG7v9okSkQ"
 
 [talks.2_15_00]
 speaker = "Zedong Peng"
 title = "Hybrid Quantum Branch-and-Bound Method for Quadratic Unconstrained Binary Optimization"
+url = "https://youtu.be/0JRcGjQH1dE"
 
 [talks.2_15_15]
 speaker = "Alexis Montoison"
 title = "libHSL: the ultimate collection for large-scale scientific computation"
+url = "https://youtu.be/clfi8WEC5oc"
 
 [talks.2_15_30]
 speaker = "Tangi Migot"
 title = "Recent Advances in Optimization Solvers within JuliaSmoothOptimizers"
 slides = "migot.pdf"
+url = "https://youtu.be/e299lgkihzM"
 
 [talks.2_15_45]
 
