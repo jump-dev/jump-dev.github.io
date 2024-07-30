@@ -214,7 +214,8 @@ url = "https://youtu.be/TIJ_qpSHdm0"
 [talks.2_12_15]
 speaker = "Lars Hellemo"
 title = "PiecewiseAffineApprox.jl"
-# url = "https://youtu.be/rm292x59Yjk"
+slides = "hellemo.pdf"
+url = "https://youtu.be/rm292x59Yjk"
 
 [talks.2_12_30]
 title = "Lunch"
