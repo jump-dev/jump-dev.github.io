@@ -42,7 +42,7 @@ url = "https://youtu.be/RL6N4dZ5JDg"
 [talks.1_10_15]
 speaker = "Jad Wehbeh"
 title = "LoReSIO.jl: Using JuMP for Semi-Infinite Optimization"
-url = "https://youtu.be/_wd08Gam8zg"
+# url = "https://youtu.be/_wd08Gam8zg"
 
 [talks.1_10_30]
 title = "Morning tea"
@@ -55,7 +55,7 @@ type = "break"
 [talks.1_11_00]
 speaker = "Truls Flatberg"
 title = "Applied optimization with JuMP at SINTEF"
-url = "https://youtu.be/-a9-ToFiT8E"
+# url = "https://youtu.be/-a9-ToFiT8E"
 
 [talks.1_11_15]
 title = "<br><br>"
@@ -75,7 +75,7 @@ url = "https://youtu.be/_oJYwdKdW3E"
 [talks.1_12_00]
 speaker = "Jose Daniel Lara"
 title = "Solving the Market-to-Market Problem in Large Scale Power Systems"
-url = "https://youtu.be/N-jDHickaTc"
+# url = "https://youtu.be/N-jDHickaTc"
 
 [talks.1_12_15]
 
@@ -105,12 +105,12 @@ type = "break"
 [talks.1_14_15]
 speaker = "Paul Raynaud"
 title = "Minimization of partially-separable problems within JuliaSmoothOptimizers with the help of JuMP"
-url = "https://youtu.be/rALl05UIae8"
+# url = "https://youtu.be/rALl05UIae8"
 
 [talks.1_14_30]
 speaker = "Chelsea Sidrane"
 title = "Solving Difficult Reachability Problems in JuMP.jl"
-url = "https://youtu.be/LhcNqFnlcsg"
+# url = "https://youtu.be/LhcNqFnlcsg"
 
 [talks.1_14_45]
 speaker = "Willem van Osselaer"
@@ -127,12 +127,12 @@ url = "https://youtu.be/jEyCJAqkrZ8"
 [talks.1_15_15]
 speaker = "Valeri Vasquez"
 title = "Optimal deployment of genetic biocontrol under environmental uncertainty"
-url = "https://youtu.be/jyRbfTJK5AY"
+# url = "https://youtu.be/jyRbfTJK5AY"
 
 [talks.1_15_30]
 speaker = "Theo Diamandis"
 title = "Convex Network Flows"
-url = "https://youtu.be/GI-Lmpk_0VY"
+# url = "https://youtu.be/GI-Lmpk_0VY"
 
 [talks.1_15_45]
 title = "<br><br>"
@@ -214,7 +214,7 @@ url = "https://youtu.be/TIJ_qpSHdm0"
 [talks.2_12_15]
 speaker = "Lars Hellemo"
 title = "PiecewiseAffineApprox.jl"
-url = "https://youtu.be/rm292x59Yjk"
+# url = "https://youtu.be/rm292x59Yjk"
 
 [talks.2_12_30]
 title = "Lunch"
@@ -245,17 +245,17 @@ type = "break"
 [talks.2_14_30]
 speaker = "Pedro Maciel Xavier"
 title = "QUBO.jl: A Julia ecosystem for Quadratic Unconstrained Binary Optimization"
-url = "https://youtu.be/GdhHccx1LsM"
+# url = "https://youtu.be/GdhHccx1LsM"
 
 [talks.2_15_00]
 speaker = "Zedong Peng"
 title = "Hybrid Quantum Branch-and-Bound Method for Quadratic Unconstrained Binary Optimization"
-url = "https://youtu.be/A5XrAmJ24YA"
+# url = "https://youtu.be/A5XrAmJ24YA"
 
 [talks.2_15_15]
 speaker = "Alexis Montoison"
 title = "libHSL: the ultimate collection for large-scale scientific computation"
-url = "https://youtu.be/V0k5mR43khs"
+# url = "https://youtu.be/V0k5mR43khs"
 
 [talks.2_15_30]
 speaker = "Tangi Migot"
