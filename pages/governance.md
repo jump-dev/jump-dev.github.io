@@ -109,19 +109,15 @@ Steering Committee:
 The current members of the Steering Committee are:
 
 * Miles Lubin, _Hudson River Trading_ (@mlubin)
+* Juan Pablo Vielma, _Google_ (@juan-pablo-vielma)
 * Carleton Coffrin, _Los Alamos National Laboratory_ (@ccoffrin)
 * Oscar Dowson (@odow)
 * Changhyun Kwon, _KAIST_ (@chkwon)
-* Julian Hall, _University of Edinburgh_ (@jajhall)
 
 A member of the Steering Committee may leave the committee by notifying the
 Steering Committee and [core contributors]. The remaining Steering Committee
 members, in consultation with the [core contributors], will invite a member of
 the community to join in order to maintain a quorum of five members.
-
-The following people previously served on the Steering Committee:
-
-* Juan Pablo Vielma, _Google_ (@juan-pablo-vielma), 2018--2024
 
 ## Decision Making Process
 
