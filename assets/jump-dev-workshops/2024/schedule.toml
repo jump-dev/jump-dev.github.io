@@ -44,7 +44,8 @@ url = "https://youtu.be/RL6N4dZ5JDg"
 [talks.1_10_15]
 speaker = "Jad Wehbeh"
 title = "LoReSIO.jl: Using JuMP for Semi-Infinite Optimization"
-# url = "https://youtu.be/_wd08Gam8zg"
+slides = "wehbeh.pdf"
+url = "https://youtu.be/_wd08Gam8zg"
 
 [talks.1_10_30]
 title = "Morning tea"
