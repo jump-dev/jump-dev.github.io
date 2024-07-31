@@ -18,6 +18,7 @@ type = "organization"
 [talks.1_09_00]
 speaker = "Miles Lubin"
 title = "The state of JuMP"
+slides = "lubin.pdf"
 url = "https://youtu.be/cMUTdfoAMpo"
 
 [talks.1_09_15]
@@ -26,6 +27,7 @@ title = "<br><br>"
 [talks.1_09_30]
 speaker = "Andrew Rosemberg"
 title = "Bridging ML and Optimization with JuMP"
+slides = "rosemberg.pdf"
 url = "https://youtu.be/JhgHKYvga2s"
 
 [talks.1_09_45]
