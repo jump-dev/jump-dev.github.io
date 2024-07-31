@@ -141,8 +141,8 @@ url = "https://youtu.be/jyRbfTJK5AY"
 [talks.1_15_30]
 speaker = "Theo Diamandis"
 title = "Convex Network Flows"
-# slides = "diamandis.pdf"
-# url = "https://youtu.be/GI-Lmpk_0VY"
+slides = "diamandis.pdf"
+url = "https://youtu.be/GI-Lmpk_0VY"
 
 [talks.1_15_45]
 title = "<br><br>"
