@@ -126,8 +126,6 @@ The following people previously served on the Steering Committee:
 
 ## Decision Making Process
 
-## Decision Making Process
-
 This section outlines how financial and non-financial decisions are made in the
 JuMP project.
 
