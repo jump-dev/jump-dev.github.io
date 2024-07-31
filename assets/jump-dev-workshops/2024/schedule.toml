@@ -248,17 +248,20 @@ type = "break"
 [talks.2_14_30]
 speaker = "Pedro Maciel Xavier"
 title = "QUBO.jl: A Julia ecosystem for Quadratic Unconstrained Binary Optimization"
-# url = "https://youtu.be/GdhHccx1LsM"
+slides = "xavier.pdf"
+url = "https://youtu.be/GdhHccx1LsM"
 
 [talks.2_15_00]
-speaker = "Zedong Peng"
+speaker = "David E. Bernal"
 title = "Hybrid Quantum Branch-and-Bound Method for Quadratic Unconstrained Binary Optimization"
-# url = "https://youtu.be/A5XrAmJ24YA"
+slides = "bernal.pdf"
+url = "https://youtu.be/A5XrAmJ24YA"
 
 [talks.2_15_15]
 speaker = "Alexis Montoison"
 title = "libHSL: the ultimate collection for large-scale scientific computation"
-# url = "https://youtu.be/V0k5mR43khs"
+slides = "montoison.pdf"
+url = "https://youtu.be/V0k5mR43khs"
 
 [talks.2_15_30]
 speaker = "Tangi Migot"
