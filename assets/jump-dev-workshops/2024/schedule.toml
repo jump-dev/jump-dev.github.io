@@ -129,7 +129,7 @@ url = "https://youtu.be/jEyCJAqkrZ8"
 [talks.1_15_15]
 speaker = "Valeri Vasquez"
 title = "Optimal deployment of genetic biocontrol under environmental uncertainty"
-# url = "https://youtu.be/jyRbfTJK5AY"
+url = "https://youtu.be/jyRbfTJK5AY"
 
 [talks.1_15_30]
 speaker = "Theo Diamandis"
