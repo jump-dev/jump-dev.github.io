@@ -59,8 +59,8 @@ type = "break"
 [talks.1_11_00]
 speaker = "Truls Flatberg"
 title = "Applied optimization with JuMP at SINTEF"
-# slides = "flatberg.pdf"
-# url = "https://youtu.be/-a9-ToFiT8E"
+slides = "flatberg.pdf"
+url = "https://youtu.be/-a9-ToFiT8E"
 
 [talks.1_11_15]
 title = "<br><br>"
