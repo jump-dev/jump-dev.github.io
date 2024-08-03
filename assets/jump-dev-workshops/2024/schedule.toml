@@ -184,7 +184,7 @@ url = "https://youtu.be/ERO6vyTOOoI"
 [talks.2_10_00]
 speaker = "Bethany Nicholson"
 title = "<b>Invited talk</b>: The Pyomo modeling language"
-slides = "Nicholson.pdf"
+slides = "nicholson.pdf"
 url = "https://youtu.be/G1tW68vrOBM"
 
 [talks.2_10_15]
