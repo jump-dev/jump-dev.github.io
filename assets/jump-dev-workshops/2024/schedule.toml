@@ -8,7 +8,6 @@ title = "Light breakfast"
 type = "break"
 
 [talks.1_08_30]
-title = ""
 type = "break"
 
 [talks.1_08_45]
@@ -117,8 +116,8 @@ url = "https://youtu.be/rALl05UIae8"
 [talks.1_14_30]
 speaker = "Chelsea Sidrane"
 title = "Solving Difficult Reachability Problems in JuMP.jl"
-# slides = "sidrane.pdf"
-# url = "https://youtu.be/LhcNqFnlcsg"
+slides = "sidrane.pdf"
+url = "https://youtu.be/NpBteRtyFsc"
 
 [talks.1_14_45]
 speaker = "Willem van Osselaer"
@@ -156,7 +155,6 @@ title = "Light breakfast"
 type = "break"
 
 [talks.2_08_30]
-title = ""
 type = "break"
 
 [talks.2_08_45]
