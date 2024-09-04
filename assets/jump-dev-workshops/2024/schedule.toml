@@ -32,7 +32,7 @@ url = "https://youtu.be/JhgHKYvga2s"
 [talks.1_09_45]
 speaker = "Joaquim Dias Garcia"
 title = "Differentiating Parametric JuMP Models"
-# slides = ""
+slides = "diasgarcia.pdf"
 url = "https://youtu.be/UwZ9EM6lKl8"
 
 [talks.1_10_00]
