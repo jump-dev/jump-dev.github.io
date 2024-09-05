@@ -67,7 +67,7 @@ UnitJuMP.jl is particularly notable because it adds support for modeling with
 variables and constraints that are attached to physical units (which is the
 topic of the second oldest open issue in JuMP,  [JuMP#1350](https://github.com/jump-dev/JuMP.jl/issues/1350)).
 UnitJuMP prevents common modeling errors such as missing a scale factor from
-kilo- to mega-, or by using feet instead of meters. 
+kilo- to mega-, or by using feet instead of meters.
 
 Finally, Truls mentioned how they use PackageCompiler to create self-contained
 executables for deploying their JuMP and Julia code to customers. Initially, the
@@ -170,12 +170,41 @@ repository.
 
 ## Solving the Market-to-Market Problem in Large Scale Power Systems
 
+_Speaker: Jose Daniel Lara @jd-lara
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N-jDHickaTc?si=T7eQnTopbCCtES3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-100m variables and constraints
+In this talk Jose gave an overview and spoke about recent updates to
+[Sienna](https://www.nrel.gov/analysis/sienna.html) (nee PowerSimulations.jl).
+The talk follows his previous talks at [JuMP-dev 2019](https://www.youtube.com/watch?v=JAHjZYiIJeI)
+and [JuMP-dev 2023](https://www.youtube.com/watch?v=J7VbCKsnTvQ).
 
-Jose has previously spoken about Sienna (nee PowerSimulations.jl) at [JuMP-dev 2019](https://www.youtube.com/watch?v=JAHjZYiIJeI) and
-[JuMP-dev 2023](https://www.youtube.com/watch?v=J7VbCKsnTvQ).
+A key feature of Sienna is that it is designed for problems with _O(10^8)_
+variables and constraints. They are building and solving simulation models of
+the Eastern Interconnection, which is one of, it not the, largest power system
+in the world (it has 150,000 buses and 270,000 lines).
+
+A key lesson that I took from Jose's talk is that they have already encountered
+(and resolved or worked around) many of same issues that Diego raised in his
+talk, such as how to efficiently save the large volume of data that comes out of
+the simulation models.
+
+In regard to feature requests for future versions of JuMP, Jose again referenced
+the need for efficient re-solves of optimization models with parameters. We
+have, over the years, experimented with a number of different approaches in
+Sienna, including the nnow largely defunct [ParameterJuMP.jl](https://github.com/JuliaStochOpt/ParameterJuMP.jl),
+the intended replacement [ParametricOptInterface.jl](https://github.com/jump-dev/ParametricOptInterface.jl),
+and other work-arounds like adding new `VariableIndex in EqualTo` constraints.
+Ultimately, each way has a different trade-off (and it also depends on the size
+of the model that you are trying to solve), and we haven't found something that
+we are completely happy with.
+
+My main takeaways are that we should include benchmarks that use
+ParametricOptInterface.jl in our [jump-dev/open-energy-modeling-benchmarks](https://github.com/jump-dev/open-energy-modeling-benchmarks)
+repository, and that JuMP's ability to efficiently solve a sequence of similar
+problems with some changes in the problem parameters is both a main selling
+point of using JuMP over alternative tools and a current bottleneck in existing
+workflows.
 
 ## PiecewiseAffineApprox.jl
 
