@@ -28,7 +28,7 @@ _Speaker: Truls Flatberg @trulsf_
 In this [prize winning](prize/jump-dev-2024) talk, Truls discussed how they have
 been using JuMP to build and solve large scale optimization models at SINTEF.
 
-SINTEF has been an active attendees of JuMP-dev recently, speaking about
+SINTEF have been active attendees of JuMP-dev recently, speaking about
 [UnitJuMP.jl](https://www.youtube.com/watch?v=JQ6_LZfYRqg) and
 [SparseVariables.jl](https://www.youtube.com/watch?v=YuDvfZo9W5A) at
 [JuMP-dev 2022](/meetings/juliacon2022/), and
