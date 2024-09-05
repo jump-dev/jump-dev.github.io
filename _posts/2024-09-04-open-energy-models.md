@@ -33,7 +33,7 @@ SINTEF have been active attendees of JuMP-dev recently, speaking about
 [SparseVariables.jl](https://www.youtube.com/watch?v=YuDvfZo9W5A) at
 [JuMP-dev 2022](/meetings/juliacon2022/), and
 [TimeStruct.jl](https://www.youtube.com/watch?v=Hz6AL5kClKU) and
-[energy system models](https://www.youtube.com/watch?v=fARbeM8sANA) at
+[EnergyModelsX](https://www.youtube.com/watch?v=fARbeM8sANA) at
 [JuMP-dev 2023](/meetings/jumpdev2023/).
 
 Historically, SINTEF primarily used FICO Xpress's Mosel modeling language, with
