@@ -11,26 +11,30 @@ of our annual developer workshop. As part of the workshop, we sought talks
 from a number of groups who use JuMP to build open energy models.
 
 This report started as a summary of my notes from watching the energy-related
-talks. But based on the [positive feedback during the writing of this post](https://github.com/jump-dev/jump-dev.github.io/pull/156),
+talks, but based on the [positive feedback during the writing of this post](https://github.com/jump-dev/jump-dev.github.io/pull/156),
 I extended the scope to talks about energy system modeling in previous years as
 well.
 
 ## Summary
 
+This post provides an overview of the energy-related talks from JuMP-dev 2024
+and previous years, highlighting key insights and areas for improvement in using
+JuMP for energy system modeling
+
 JuMP is a popular tool for building open energy system models.
 
 Tools like [GenX](http://genx.mit.edu/) and [Sienna](https://www.nrel.gov/analysis/sienna.html)
-have a long history of development and used to analyze power systems around the
-world.
+have a long history of development, and they are used to analyze power systems
+around the world.
 
 The main features that energy modelers like about JuMP are:
 
- * Performance: tools like Sienna have demonstrated that it is possible to build
-   and solve extremely large simulation models of a power system, with _O(10⁸)_
-   variables and constraints.
+ * Performance: Sienna has demonstrated that it is possible to build and solve
+   extremely large simulation models of a power system, with _O(10⁸)_ variables
+   and constraints.
  * In-memory re-solves: JuMP makes it possible to efficiently solve a model,
    change some of the parameters like variable bounds and right-hand sides, and
-   then re-solve, without needing to rebuild the model from scratch or use file
+   then re-solve, without needing to rebuild each model from scratch or use file
    I/O. This is a critical feature for the rolling-horizon type problems that
    arise when we simulate the operations of a power system.
  * Documentation: I have put a lot of effort into developing excellent
@@ -53,7 +57,7 @@ improve JuMP in the context of energy modeling:
  * We need better support for sparse variables. The default `SparseAxisArray` in
    JuMP has a number of performance problems (it is really just a thin wrapper
    around `Base.Dict`). SINTEF have developed [SparseVariables.jl](https://github.com/sintefore/SparseVariables.jl).
-   We should think about whether we can better integrate this into JuMP.
+   We will think about how we can better integrate this into JuMP.
  * We need better support for physical units. One of the most common bugs in
    energy system models related to mismatched physical units, whether that is
    data given in kilowatts instead of megawatts, or feet instead of meters.
@@ -64,11 +68,15 @@ improve JuMP in the context of energy modeling:
    users to formulate and solve a wide range of optimization problems, JuMP
    provides little support for the users who make mistakes, or tools for
    advanced users to debug problematic models. Moreover, in our experience the
-   majority of (expensive) human programmer time is spent, not in formulating or
-   solving a model, but in the debugging and testing stage of development. There
+   majority of (expensive) human programmer time is spent, not on formulating or
+   solving a model, but on the debugging and testing stage of development. There
    is an [open issue in JuMP (#3664)](https://github.com/jump-dev/JuMP.jl/issues/3664)
    that contains some preliminary ideas for features we could add that would
    help users debug and test JuMP models.
+
+To summarize, JuMP is a powerful tool for energy system modeling. The insights
+from JuMP-dev 2024 will help guide future developments, particularly in areas
+like debugging, physical units, and sparse variabble support.
 
 ## Contents
 
@@ -98,8 +106,8 @@ _Speaker: Truls Flatberg @trulsf_
 In this [prize winning](prize/jump-dev-2024) talk, Truls discussed how they have
 been using JuMP to build and solve large scale optimization models at SINTEF.
 
-SINTEF have been active attendees of JuMP-dev recently, speaking about
-[UnitJuMP.jl](#2022-unitjump-automatic-unit-handling-in-jump) and
+Developers from SINTEF have been active attendees of JuMP-dev recently, speaking
+about [UnitJuMP.jl](#2022-unitjump-automatic-unit-handling-in-jump) and
 [SparseVariables.jl](#2022-sparsevariablesjl-efficient-sparse-modelling-with-jump) at
 [JuMP-dev 2022](/meetings/juliacon2022/), and
 [TimeStruct.jl](#2023-timestructjl-multi-horizon-time-modelling-in-jump) and
