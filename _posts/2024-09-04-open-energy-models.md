@@ -1,25 +1,95 @@
 ---
 layout: post
-title:  "Open Energy Modeling at JuMP-dev 2024"
-date:   2024-09-01
+title:  "Open Energy Modeling at JuMP-dev"
+date:   2024-09-04
 categories: [open-energy-models]
 author: "Oscar Dowson"
 ---
 
 In July 2024, we held [JuMP-dev 2024](/meetings/jumpdev2024/), the 7th edition
 of our annual developer workshop. As part of the workshop, we sought talks
-from a number of groups who use JuMP to build open energy models. This report
-is a summary of my notes from watching the energy-related talks.
+from a number of groups who use JuMP to build open energy models.
 
-### Contents
+This report started as a summary of my notes from watching the energy-related
+talks. But based on the [positive feedback during the writing of this post](https://github.com/jump-dev/jump-dev.github.io/pull/156),
+I extended the scope to talks about energy system modeling in previous years as
+well.
 
- * [Applied optimization with JuMP at SINTEF](#applied-optimization-with-jump-at-sintef)
- * [Introduction to TulipaEnergyModel.jl](#introduction-to-tulipaenergymodeljl)
- * [SpineOpt.jl: A highly adaptable modelling framework for multi-energy systems](#spineoptjl-a-highly-adaptable-modelling-framework-for-multi-energy-systems)
- * [Solving the Market-to-Market Problem in Large Scale Power Systems](#solving-the-market-to-market-problem-in-large-scale-power-systems)
- * [PiecewiseAffineApprox.jl](#piecewiseaffineapproxjl)
+## Summary
 
-## Applied optimization with JuMP at SINTEF
+JuMP is a popular tool for building open energy system models.
+
+Tools like [GenX](http://genx.mit.edu/) and [Sienna](https://www.nrel.gov/analysis/sienna.html)
+have a long history of development and used to analyze power systems around the
+world.
+
+The main features that energy modelers like about JuMP are:
+
+ * Performance: tools like Sienna have demonstrated that it is possible to build
+   and solve extremely large simulation models of a power system, with _O(10⁸)_
+   variables and constraints.
+ * In-memory re-solves: JuMP makes it possible to efficiently solve a model,
+   change some of the parameters like variable bounds and right-hand sides, and
+   then re-solve, without needing to rebuild the model from scratch or use file
+   I/O. This is a critical feature for the rolling-horizon type problems that
+   arise when we simulate the operations of a power system.
+ * Documentation: I have put a lot of effort into developing excellent
+   documentation, and we frequently add new tutorials and clarify existing parts
+   in response to common user questions. Good documentation makes it easier for
+   new users to onboard, and targeted tutorials make it possible to share best
+   practice.
+ * Support: we provide free community support on [http://jump.dev/forum](http://jump.dev/forum).
+   The forum is highly active, and multiple speakers have talked about the fast
+   and informative support they get from reading and asking questions.
+
+However, there are a few common complaints and suggestions for how we could
+improve JuMP in the context of energy modeling:
+
+ * Developing efficient Julia code can be hard. Writing code like you would in
+   MATLAB or Python does not result in performant Julia code. Similarly, writing
+   models like you would in GAMS does not result in fast JuMP code. We need to
+   better highlight these differences, particularly for new users who are
+   transitioning to JuMP from other tools.
+ * We need better support for sparse variables. The default `SparseAxisArray` in
+   JuMP has a number of performance problems (it is really just a thin wrapper
+   around `Base.Dict`). SINTEF have developed [SparseVariables.jl](https://github.com/sintefore/SparseVariables.jl).
+   We should think about whether we can better integrate this into JuMP.
+ * We need better support for physical units. One of the most common bugs in
+   energy system models related to mismatched physical units, whether that is
+   data given in kilowatts instead of megawatts, or feet instead of meters.
+   Pyomo has long supported physical units, and SINTEF have developed [UnitJuMP.jl](https://github.com/trulsf/UnitJuMP.jl).
+   Adding support for physical units is an [open issue in JuMP (#1350)](https://github.com/jump-dev/JuMP.jl/issues/1350)
+   and is on our [roadmap](https://jump.dev/JuMP.jl/stable/developers/roadmap/).
+ * We need better tools for debugging JuMP models. Despite making it easy for
+   users to formulate and solve a wide range of optimization problems, JuMP
+   provides little support for the users who make mistakes, or tools for
+   advanced users to debug problematic models. Moreover, in our experience the
+   majority of (expensive) human programmer time is spent, not in formulating or
+   solving a model, but in the debugging and testing stage of development. There
+   is an [open issue in JuMP (#3664)](https://github.com/jump-dev/JuMP.jl/issues/3664)
+   that contains some preliminary ideas for features we could add that would
+   help users debug and test JuMP models.
+
+## Contents
+
+This post ended up being pretty long, so here is a table of contents if you want
+to JuMP (if you will) around:
+
+ * [[2024] Applied optimization with JuMP at SINTEF](#2024-applied-optimization-with-jump-at-sintef)
+ * [[2024] Introduction to TulipaEnergyModel.jl](#2024-introduction-to-tulipaenergymodeljl)
+ * [[2024] SpineOpt.jl: A highly adaptable modelling framework for multi-energy systems](#2024-spineoptjl-a-highly-adaptable-modelling-framework-for-multi-energy-systems)
+ * [[2024] Solving the Market-to-Market Problem in Large Scale Power Systems](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems)
+ * [[2024] PiecewiseAffineApprox.jl](#2024-piecewiseaffineapproxjl)
+ * [[2023] How JuMP Enables Abstract Energy System Models](#2023-how-jump-enables-abstract-energy-system-models)
+ * [[2023] TimeStruct.jl: Multi Horizon Time Modelling in JuMP](#2023-timestructjl-multi-horizon-time-modelling-in-jump)
+ * [[2023] Designing a Flexible Energy System Model Using Multiple Dispatch](#2023-designing-a-flexible-energy-system-model-using-multiple-dispatch)
+ * [[2022] UnitJuMP: Automatic Unit Handling in JuMP](#2022-unitjump-automatic-unit-handling-in-jump)
+ * [[2022] SparseVariables.jl: Efficient Sparse Modelling with JuMP](#2022-sparsevariablesjl-efficient-sparse-modelling-with-jump)
+ * [[2021] Modelling Australia's National Electricity Market with JuMP](#2021-modelling-australias-national-electricity-market-with-jump)
+ * [[2021] AnyMOD.jl: A Julia package for creating energy system models](#2021-anymodjl-a-julia-package-for-creating-energy-system-models)
+ * [[2019] PowerSimulations.jl](#2019-powersimulationsjl)
+
+## [2024] Applied optimization with JuMP at SINTEF
 
 _Speaker: Truls Flatberg @trulsf_
 
@@ -29,11 +99,11 @@ In this [prize winning](prize/jump-dev-2024) talk, Truls discussed how they have
 been using JuMP to build and solve large scale optimization models at SINTEF.
 
 SINTEF have been active attendees of JuMP-dev recently, speaking about
-[UnitJuMP.jl](https://www.youtube.com/watch?v=JQ6_LZfYRqg) and
-[SparseVariables.jl](https://www.youtube.com/watch?v=YuDvfZo9W5A) at
+[UnitJuMP.jl](#2022-unitjump-automatic-unit-handling-in-jump) and
+[SparseVariables.jl](#2022-sparsevariablesjl-efficient-sparse-modelling-with-jump) at
 [JuMP-dev 2022](/meetings/juliacon2022/), and
-[TimeStruct.jl](https://www.youtube.com/watch?v=Hz6AL5kClKU) and
-[EnergyModelsX](https://www.youtube.com/watch?v=fARbeM8sANA) at
+[TimeStruct.jl](#2023-timestructjl-multi-horizon-time-modelling-in-jump) and
+[EnergyModelsX](#2023-designing-a-flexible-energy-system-model-using-multiple-dispatch)  at
 [JuMP-dev 2023](/meetings/jumpdev2023/).
 
 Historically, SINTEF primarily used FICO Xpress's Mosel modeling language, with
@@ -75,7 +145,9 @@ _O(400 MB)_ files caused some concern internally within SINTEF, but after
 feedback from customers this has not proven to be a problem. Still, it is
 something that the Julia community is working on improving.
 
-## Introduction to TulipaEnergyModel.jl
+[_Back to contents_](#contents)
+
+## [2024] Introduction to TulipaEnergyModel.jl
 
 _Speaker: Diego Tejada @datejada_
 
@@ -118,7 +190,9 @@ at the workshop. We have since worked together to add a
 to the JuMP documentation that uses ParametricOptInterface to solve a rolling
 horizon problem of a power system with battery storage.
 
-## SpineOpt.jl: A highly adaptable modelling framework for multi-energy systems
+[_Back to contents_](#contents)
+
+## [2024] SpineOpt.jl: A highly adaptable modelling framework for multi-energy systems
 
 _Speaker: Diego Tejada @datejada_
 
@@ -168,18 +242,20 @@ simulations in our set of benchmark instances that we are building in the
 [jump-dev/open-energy-modeling-benchmarks](https://github.com/jump-dev/open-energy-modeling-benchmarks)
 repository.
 
-## Solving the Market-to-Market Problem in Large Scale Power Systems
+[_Back to contents_](#contents)
 
-_Speaker: Jose Daniel Lara @jd-lara
+## [2024] Solving the Market-to-Market Problem in Large Scale Power Systems
+
+_Speaker: Jose Daniel Lara @jd-lara_
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N-jDHickaTc?si=T7eQnTopbCCtES3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 In this talk Jose gave an overview and spoke about recent updates to
 [Sienna](https://www.nrel.gov/analysis/sienna.html) (nee PowerSimulations.jl).
-The talk follows his previous talks at [JuMP-dev 2019](https://www.youtube.com/watch?v=JAHjZYiIJeI)
+The talk follows his previous talks at [JuMP-dev 2019](#2019-powersimulationsjl)
 and [JuMP-dev 2023](https://www.youtube.com/watch?v=J7VbCKsnTvQ).
 
-A key feature of Sienna is that it is designed for problems with _O(10^8)_
+A key feature of Sienna is that it is designed for problems with _O(10⁸)_
 variables and constraints. They are building and solving simulation models of
 the Eastern Interconnection, which is one of, it not the, largest power system
 in the world (it has 150,000 buses and 270,000 lines).
@@ -192,7 +268,7 @@ the simulation models.
 In regard to feature requests for future versions of JuMP, Jose again referenced
 the need for efficient re-solves of optimization models with parameters. We
 have, over the years, experimented with a number of different approaches in
-Sienna, including the nnow largely defunct [ParameterJuMP.jl](https://github.com/JuliaStochOpt/ParameterJuMP.jl),
+Sienna, including the now largely defunct [ParameterJuMP.jl](https://github.com/JuliaStochOpt/ParameterJuMP.jl),
 the intended replacement [ParametricOptInterface.jl](https://github.com/jump-dev/ParametricOptInterface.jl),
 and other work-arounds like adding new `VariableIndex in EqualTo` constraints.
 Ultimately, each way has a different trade-off (and it also depends on the size
@@ -206,7 +282,9 @@ problems with some changes in the problem parameters is both a main selling
 point of using JuMP over alternative tools and a current bottleneck in existing
 workflows.
 
-## PiecewiseAffineApprox.jl
+[_Back to contents_](#contents)
+
+## [2024] PiecewiseAffineApprox.jl
 
 _Speaker: Lars Hellemo @hellemo_
 
@@ -236,3 +314,179 @@ an issue,
 to discuss moving that package to `jump-dev`. In the medium term, it might be
 helpful to combine the two packages into a single utility package that has a
 broad range of functionality for constructing piecewise linear approximations.
+
+[_Back to contents_](#contents)
+
+## [2023] How JuMP Enables Abstract Energy System Models
+
+_Speaker: Stefan Strömer @sstromer_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IFI-u6TiuBk?si=Jco2_udi2BcuDNuj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In this talk, Stefan discussed an energy system model they have been developing.
+A unique feature of their model is that they want to scale from low-latency
+model predictive control to continental scale models. Their approach is no-code,
+with the complete input described in YAML and CSV files.
+
+Stefan again gives an example that their initial experience with JuMP was not
+good because it did not fit their object-orientated design philosophy. However,
+after working with it for a while and changing their approach, they are now very
+happy with it and with its performance.
+
+[_Back to contents_](#contents)
+
+## [2023] TimeStruct.jl: Multi Horizon Time Modelling in JuMP
+
+_Speaker: Truls Flatberg @trulsf_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Hz6AL5kClKU?si=X2oqhPM3OaqaNsAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In this talk Truls presented his work on [TimeStruct.jl](https://github.com/sintefore/TimeStruct.jl),
+(if you watch the video, the package is now registered!) which is a JuMP
+extension for working with time-structured models that often arise in planning
+problems.
+
+Truls points out that a key feature of JuMP is its modularity, and how they can
+invest in the develop of small utility packages like TimeStruct.jl, and then
+re-use the utility package across many different application models.
+
+If you are building a JuMP model with time as a significant component, we
+recommend that you try out
+[TimeStruct.jl](https://github.com/sintefore/TimeStruct.jl).
+
+[_Back to contents_](#contents)
+
+## [2023] Designing a Flexible Energy System Model Using Multiple Dispatch
+
+_Speaker: Julian Straus @JulStraus_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fARbeM8sANA?si=tETN7GSZNzW5ZzCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In this talk, Julian discusses [EnergyModelsX](https://github.com/EnergyModelsX)
+that he is building at SINTEF.
+
+I found it useful to compare the talk to Jose's [[2019] PowerSimulations.jl](#2019-powersimulationsjl).
+If multiple groups arrive at the same set of ideas, I think it demonstrates that
+hierarchical models that leverage Julia's multiple dispatch is the "right" way
+to build large-scale JuMP models.
+
+This approach is the topic of my tutorial,
+[Design patters for large models](https://jump.dev/JuMP.jl/stable/tutorials/getting_started/design_patterns_for_larger_models/),
+which I think should be required reading for anyone embarking on the development
+of an industrial-scale JuMP project.
+
+[_Back to contents_](#contents)
+
+## [2022] UnitJuMP: Automatic Unit Handling in JuMP
+
+_Speaker: Truls Flatberg @trulsf_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JQ6_LZfYRqg?si=Aj1yNzNDgPodqC2u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In this talk Truls presented his work on UnitJuMP.jl, which is a JuMP extension
+that adds support for modeling with variables and constraints that are attached
+to physical units (which is the topic of the second oldest open issue in JuMP,
+[JuMP#1350](https://github.com/jump-dev/JuMP.jl/issues/1350)). UnitJuMP prevents
+common modeling errors such as missing a scale factor from kilo- to mega-, or by
+using feet instead of meters.
+
+Adding support for physical units is an
+[open issue in JuMP (#1350)](https://github.com/jump-dev/JuMP.jl/issues/1350)
+and is on our [roadmap](https://jump.dev/JuMP.jl/stable/developers/roadmap/).
+For now, readers are encouraged to use and try out UnitJuMP. At some point, we
+will better integrate the features of UnitJuMP into the core JuMP repository.
+
+[_Back to contents_](#contents)
+
+## [2022] SparseVariables.jl: Efficient Sparse Modelling with JuMP
+
+_Speaker: Lars Hellemo @hellemo_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YuDvfZo9W5A?si=A0LQR4Rus94j_1qh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In this talk Lars presented his work on [SparseVariables.jl](https://github.com/sintefore/SparseVariables.jl),
+which is SINTEF's solution for dealing with the common problems associated with
+the sparse index sets that often arise in industrial JuMP models.
+
+For now, readers are encouraged to use and try out SparseVariables. At some
+point, we should think about how to better integrate the features of
+SparseVariables into the core JuMP repository.
+
+[_Back to contents_](#contents)
+
+## [2021] Modelling Australia's National Electricity Market with JuMP
+
+_Speaker: James Foster @jd-foster_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gbSVH8Q0xq4?si=IeZgeipH3UhTTnkz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In this talk, James provided a general overview of develop models in JuMP. A
+useful part of the talk was how he mentioned the challenge of working with
+sparsely indexed parameters and variables. We just saw that SINTEF solved this
+challenge by developing SparseVariables.jl. James solved the challenge by
+loading the data into SQLite tables, performing the computationally intensive
+transformation steps using SQL, and then outputting clean tables to DataFrames
+for use in JuMP.
+
+This is the same approach that I have taken in tutorials like
+[The network multi-commodity flow problem](https://jump.dev/JuMP.jl/stable/tutorials/linear/multi_commodity_network/),
+so I wonder if it would be helpful for other users if we advertised this more
+widely.
+
+James also raises the reoccurring theme that scaling up your model will present
+different issues than the model design phase.
+
+[_Back to contents_](#contents)
+
+## [2021] AnyMOD.jl: A Julia package for creating energy system models
+
+_Speaker: Leonard Goeke @leonardgoeke_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QE_tNDER0F4?si=8TTH54xkuz88tnmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In this talk, Leonard presented his work on [AnyMOD.jl](https://github.com/leonardgoeke/AnyMOD.jl).
+Like Stefan, AnyMOD.jl is a low-code model, in which all inputs and outputs are
+via CSV files.
+
+A unique feature of AnyMOD is that it has automatic scaling of the problem to
+increase the robustness of interior point solves. This is something that JuMP
+has not provided in the past, although we sometimes get it as a feature request.
+I am still divided on whether this is something that we should support, because
+in my experience, models that need automatic rescaling are typically "wrong" in
+the sense that they are defined at the wrong level of detail (for example,
+measuring costs to the nearest cent for investment problems that invest billions
+of dollars over decades).
+
+Like [[2021] Modelling Australia's National Electricity Market with JuMP](#2021-modelling-australias-national-electricity-market-with-jump),
+AnyMOD uses DataFrames and SQL joins to do the various transformations required
+to get the problem data into a format suitable for JuMP.
+
+[_Back to contents_](#contents)
+
+## [2019] PowerSimulations.jl
+
+_Speaker: Jose Daniel Lara @jd-lara_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JAHjZYiIJeI?si=euyA8WzK-lEs_Pg9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This talk is the first talk by Jose at a JuMP-dev on PowerSimulations.jl (now
+called Sienna). I found it useful to compare this talk to
+[his talk at JuMP-dev 2024](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems).
+
+Jose described how the three design principles of PowerSimulations were
+flexibility, modularity, and scalability, and how all three of these were
+achieved by using Julia's multiple dispatch to build different mathematical
+formulations based on the input data. I found it interesting that Jose hits upon
+on many of the same themes that Julian did in his 2023 talk
+[[2023] Designing a Flexible Energy System Model Using Multiple Dispatch](#2023-designing-a-flexible-energy-system-model-using-multiple-dispatch).
+This suggests to me that we can better share lessons learned between developers.
+
+Jose also talks about the issue with parameters and time-series data. Five years
+later and we still do not have a perfect solution to this.
+
+Finally, Jose talked about how they wanted to scale to 50,000 buses. Well, in
+his [2024 talk](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems),
+he mentioned that Sienna now runs on problems with 150,000 buses. It's nice to
+see progress!
+
+[_Back to contents_](#contents)
