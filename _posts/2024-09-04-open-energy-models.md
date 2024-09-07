@@ -96,6 +96,7 @@ to JuMP (if you will) around:
  * [[2021] Modelling Australia's National Electricity Market with JuMP](#2021-modelling-australias-national-electricity-market-with-jump)
  * [[2021] AnyMOD.jl: A Julia package for creating energy system models](#2021-anymodjl-a-julia-package-for-creating-energy-system-models)
  * [[2019] PowerSimulations.jl](#2019-powersimulationsjl)
+ * [[2017] PowerModels.jl: a Brief Introduction](#2017-powermodelsjl-a-brief-introduction)
 
 ## [2024] Applied optimization with JuMP at SINTEF
 
@@ -226,10 +227,9 @@ models in a complicated solution algorithm. On the other hand, the MGA algorithm
 seems a lot like some of the multi-objective solution algorithms that are built
 into
 [MultiObjectiveAlgorithms.jl](https://github.com/jump-dev/MultiObjectiveAlgorithms.jl).
-Similarly, I have been developing [SDDP.jl](http://sddp.dev) for nearly 10
-years. SDDP.jl is built to solve multistage stochastic optimization problems
-using a form of Benders decomposition, and it is already used to solve
-energy-related problems, such as the
+Similarly, I develop [SDDP.jl](http://sddp.dev), which is a generic library for
+solving multistage stochastic optimization problems using a form of Benders
+decomposition. SDDP.jlj is used to solve energy-related problems, such as the
 [JADE model at the New Zealand Electricity Authority](https://www.emi.ea.govt.nz/Wholesale/Tools/JADE).
 It would be useful to understand more about how SpineOpt implements these
 meta-solvers, and whether it is possible to re-use common packages such as
@@ -496,5 +496,31 @@ Finally, Jose talked about how they wanted to scale to 50,000 buses. Well, in
 his [2024 talk](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems),
 he mentioned that Sienna now runs on problems with 150,000 buses. It's nice to
 see progress!
+
+[_Back to contents_](#contents)
+
+## [2017] PowerModels.jl: a Brief Introduction
+
+_Speaker: Carleton Coffrin @ccoffrin_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W4LOKR7B4ts?si=__mZY2mAsJWTZXeD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This is a talk about [PowerModels.jl](https://github.com/lanl-ansi/PowerModels.jl)
+from the first JuMP-dev, which we held in 2017 at MIT. PowerModels.jl is one of
+the oldest JuMP-related packages for power system optimization.
+
+To me, there are two design features of PowerModels.jl which stick out, and have
+changed very little over the course of PowerModels development.
+
+First, the input data is parsed from MATPOWER files into untyped dictionaries.
+This makes it easy for domain-expert users to work with, but Julia code that
+operates on the input data is not type stable. This design decision is the
+opposite of that chosen by [[2019] PowerSimulations.jl](#2019-powersimulationsjl).
+It is an open question whether this was a good design decision. It seems to work
+for PowerModels, but it may not work for larger simulation models.
+
+Second, PowerModels makes heavy use of Julia's multiple dispatch to implement
+the various relaxations and approximations of AC power flow. This decision has
+proven to be a very good design choice.
 
 [_Back to contents_](#contents)
