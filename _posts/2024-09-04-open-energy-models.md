@@ -95,6 +95,7 @@ to JuMP (if you will) around:
  * [[2021] UnitCommitment.jl Security-Constrained Unit Commitment in JuMP](#2021-unitcommitmentjl-security-constrained-unit-commitment-in-jump)
  * [[2021] A Brief Introduction to InfrastructureModels](#2021-a-brief-introduction-to-infrastructuremodels)
  * [[2019] PowerSimulations.jl](#2019-powersimulationsjl)
+ * [[2017] Stochastic programming in energy systems](#2017-stochastic-programming-in-energy-systems)
  * [[2017] PowerModels.jl: a Brief Introduction](#2017-powermodelsjl-a-brief-introduction)
 
 ## [2024] Applied optimization with JuMP at SINTEF
@@ -549,6 +550,32 @@ Finally, Jose talked about how they wanted to scale to 50,000 buses. Well, in
 his [2024 talk](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems),
 he mentioned that Sienna now runs on problems with 150,000 buses. It's nice to
 see progress!
+
+[_Back to contents_](#contents)
+
+## [2017] Stochastic programming in energy systems
+
+_Speaker: Joaquim Dias Garcia @joaquimg_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HwOOww8vwyA?si=Hs065CFXrIe2kg6q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In this talk from thhe first JuMP-dev, Joaquim discussed how PSR were using JuMP
+to solve a variety of energy-related models, both for research and for
+industrial clients around the world.
+
+For me, it was interesting to revisit this talk because Joaquim's discussion
+about stochastic dual dynamic programming (I develop [SDDP.jl](https://sddp.dev).)
+Joaquim described how they implemmented some of the algorithm in JuMP, and some
+in [MathProgBase](https://github.com/JuliaOpt/MathProgBase.jl). I note that many
+of the missing features that drove him to do so (like the ability to delete
+variables and constraints) are now first-class features in JuMP.
+
+One pertinent feature is that Joaquim described the need for an IIS (irreducible
+infeasible subsystem) solver to help debugging. At the moment, some solvers like
+Gurobi and Xpress provide native support for computing an IIS, while others like
+HiGHS and Ipopt do not. It would be useful to add native support for the IIS to
+HiGHS, and it would also be useful to write a generic IIS solver in
+MathOptInterface for optimizers that do not have native support.
 
 [_Back to contents_](#contents)
 
