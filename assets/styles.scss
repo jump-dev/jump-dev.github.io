@@ -74,16 +74,18 @@ $colour-notification-banner: #ffc107;
     font-size: 100%;
   }
 }
+
 // Over-ride default indentation.
 :root {
   p{
     margin-bottom: 0rem;
   }
   ul{
-    // TODO(odow): we should reduce the margin-bottom of lists, except this
-    // disables the drop-down navigation button on mobile.
-    // margin-bottom: 0rem;
     margin-left: 1em;
+    margin-bottom: 0;
+  }
+  .list--nav {
+    margin-bottom: var(--listHeight, 0)
   }
 }
 
