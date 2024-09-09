@@ -17,10 +17,6 @@ well.
 
 ## Summary
 
-This post provides an overview of the energy-related talks from JuMP-dev 2024
-and previous years, highlighting key insights and areas for improvement in using
-JuMP for energy system modeling
-
 JuMP is a popular tool for building open energy system models.
 
 Tools like [GenX](http://genx.mit.edu/) and [Sienna](https://www.nrel.gov/analysis/sienna.html)
@@ -93,8 +89,11 @@ to JuMP (if you will) around:
  * [[2023] Designing a Flexible Energy System Model Using Multiple Dispatch](#2023-designing-a-flexible-energy-system-model-using-multiple-dispatch)
  * [[2022] UnitJuMP: Automatic Unit Handling in JuMP](#2022-unitjump-automatic-unit-handling-in-jump)
  * [[2022] SparseVariables.jl: Efficient Sparse Modelling with JuMP](#2022-sparsevariablesjl-efficient-sparse-modelling-with-jump)
+ * [[2022] Benchmarking Nonlinear Optimization with AC Optimal Power Flow](#2022-benchmarking-nonlinear-optimization-with-ac-optimal-power-flow)
  * [[2021] Modelling Australia's National Electricity Market with JuMP](#2021-modelling-australias-national-electricity-market-with-jump)
  * [[2021] AnyMOD.jl: A Julia package for creating energy system models](#2021-anymodjl-a-julia-package-for-creating-energy-system-models)
+ * [[2021] UnitCommitment.jl Security-Constrained Unit Commitment in JuMP](#2021-unitcommitmentjl-security-constrained-unit-commitment-in-jump)
+ * [[2021] A Brief Introduction to InfrastructureModels](#2021-a-brief-introduction-to-infrastructuremodels)
  * [[2019] PowerSimulations.jl](#2019-powersimulationsjl)
  * [[2017] PowerModels.jl: a Brief Introduction](#2017-powermodelsjl-a-brief-introduction)
 
@@ -341,6 +340,14 @@ good because it did not fit their object-orientated design philosophy. However,
 after working with it for a while and changing their approach, they are now very
 happy with it and with its performance.
 
+Stefan also talked about the need for parameters, and how `parameter * variable`
+support would be useful, but that it complicates. We had
+[multiple](https://discourse.julialang.org/t/jump-multiplicative-parameters-for-lp/94192)
+[discussions](https://discourse.julialang.org/t/moi-re-evaluate-custom-bridge-direct-model-bridging/94219)
+on the community forum, and Stefan opened a [PR with over 50 comments](https://github.com/jump-dev/MathOptInterface.jl/pull/2092)
+that was ultimately closed without merging. This is a tricky topic for which we
+do not have a good solution.
+
 [_Back to contents_](#contents)
 
 ## [2023] TimeStruct.jl: Multi Horizon Time Modelling in JuMP
@@ -422,6 +429,18 @@ SparseVariables into the core JuMP repository.
 
 [_Back to contents_](#contents)
 
+## [2022] Benchmarking Nonlinear Optimization with AC Optimal Power Flow
+
+_Speaker: Carleton Coffrin @ccoffrin_
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tvBNQcuU-hY?si=fSJKG_OK-RhkXAnq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This talk by Carleton isn't really about energy modeling, but it is about
+solving nonlinear AC Optimal Power Flow problems. I'm including it here for
+reader interest because it demonstrates that JuMP is a great tool for building
+and solving energy-related optimization problems.
+
+[_Back to contents_](#contents)
+
 ## [2021] Modelling Australia's National Electricity Market with JuMP
 
 _Speaker: James Foster @jd-foster_
@@ -468,6 +487,40 @@ of dollars over decades).
 Like [[2021] Modelling Australia's National Electricity Market with JuMP](#2021-modelling-australias-national-electricity-market-with-jump),
 AnyMOD uses DataFrames and SQL joins to do the various transformations required
 to get the problem data into a format suitable for JuMP.
+
+[_Back to contents_](#contents)
+
+## [2021] UnitCommitment.jl Security-Constrained Unit Commitment in JuMP
+
+_Speaker: Alinson Xavier @iSoron_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rYUZK9kYeIY?si=zUdYsvHk_we_qbYb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In this talk, Alinson presented his work on
+[UnitCommitment.jl](https://github.com/ANL-CEEESA/UnitCommitment.jl). The scope
+of this package is similar to PowerModels.jl, in that it is not an energy system
+model, but a collection of data and implementations of the unit commitment
+problem, which is often a core part of energy system models that focus on the
+operation of a power system with sub-hourly resolution.
+
+A key part of UnitCommitment.jl is a JSON file format for unit commitment
+problems.
+
+[_Back to contents_](#contents)
+
+## [2021] A Brief Introduction to InfrastructureModels
+
+_Speaker: Carleton Coffrin @ccoffrin_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/POOt1FCA8LI?si=zJK3Pr5DQvqtYY6n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This is a general interest talk by Carleton isn't really about energy modeling,
+but it is about the much larger suite of models around
+[InfrastructureModels.jl](https://github.com/lanl-ansi/InfrastructureModels.jl)
+that they are building at LANL.
+
+If you are writing energy system models, InfrastructureModels.jl and related
+packages like PowerModels.jl are a good place to look for inspiration.
 
 [_Back to contents_](#contents)
 
