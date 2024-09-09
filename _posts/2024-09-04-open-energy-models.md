@@ -92,6 +92,7 @@ to JuMP (if you will) around:
  * [[2022] Benchmarking Nonlinear Optimization with AC Optimal Power Flow](#2022-benchmarking-nonlinear-optimization-with-ac-optimal-power-flow)
  * [[2021] Modelling Australia's National Electricity Market with JuMP](#2021-modelling-australias-national-electricity-market-with-jump)
  * [[2021] AnyMOD.jl: A Julia package for creating energy system models](#2021-anymodjl-a-julia-package-for-creating-energy-system-models)
+ * [[2021] Power Market Tool (POMATO)](#2021-power-market-tool-pomato)
  * [[2021] UnitCommitment.jl Security-Constrained Unit Commitment in JuMP](#2021-unitcommitmentjl-security-constrained-unit-commitment-in-jump)
  * [[2021] A Brief Introduction to InfrastructureModels](#2021-a-brief-introduction-to-infrastructuremodels)
  * [[2019] PowerSimulations.jl](#2019-powersimulationsjl)
@@ -488,6 +489,25 @@ of dollars over decades).
 Like [[2021] Modelling Australia's National Electricity Market with JuMP](#2021-modelling-australias-national-electricity-market-with-jump),
 AnyMOD uses DataFrames and SQL joins to do the various transformations required
 to get the problem data into a format suitable for JuMP.
+
+[_Back to contents_](#contents)
+
+## [2021] Power Market Tool (POMATO)
+
+_Speaker: Richard Weinhold @richard-weinhold_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n0wmYTm6Y64?si=w9NJH0CzvC_hqPEQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In this talk, Richard presented his work on [POMATO](https://github.com/richard-weinhold/pomato).
+POMATO has a Python front-end, but it uses JuMP for its
+[MarketModel](https://github.com/richard-weinhold/MarketModel) and
+[RedundancyRemoval](https://github.com/richard-weinhold/RedundancyRemoval)
+components. POMATO makes heavy use of JuMP's ability to efficiently represent
+second-order cone constraints to solve a stochastic power flow problem with
+chance constraints.
+
+POMATO is a good example of a project to look at for inspiration if you want to
+mix Python and Julia.
 
 [_Back to contents_](#contents)
 
