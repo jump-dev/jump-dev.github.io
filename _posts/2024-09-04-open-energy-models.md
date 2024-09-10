@@ -259,7 +259,7 @@ _Speaker: Jose Daniel Lara @jd-lara_
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N-jDHickaTc?si=T7eQnTopbCCtES3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-In this talk Jose gave an overview and spoke about recent updates to
+In this talk Jose Daniel gave an overview and spoke about recent updates to
 [Sienna](https://www.nrel.gov/analysis/sienna.html) (nee PowerSimulations.jl).
 The talk follows his previous talks at [JuMP-dev 2019](#2019-powersimulationsjl)
 and [JuMP-dev 2023](https://www.youtube.com/watch?v=J7VbCKsnTvQ).
@@ -269,15 +269,15 @@ variables and constraints. They are building and solving simulation models of
 the Eastern Interconnection, which is one of, it not the, largest power system
 in the world (it has 150,000 buses and 270,000 lines).
 
-A key lesson that I took from Jose's talk is that they have already encountered
-(and resolved or worked around) many of same issues that Diego raised in his
-talk, such as how to efficiently save the large volume of data that comes out of
-the simulation models.
+A key lesson that I took from Jose Daniel's talk is that they have already
+encountered (and resolved or worked around) many of same issues that Diego
+raised in his talk, such as how to efficiently save the large volume of data
+that comes out of the simulation models.
 
-In regard to feature requests for future versions of JuMP, Jose again referenced
-the need for efficient re-solves of optimization models with parameters. We
-have, over the years, experimented with a number of different approaches in
-Sienna, including the now largely defunct [ParameterJuMP.jl](https://github.com/JuliaStochOpt/ParameterJuMP.jl),
+In regard to feature requests for future versions of JuMP, Jose Daniel again
+referenced the need for efficient re-solves of optimization models with
+parameters. We have, over the years, experimented with a number of different
+approaches in Sienna, including the now largely defunct [ParameterJuMP.jl](https://github.com/JuliaStochOpt/ParameterJuMP.jl),
 the intended replacement [ParametricOptInterface.jl](https://github.com/jump-dev/ParametricOptInterface.jl),
 and other work-arounds like adding new `VariableIndex in EqualTo` constraints.
 Ultimately, each way has a different trade-off (and it also depends on the size
@@ -382,7 +382,8 @@ _Speaker: Julian Straus @JulStraus_
 In this talk, Julian discusses [EnergyModelsX](https://github.com/EnergyModelsX)
 that he is building at SINTEF.
 
-I found it useful to compare the talk to Jose's [[2019] PowerSimulations.jl](#2019-powersimulationsjl).
+I found it useful to compare the talk to Jose Daniel's
+[[2019] PowerSimulations.jl](#2019-powersimulationsjl).
 If multiple groups arrive at the same set of ideas, I think it demonstrates that
 hierarchical models that leverage Julia's multiple dispatch is the "right" way
 to build large-scale JuMP models.
@@ -518,14 +519,14 @@ _Speaker: Alinson Xavier @iSoron_
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rYUZK9kYeIY?si=zUdYsvHk_we_qbYb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 In this talk, Alinson presented his work on
-[UnitCommitment.jl](https://github.com/ANL-CEEESA/UnitCommitment.jl). The scope
-of this package is similar to PowerModels.jl, in that it is not an energy system
-model, but a collection of data and implementations of the unit commitment
-problem, which is often a core part of energy system models that focus on the
-operation of a power system with sub-hourly resolution.
+[UnitCommitment.jl](https://github.com/ANL-CEEESA/UnitCommitment.jl). The
+package is a collection of data and implementations of the multi-period unit
+commitment problem, which is often a core part of energy system models that
+focus on the operation of a power system with sub-hourly resolution.
 
 A key part of UnitCommitment.jl is a JSON file format for unit commitment
-problems.
+problems. This could be useful as we look to build a collection of benchmark
+instances in [jump-dev/open-energy-modeling-benchmarks](https://github.com/jump-dev/open-energy-modeling-benchmarks).
 
 [_Back to contents_](#contents)
 
@@ -551,23 +552,23 @@ _Speaker: Jose Daniel Lara @jd-lara_
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JAHjZYiIJeI?si=euyA8WzK-lEs_Pg9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-This talk is the first talk by Jose at a JuMP-dev on PowerSimulations.jl (now
-called Sienna). I found it useful to compare this talk to
+This talk is the first talk by Jose Daniel at a JuMP-dev on PowerSimulations.jl
+(now called Sienna). I found it useful to compare this talk to
 [his talk at JuMP-dev 2024](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems).
 
-Jose described how the three design principles of PowerSimulations were
+Jose Daniel described how the three design principles of PowerSimulations were
 flexibility, modularity, and scalability, and how all three of these were
 achieved by using Julia's multiple dispatch to build different mathematical
-formulations based on the input data. I found it interesting that Jose hits upon
-on many of the same themes that Julian did in his 2023 talk
+formulations based on the input data. I found it interesting that Jose Daniel
+hits upon on many of the same themes that Julian did in his 2023 talk
 [[2023] Designing a Flexible Energy System Model Using Multiple Dispatch](#2023-designing-a-flexible-energy-system-model-using-multiple-dispatch).
 This suggests to me that we can better share lessons learned between developers.
 
-Jose also talks about the issue with parameters and time-series data. Five years
-later and we still do not have a perfect solution to this.
+Jose Daniel also talks about the issue with parameters and time-series data.
+Five years later and we still do not have a perfect solution to this.
 
-Finally, Jose talked about how they wanted to scale to 50,000 buses. Well, in
-his [2024 talk](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems),
+Finally, Jose Daniel talked about how they wanted to scale to 50,000 buses.
+Well, in his [2024 talk](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems),
 he mentioned that Sienna now runs on problems with 150,000 buses. It's nice to
 see progress!
 
