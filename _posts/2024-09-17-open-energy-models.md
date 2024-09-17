@@ -134,7 +134,7 @@ issue [JuMP#3664](https://github.com/jump-dev/JuMP.jl/issues/3664) with some
 preliminary ideas for tools that we could develop to test and debug JuMP models,
 and I think these would be highly useful to users.
 
-Truls gave a shout out to a tutorial I wrote, [Design patters for large models](https://jump.dev/JuMP.jl/stable/tutorials/getting_started/design_patterns_for_larger_models/),
+Truls gave a shout out to a tutorial I wrote, [Design patterns for large models](https://jump.dev/JuMP.jl/stable/tutorials/getting_started/design_patterns_for_larger_models/),
 which I think should be required reading for anyone embarking on the development
 of an industrial-scale JuMP project.
 
