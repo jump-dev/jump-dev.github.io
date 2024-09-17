@@ -72,7 +72,7 @@ improve JuMP in the context of energy modeling:
 
 To summarize, JuMP is a powerful tool for energy system modeling. The insights
 from JuMP-dev 2024 will help guide future developments, particularly in areas
-like debugging, physical units, and sparse variabble support.
+like debugging, physical units, and sparse variable support.
 
 ## Contents
 
