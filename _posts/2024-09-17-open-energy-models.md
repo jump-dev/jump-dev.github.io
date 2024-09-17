@@ -580,7 +580,7 @@ _Speaker: Joaquim Dias Garcia @joaquimg_
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HwOOww8vwyA?si=Hs065CFXrIe2kg6q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-In this talk from thhe first JuMP-dev, Joaquim discussed how PSR were using JuMP
+In this talk from the first JuMP-dev, Joaquim discussed how PSR were using JuMP
 to solve a variety of energy-related models, both for research and for
 industrial clients around the world.
 
