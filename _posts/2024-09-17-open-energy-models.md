@@ -6,7 +6,7 @@ categories: [open-energy-models]
 author: "Oscar Dowson"
 ---
 
-In July 2024, we held [JuMP-dev 2024](/meetings/jumpdev2024/), the 7th edition
+In July 2024, we held [JuMP-dev 2024](/meetings/jumpdev2024/), the seventh edition
 of our annual developer workshop. As part of the workshop, we sought talks
 from a number of groups who use JuMP to build open energy models.
 
