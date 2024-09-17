@@ -586,7 +586,7 @@ industrial clients around the world.
 
 For me, it was interesting to revisit this talk because Joaquim's discussion
 about stochastic dual dynamic programming (I develop [SDDP.jl](https://sddp.dev).)
-Joaquim described how they implemmented some of the algorithm in JuMP, and some
+Joaquim described how they implemented some of the algorithm in JuMP, and some
 in [MathProgBase](https://github.com/JuliaOpt/MathProgBase.jl). I note that many
 of the missing features that drove him to do so (like the ability to delete
 variables and constraints) are now first-class features in JuMP.
