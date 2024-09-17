@@ -305,7 +305,7 @@ which automatically approximates nonlinear functions with a linearized MIP
 formulation that can be used in a linear solver like HiGHS. The package is used
 by SINTEF in many of their energy-related applications.
 
-JuMP core developer @joehuchette wrote a similar package,
+JuMP core developer Joey Hutchette @joehuchette wrote a similar package,
 [PiecewiseLinearOpt.jl](https://github.com/joehuchette/PiecewiseLinearOpt.jl),
 that he [presented at the first JuMP developers workshop in 2017 (video)](https://www.youtube.com/watch?v=yiWx52yVVzM).
 (It's notable to see that the production quality of JuMP-dev videos is much
