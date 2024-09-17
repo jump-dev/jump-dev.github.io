@@ -260,13 +260,13 @@ _Speaker: Jose Daniel Lara @jd-lara_
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N-jDHickaTc?si=T7eQnTopbCCtES3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 In this talk Jose Daniel gave an overview and spoke about recent updates to
-[Sienna](https://www.nrel.gov/analysis/sienna.html) (nee PowerSimulations.jl).
+[Sienna](https://www.nrel.gov/analysis/sienna.html) (originally named SIIP).
 The talk follows his previous talks at [JuMP-dev 2019](#2019-powersimulationsjl)
 and [JuMP-dev 2023](https://www.youtube.com/watch?v=J7VbCKsnTvQ).
 
-A key feature of Sienna is that it is designed for problems with _O(10⁸)_
+A key feature of the Sienna set of tools is that it is designed for problems with _O(10⁸)_
 variables and constraints. They are building and solving simulation models of
-the Eastern Interconnection, which is one of, it not the, largest power system
+the Eastern Interconnection, which is one of, if not the, largest power system
 in the world (it has 150,000 buses and 270,000 lines).
 
 A key lesson that I took from Jose Daniel's talk is that they have already
@@ -343,7 +343,7 @@ after working with it for a while and changing their approach, they are now very
 happy with it and with its performance.
 
 Stefan also talked about the need for parameters, and how `parameter * variable`
-support would be useful, but that it complicates. We had
+support would be useful, but that it complicates matters. We had
 [multiple](https://discourse.julialang.org/t/jump-multiplicative-parameters-for-lp/94192)
 [discussions](https://discourse.julialang.org/t/moi-re-evaluate-custom-bridge-direct-model-bridging/94219)
 on the community forum, and Stefan opened a [PR with over 50 comments](https://github.com/jump-dev/MathOptInterface.jl/pull/2092)
@@ -364,7 +364,7 @@ extension for working with time-structured models that often arise in planning
 problems.
 
 Truls points out that a key feature of JuMP is its modularity, and how they can
-invest in the develop of small utility packages like TimeStruct.jl, and then
+invest in the development of small utility packages like TimeStruct.jl, and then
 re-use the utility package across many different application models.
 
 If you are building a JuMP model with time as a significant component, we
@@ -389,7 +389,7 @@ hierarchical models that leverage Julia's multiple dispatch is the "right" way
 to build large-scale JuMP models.
 
 This approach is the topic of my tutorial,
-[Design patters for large models](https://jump.dev/JuMP.jl/stable/tutorials/getting_started/design_patterns_for_larger_models/),
+[Design patterns for large models](https://jump.dev/JuMP.jl/stable/tutorials/getting_started/design_patterns_for_larger_models/),
 which I think should be required reading for anyone embarking on the development
 of an industrial-scale JuMP project.
 
@@ -475,7 +475,7 @@ _Speaker: Leonard Goeke @leonardgoeke_
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QE_tNDER0F4?si=8TTH54xkuz88tnmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 In this talk, Leonard presented his work on [AnyMOD.jl](https://github.com/leonardgoeke/AnyMOD.jl).
-Like Stefan, AnyMOD.jl is a low-code model, in which all inputs and outputs are
+Like Stefan's approach, AnyMOD.jl is a low-code model, in which all inputs and outputs are
 via CSV files.
 
 A unique feature of AnyMOD is that it has automatic scaling of the problem to
@@ -553,7 +553,7 @@ _Speaker: Jose Daniel Lara @jd-lara_
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JAHjZYiIJeI?si=euyA8WzK-lEs_Pg9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This talk is the first talk by Jose Daniel at a JuMP-dev on PowerSimulations.jl
-(now called Sienna). I found it useful to compare this talk to
+(now part of Sienna). I found it useful to compare this talk to
 [his talk at JuMP-dev 2024](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems).
 
 Jose Daniel described how the three design principles of PowerSimulations were
