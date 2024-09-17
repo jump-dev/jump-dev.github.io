@@ -450,7 +450,7 @@ _Speaker: James Foster @jd-foster_
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gbSVH8Q0xq4?si=IeZgeipH3UhTTnkz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-In this talk, James provided a general overview of develop models in JuMP. A
+In this talk, James provided a general overview of developing models in JuMP. A
 useful part of the talk was how he mentioned the challenge of working with
 sparsely indexed parameters and variables. We just saw that SINTEF solved this
 challenge by developing SparseVariables.jl. James solved the challenge by
