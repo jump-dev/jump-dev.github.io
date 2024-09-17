@@ -105,7 +105,7 @@ _Speaker: Truls Flatberg @trulsf_
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-a9-ToFiT8E?si=rpQeHt1__-lwxjXT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-In this [prize winning](prize/jump-dev-2024) talk, Truls discussed how they have
+In this [prize-winning](prize/jump-dev-2024) talk, Truls discussed how they have
 been using JuMP to build and solve large scale optimization models at SINTEF.
 
 Developers from SINTEF have been active attendees of JuMP-dev recently, speaking
