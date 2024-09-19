@@ -10,8 +10,9 @@ In July 2024, we held [JuMP-dev 2024](/meetings/jumpdev2024/), the seventh editi
 of our annual developer workshop. As part of the workshop, we sought talks
 from a number of groups who use JuMP to build open energy models.
 
-This report started as a summary of my notes from watching the energy-related
-talks, but based on the [positive feedback during the writing of this post](https://github.com/jump-dev/jump-dev.github.io/pull/156),
+Motivated by our [recently announced Open Energy Modeling project](/announcements/open-energy-modeling/2024/09/16/oem/),
+I started writing this report as a summary of my notes from watching the energy-related
+talks at JuMP-dev 2024, but, based on the [community feedback during the writing of this post](https://github.com/jump-dev/jump-dev.github.io/pull/156),
 I extended the scope to talks about energy system modeling in previous years as
 well.
 
