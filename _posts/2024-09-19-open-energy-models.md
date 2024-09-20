@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Open Energy Modeling at JuMP-dev"
-date:   2024-09-17
+date:   2024-09-19
 categories: [open-energy-models]
 author: "Oscar Dowson"
 ---
