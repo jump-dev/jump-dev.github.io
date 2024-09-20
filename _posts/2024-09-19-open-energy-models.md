@@ -34,8 +34,8 @@ The main features that energy modelers like about JuMP are:
    then re-solve, without needing to rebuild each model from scratch or use file
    I/O. This is a critical feature for the rolling-horizon type problems that
    arise when we simulate the operations of a power system.
- * Documentation: I have put a lot of effort into developing excellent
-   documentation, and we frequently add new tutorials and clarify existing parts
+ * Documentation: I have put a lot of effort into developing [excellent documentation](https://jump.dev/JuMP.jl/stable/),
+   and we frequently add new tutorials and clarify existing parts
    in response to common user questions. Good documentation makes it easier for
    new users to onboard, and targeted tutorials make it possible to share best
    practice.
