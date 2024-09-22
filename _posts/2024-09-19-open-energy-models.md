@@ -100,6 +100,11 @@ to JuMP (if you will) around:
  18. [[2017] Stochastic programming in energy systems](#2017-stochastic-programming-in-energy-systems)
  19. [[2017] PowerModels.jl: a Brief Introduction](#2017-powermodelsjl-a-brief-introduction)
 
+There are also a few related JuliaCon talks
+
+ 20. [[2020] Crash Course in Energy Systems Modeling & Analysis with Julia](#2020-crash-course-in-energy-systems-modeling--analysis-with-julia)
+ 21. [[2019] Open Source Power System Production Cost Modeling in Julia](#2019-open-source-power-system-production-cost-modeling-in-julia)
+
 ## [2024] Applied optimization with JuMP at SINTEF
 
 _Speaker: Truls Flatberg @trulsf_
@@ -573,6 +578,10 @@ Well, in his [2024 talk](#2024-solving-the-market-to-market-problem-in-large-sca
 he mentioned that Sienna now runs on problems with 150,000 buses. It's nice to
 see progress!
 
+@kdheepak's talks at [JuliaCon 2019](#2019-open-source-power-system-production-cost-modeling-in-julia)
+and [JuliaCon 2020](#2020-crash-course-in-energy-systems-modeling--analysis-with-julia)
+are also about PowerSimulations.jl and go into complementary detail.
+
 [_Back to contents_](#contents)
 
 ## [2017] Stochastic programming in energy systems
@@ -624,5 +633,42 @@ for PowerModels, but it may not work for larger simulation models.
 Second, PowerModels makes heavy use of Julia's multiple dispatch to implement
 the various relaxations and approximations of AC power flow. This decision has
 proven to be a very good design choice.
+
+[_Back to contents_](#contents)
+
+## [2020] Crash Course in Energy Systems Modeling & Analysis with Julia
+
+_Speaker: Dheepak Krishnamurthy @kdheepak_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kQNOG4tGJdg?si=QvTPbIQncBgr37Ev" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This is a short talk by @kdheepak about PowerSimulations.jl. The "crash course"
+in the title is rather apt, because it walks through how to build an run a power
+system optimization model in eight minutes. It was useful to watch this video in
+conjunction with the other PowerSimulations.jl videos such as
+[[2024] Solving the Market-to-Market Problem in Large Scale Power Systems](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems),
+[[2019] PowerSimulations.jl](#2019-powersimulationsjl), and
+[[2019] Open Source Power System Production Cost Modeling in Julia](#2019-open-source-power-system-production-cost-modeling-in-julia).
+
+[_Back to contents_](#contents)
+
+## [2019] Open Source Power System Production Cost Modeling in Julia
+
+_Speaker: Dheepak Krishnamurthy @kdheepak_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1TipY6g9IzE?si=cbTPZb4Sq_Pt6zW7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This is a talk by @kdheepak about PowerSimulations.jl, which Jose Daniel
+[presented at JuMP-dev 2019](#2019-powersimulationsjl). Using a small example,
+Dheepak goes into more detail around how PowerSimulations.jl uses Julia's
+multiple dispatch to build the optimization problems.
+
+There was an interesting question at the end related to how we document models.
+@sstroemer mentioned this as well in [his talk](#2023-how-jump-enables-abstract-energy-system-models).
+Stefan's answer as to write out the models in some form of abstract LaTeX. JuMP
+used to print out a compressed form of the model, but we changed to writing out
+the scalarized form during the change to MOI because the compressed form
+required too many hacks for work and required a lot of maintenance. I'm not sure
+what we should do going forward.
 
 [_Back to contents_](#contents)
