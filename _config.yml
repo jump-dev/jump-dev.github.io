@@ -127,6 +127,8 @@ navigation_header:
     url: /pages/code/
 - title: Workshops
   items:
+   - title: 2025
+     url: /meetings/jumpdev2025
    - title: 2024
      url: /meetings/jumpdev2024
    - title: 2023
@@ -166,5 +168,5 @@ sharing_links: # Appear at the bottom of single blog posts, add as desired. The 
   Email: true
 
 # Site header notification content
-# notification: |
-#  [JuMP-dev 2024 will be held July 19-21 in Montréal, Canada](/meetings/jumpdev2024/)
+notification: |
+ [JuMP-dev 2025 will be held November 17-20 in Auckland, New Zealand](/meetings/jumpdev2025/)
