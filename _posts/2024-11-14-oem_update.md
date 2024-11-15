@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "An Open Energy Modeling update"
-date:   2024-11-15
+date:   2024-11-14
 categories: [open-energy-modeling]
 author: "Oscar Dowson, Ivet Galabova, Joaquim Dias Garcia, Julian Hall"
 ---
@@ -108,3 +108,5 @@ links for a full list of changes).
    faster than before. This is particularly noticeable if you have a model with
    a very large number of variables, a small number of constraints, and the
    model is simple to solve.
+
+Stay tuned for future updates!
