@@ -49,7 +49,7 @@ links for the full release notes.
 
 HiGHlights (if you will) for energy modelers include:
 
- * Our initial benchmarking and analysis of energy system models also exposed a
+ * Our initial benchmarking and analysis of energy system models exposed a
    few bugs. For example, we fixed a [segfault in the QP solver](https://github.com/ERGO-Code/HiGHS/issues/1990),
    fixed a [problem detecting unboundedness](https://github.com/ERGO-Code/HiGHS/issues/1962),
    and we fixed a [correctness issue](https://github.com/ERGO-Code/HiGHS/issues/1935)
