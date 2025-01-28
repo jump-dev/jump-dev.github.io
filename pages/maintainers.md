@@ -68,7 +68,7 @@ This document lists community members who are [repository maintainers](/pages/go
   - [MutableArithmetics.jl](https://github.com/jump-dev/MutableArithmetics.jl)
 * Simon Bowly (@simonbowly)
   - [Gurobi.jl](https://github.com/jump-dev/Gurobi.jl)
-* Stevenn G. Johnsonn (@stevengj)
+* Steven G. Johnson (@stevengj)
   - [NLopt.jl](https://github.com/jump-dev/NLopt.jl)
 * Tomás Gutierrez (@tomasfmg)
   - [ParametricOptInterface.jl](https://github.com/jump-dev/ParametricOptInterface.jl)
