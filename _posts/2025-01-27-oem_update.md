@@ -96,7 +96,7 @@ performance improvements to the GenX codebase
 made a number of changes to both GenX
 ([GenX#815](https://github.com/GenXProject/GenX.jl/pull/815)) and JuMP
 ([MutableArithmetics#302](https://github.com/jump-dev/MutableArithmetics.jl/issues/302)),
-with the result that GenX models are now XX% faster to build.
+with the result that GenX models are now faster to build.
 
 ## Sienna
 
