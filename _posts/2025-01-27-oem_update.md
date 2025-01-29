@@ -93,8 +93,10 @@ undiagnosed for one year
 Working with the developers of GenX, we identified a number of possible
 performance improvements to the GenX codebase
 ([GenX#773](https://github.com/GenXProject/GenX.jl/pull/773)). As a result, we
-made a number of changes to both GenX and JuMP, with the result that GenX models
-are now XX% faster to build.
+made a number of changes to both GenX
+([GenX#815](https://github.com/GenXProject/GenX.jl/pull/815)) and JuMP
+([MutableArithmetics#302](https://github.com/jump-dev/MutableArithmetics.jl/issues/302)),
+with the result that GenX models are now XX% faster to build.
 
 ## Sienna
 
@@ -107,6 +109,7 @@ bottlenecks in their code and in JuMP:
    rewrote the relevant parts of JuMP
    ([MathOptInterface#2606](https://github.com/jump-dev/MathOptInterface.jl/pull/2606),
    [MathOptInterface#2613](https://github.com/jump-dev/MathOptInterface.jl/pull/2613)).
+   This lead to a 5x speedup in saving models to disk.
  * In addition to saving models to disk for reproducibility, Sienna also
    serializes the version of every package and dependency. We modified Sienna to
    use a faster code path
@@ -120,8 +123,20 @@ bottlenecks in their code and in JuMP:
 The net impact of these changes is that the time spent by Sienna outside of the
 HiGHS solver is reduced by half. The overall benchmark time depends on the
 specific model and how long HiGHS takes to solve the model. Currently, the total
-runtime improvement is approximately 5% faster with 10% less memory required,
+runtime improvement is approximately 5% faster with 15% less memory required,
 but this percentage will increase as HiGHS becomes faster.
+
+Working with the developers of Sienna, we identified a number of common Julia
+and JuMP-related anti-patterns in the Sienna code base
+([PowerSimulations#1218](https://github.com/NREL-Sienna/PowerSimulations.jl/pull/1218)).
+This included unnecessary array copies when indexing, suboptimal loop order
+when iterating over matrices, and type stability issues when re-using variable
+names within a function. Although each of these issues have a minor runtime
+impact, their cumulative effect can be large, if hard to benchmark. Therefore,
+our suggested best practice is to avoid these issues in the first place. In
+addition to providing guidance to the Sienna developers, we will update the JuMP
+documentation to better highlight these anti-patterns for the benefit of all
+energy system developers ([JuMP#2348](https://github.com/jump-dev/JuMP.jl/issues/2348#issuecomment-2618076446)).
 
 We also identified that an optional check of the input data was a critical
 performance bottleneck in Sienna's optimization pipeline. The check iterated
