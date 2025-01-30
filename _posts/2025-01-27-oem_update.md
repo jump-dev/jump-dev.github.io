@@ -96,7 +96,7 @@ performance improvements to the GenX codebase
 made a number of changes to both GenX
 ([GenX#815](https://github.com/GenXProject/GenX.jl/pull/815)) and JuMP
 ([MutableArithmetics#302](https://github.com/jump-dev/MutableArithmetics.jl/issues/302)),
-with the result that GenX models are now faster to build.
+with the result that GenX models are now 12% faster to build.
 
 ## Sienna
 
@@ -174,3 +174,29 @@ The profiling of energy system models revealed that adding variables to a HiGHS
 model can be a bottleneck. We implemented changes to JuMP and HiGHS.jl so that
 adding bounded variables is now three times faster than before
 ([HiGHS.jl#248](https://github.com/jump-dev/HiGHS.jl/pull/248)).
+
+## Other changes
+
+We have extended the local testing of HiGHS, making it possible to run unit
+tests from an external repository. The external unit tests are built with CMak
+and Catch2, consistent with the ones already in HiGHS. It is also possible to
+use private problem instances for additional checks, as we consider introducing
+modifications to the code. A thorough analysis of updates is very helpful as we
+implement more major updates to the solution algorithms. The separation of new
+tests from the HiGHS code allows for more comprehensive testing with no
+additional code shipped to the users, keeping the solver lightweight and easy to
+integrate within other systems.
+
+The code coverage functionality in HiGHS was updated and coverage reports are
+now generated and uploaded to Codecov on each PR to our development and master
+branches ([HiGHS#2112](https://github.com/ERGO-Code/HiGHS/issues/2112),
+[HiGHS#2138](https://github.com/ERGO-Code/HiGHS/issues/2138)).
+
+We have developed local benchmarking infrastructure for use during the
+development of HiGHS. Running specific test sets, we record output from the
+HiGHS library, as well as collecting additional debugging and development
+output, to test the correctness and speed of HiGHS and any potential
+improvements. For some of the experiment results presented here, a dedicated
+local server was used, with no other tasks running, required for reliable timing
+results. The new benchmark infrastructure will allow us to gather such results
+much faster, in an automated and reproducible way.
