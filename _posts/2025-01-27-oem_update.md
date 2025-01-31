@@ -178,7 +178,7 @@ adding bounded variables is now three times faster than before
 ## Other changes
 
 We have extended the local testing of HiGHS, making it possible to run unit
-tests from an external repository. The external unit tests are built with CMak
+tests from an external repository. The external unit tests are built with CMake
 and Catch2, consistent with the ones already in HiGHS. It is also possible to
 use private problem instances for additional checks, as we consider introducing
 modifications to the code. A thorough analysis of updates is very helpful as we
