@@ -9,6 +9,8 @@ This document lists community members who are [repository maintainers](/pages/go
 * Alexis Montoison (@amontoison)
   - [AmplNLWriter.jl](https://github.com/jump-dev/AmplNLWriter.jl)
   - [KNITRO.jl](https://github.com/jump-dev/KNITRO.jl)
+* Andrew Rosemberg (@andrewrosemberg)
+  - [DiffOpt.jl](https://github.com/jump-dev/DiffOpt.jl)
 * Carlo Baldassi (@carlobaldassi)
   - [GLPK.jl](https://github.com/jump-dev/GLPK.jl)
 * Carleton Coffrin (@ccoffrin)
