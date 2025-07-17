@@ -3,6 +3,13 @@ days = ["Monday 17", "Tuesday 18"]
 
 [talks]
 
+[talks.1_09_00]
+title = "Coffee and registration"
+type = "organization"
+
+[talks.1_09_15]
+type = "organization"
+
 [talks.1_09_30]
 title = "Introduction and welcome"
 type = "organization"
@@ -31,10 +38,12 @@ title = "Optimizing over trained neural networks with MathOptAI.jl"
 [talks.1_11_15]
 
 [talks.1_11_30]
-speaker = "Jean-François Baffier"
-title = "Bridging the Gap Between Models and Solvers through Constraint Programming"
+speaker = "Joaquim Dias Garcia"
+title = "ApplicationDrivenLearning.jl a framework to train forecast models with application-driven cost functions"
 
 [talks.1_11_45]
+speaker = "Jean-François Baffier"
+title = "AdaptiveProjection.jl: Automating the Speed-Accuracy Trade-off in Random Projection Methods"
 
 [talks.1_12_00]
 title = "Lunch"
@@ -62,8 +71,8 @@ type = "break"
 type = "break"
 
 [talks.1_14_00]
-speaker = "Joshua Pulsipher"
-title = "The State of InfiniteOpt.jl"
+speaker = "Dimitri Alston"
+title = "Automatic Generation of JuMP.jl Constraints from ModelingToolkit.jl Models"
 
 [talks.1_14_15]
 
@@ -81,26 +90,31 @@ type = "break"
 type = "break"
 
 [talks.1_15_30]
-speaker = "Dimitri Alston"
-title = "Automatic Generation of JuMP.jl Constraints from ModelingToolkit.jl Models"
+speaker = "Joshua Pulsipher"
+title = "The State of InfiniteOpt.jl"
 
 [talks.1_15_45]
 
 [talks.1_16_00]
-speaker = "Jean-François Baffier"
-title = "AdaptiveProjection.jl: Automating the Speed-Accuracy Trade-off in Random Projection Methods"
+speaker = "Julian Hall"
+title = "What's new in HiGHS, and thanks to JuMP for its support!"
 
 [talks.1_16_15]
-speaker = "Joaquim Dias Garcia"
-title = "ApplicationDrivenLearning.jl a framework to train forecast models with application-driven cost functions"
 
 [talks.1_16_30]
 title = "Wrap up"
 type = "organization"
 
+[talks.2_09_00]
+title = "Coffee"
+type = "organization"
+
+[talks.2_09_15]
+type = "organization"
+
 [talks.2_09_30]
-speaker = "Julian Hall"
-title = "What's new in HiGHS, and thanks to JuMP for its support!"
+speaker = "Jean-François Baffier"
+title = "Bridging the Gap Between Models and Solvers through Constraint Programming"
 
 [talks.2_09_45]
 
@@ -124,8 +138,8 @@ title = "GPU Implementation of Algorithm NCL"
 [talks.2_11_15]
 
 [talks.2_11_30]
-speaker = "Alexis Montoison"
-title = "Revisiting sparse matrix coloring and bicoloring"
+speaker = "Yuwen Chen"
+title = "CuClarabel: GPU Acceleration for a Conic Optimization Solver"
 
 [talks.2_11_45]
 
@@ -155,8 +169,8 @@ type = "break"
 type = "break"
 
 [talks.2_14_00]
-speaker = "Yuwen Chen"
-title = "CuClarabel: GPU Acceleration for a Conic Optimization Solver"
+speaker = "Alexis Montoison"
+title = "Revisiting sparse matrix coloring and bicoloring"
 
 [talks.2_14_15]
 
