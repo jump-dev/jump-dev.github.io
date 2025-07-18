@@ -1,0 +1,205 @@
+
+days = ["Monday 17", "Tuesday 18"]
+
+[talks]
+
+[talks.1_09_00]
+title = "Coffee and registration"
+type = "organization"
+
+[talks.1_09_15]
+type = "organization"
+
+[talks.1_09_30]
+title = "Introduction and welcome"
+type = "organization"
+
+[talks.1_09_45]
+speaker = "Miles Lubin"
+title = "The state of JuMP"
+
+[talks.1_10_00]
+
+[talks.1_10_15]
+speaker = "James Foster"
+title = "JuMP on demand: Creating your own compute cluster for solving optimisation problems"
+
+[talks.1_10_30]
+title = "Morning tea"
+type = "break"
+
+[talks.1_10_45]
+type = "break"
+
+[talks.1_11_00]
+speaker = "TBC"
+title = "Optimizing over trained neural networks with MathOptAI.jl"
+
+[talks.1_11_15]
+
+[talks.1_11_30]
+speaker = "Joaquim Dias Garcia"
+title = "ApplicationDrivenLearning.jl a framework to train forecast models with application-driven cost functions"
+
+[talks.1_11_45]
+speaker = "Jean-François Baffier"
+title = "AdaptiveProjection.jl: Automating the Speed-Accuracy Trade-off in Random Projection Methods"
+
+[talks.1_12_00]
+title = "Lunch"
+type = "break"
+
+[talks.1_12_15]
+type = "break"
+
+[talks.1_12_30]
+type = "break"
+
+[talks.1_12_45]
+type = "break"
+
+[talks.1_13_00]
+type = "break"
+
+[talks.1_13_15]
+type = "break"
+
+[talks.1_13_30]
+type = "break"
+
+[talks.1_13_45]
+type = "break"
+
+[talks.1_14_00]
+speaker = "Dimitri Alston"
+title = "Automatic Generation of JuMP.jl Constraints from ModelingToolkit.jl Models"
+
+[talks.1_14_15]
+
+[talks.1_14_30]
+speaker = "Benoît Legat"
+title = "Large Scale JuMP Models with Constraint Generators"
+
+[talks.1_14_45]
+
+[talks.1_15_00]
+title = "Break"
+type = "break"
+
+[talks.1_15_15]
+type = "break"
+
+[talks.1_15_30]
+speaker = "Joshua Pulsipher"
+title = "The State of InfiniteOpt.jl"
+
+[talks.1_15_45]
+
+[talks.1_16_00]
+speaker = "Julian Hall"
+title = "What's new in HiGHS, and thanks to JuMP for its support!"
+
+[talks.1_16_15]
+
+[talks.1_16_30]
+title = "Wrap up"
+type = "organization"
+
+[talks.2_09_00]
+title = "Coffee"
+type = "organization"
+
+[talks.2_09_15]
+type = "organization"
+
+[talks.2_09_30]
+speaker = "Jean-François Baffier"
+title = "Bridging the Gap Between Models and Solvers through Constraint Programming"
+
+[talks.2_09_45]
+
+[talks.2_10_00]
+speaker = "Thibaut Cuvelier"
+title = "Unlocking the Power of Google OR-Tools with MathOptInterface.jl"
+
+[talks.2_10_15]
+
+[talks.2_10_30]
+title = "Morning tea"
+type = "break"
+
+[talks.2_10_45]
+type = "break"
+
+[talks.2_11_00]
+speaker = "Michael Saunders"
+title = "GPU Implementation of Algorithm NCL"
+
+[talks.2_11_15]
+
+[talks.2_11_30]
+speaker = "Yuwen Chen"
+title = "CuClarabel: GPU Acceleration for a Conic Optimization Solver"
+
+[talks.2_11_45]
+
+[talks.2_12_00]
+title = "Lunch"
+type = "break"
+
+[talks.2_12_15]
+type = "break"
+
+[talks.2_12_30]
+type = "break"
+
+[talks.2_12_45]
+type = "break"
+
+[talks.2_13_00]
+type = "break"
+
+[talks.2_13_15]
+type = "break"
+
+[talks.2_13_30]
+type = "break"
+
+[talks.2_13_45]
+type = "break"
+
+[talks.2_14_00]
+speaker = "Alexis Montoison"
+title = "Revisiting sparse matrix coloring and bicoloring"
+
+[talks.2_14_15]
+
+[talks.2_14_30]
+speaker = "Joaquim Dias Garcia"
+title = "Open energy models: benchmarking, profiling and debugging tool for JuMP"
+
+[talks.2_14_45]
+
+[talks.2_15_00]
+title = "Break"
+type = "break"
+
+[talks.2_15_15]
+type = "break"
+
+[talks.2_15_30]
+speaker = "James Glynn"
+title = "TIMES2JuMP -  Learnings from IEA-ETSAP feasibility study of migrating the TIMES code to Julia JuMP."
+
+[talks.2_15_45]
+speaker = "Oscar Dowson"
+title = "The life and times of SDDP.jl"
+
+[talks.2_16_00]
+
+[talks.2_16_15]
+title = "Wrap up and thanks"
+type = "organization"
+
+[talks.2_16_30]
+type = "organization"
