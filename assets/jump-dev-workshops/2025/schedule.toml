@@ -3,33 +3,26 @@ days = ["Monday 17", "Tuesday 18"]
 
 [talks]
 
-[talks.1_09_00]
+[talks.1_09_30]
 title = "Coffee and registration"
 type = "organization"
 
-[talks.1_09_15]
+[talks.1_09_45]
 type = "organization"
 
-[talks.1_09_30]
+[talks.1_10_00]
 title = "Introduction and welcome"
 type = "organization"
 
-[talks.1_09_45]
+[talks.1_10_15]
 speaker = "Miles Lubin"
 title = "The state of JuMP"
 
-[talks.1_10_00]
-
-[talks.1_10_15]
-speaker = "James Foster"
-title = "JuMP on demand: Creating your own compute cluster for solving optimisation problems"
-
 [talks.1_10_30]
-title = "Morning tea"
-type = "break"
 
 [talks.1_10_45]
-type = "break"
+speaker = "James Foster"
+title = "JuMP on demand: Creating your own compute cluster for solving optimisation problems"
 
 [talks.1_11_00]
 speaker = "TBC"
@@ -105,31 +98,24 @@ title = "What's new in HiGHS, and thanks to JuMP for its support!"
 title = "Wrap up"
 type = "organization"
 
-[talks.2_09_00]
+[talks.2_09_30]
 title = "Coffee"
 type = "organization"
 
-[talks.2_09_15]
+[talks.2_09_45]
 type = "organization"
 
-[talks.2_09_30]
+[talks.2_10_00]
 speaker = "Jean-François Baffier"
 title = "Bridging the Gap Between Models and Solvers through Constraint Programming"
-
-[talks.2_09_45]
-
-[talks.2_10_00]
-speaker = "Thibaut Cuvelier"
-title = "Unlocking the Power of Google OR-Tools with MathOptInterface.jl"
 
 [talks.2_10_15]
 
 [talks.2_10_30]
-title = "Morning tea"
-type = "break"
+speaker = "Thibaut Cuvelier"
+title = "Unlocking the Power of Google OR-Tools with MathOptInterface.jl"
 
 [talks.2_10_45]
-type = "break"
 
 [talks.2_11_00]
 speaker = "Michael Saunders"
