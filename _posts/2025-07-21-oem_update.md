@@ -13,8 +13,8 @@ and our [January update](/open-energy-modeling/2025/01/27/oem_update).
 ## Welcome, Mark
 
 In May we welcomed [Dr. Mark Turner](https://scholar.google.com/citations?user=qyD8_b0AAAAJ&hl=en)
-to the project. Mark has a Ph.D. from ZIB where he worked on SCIP. Mark's focus
-is on improving the performance and reliability of the MIP solver.
+to the project. Mark has a Ph.D. from TU Berlin where he worked on SCIP. Mark's
+focus is on improving the performance and reliability of the HiGHS MIP solver.
 
 ## HiGHS workshop
 
@@ -89,10 +89,10 @@ For more information, go to [MathOptAnalyzer.jl](https://github.com/jump-dev/Mat
 ## MathOptIIS
 
 A common feature request to both JuMP and HiGHS is for an IIS. If a model is
-infeasible, the IIS is the smallest subset of variables and constraints such
-that the submodel is still infeasible. (The IIS acronym is not standardized. We
-have seen Irreducible Infeasible Subsystem and Irreducibly Inconsistent Set,
-amongst many others. We use IIS without attempting to define it.)
+infeasible, the IIS is a subset of variables and constraints such that the
+submodel is still infeasible. (The IIS acronym is not standardized. We have seen
+Irreducible Infeasible Subsystem and Irreducibly Inconsistent Set, amongst many
+others. We use IIS without attempting to define it.)
 
 The IIS is helpful for two common operations:
 
@@ -131,25 +131,25 @@ HiGHS MIP solve. In this approach, we extend HiGHS to conduct multiple parallel
 dives through the branch and bound tree. As the parallel dives find new
 solutions and prove information about feasibility and the dual bound, they
 update a shared global state. The information is shared in a deterministic
-manner, so that running the parallel MIP solver will find an identical solution
-to the serial MIP solver. This approach is the one taken by commercial MIP
-solvers. It offers a consistent performance boost, since it is strictly superior
-to the serial MIP solver. However, it requires a lot of careful engineering time
-to implement. The current status of this solver is ``work in progress'' and we
-do not have an expected date for its completion.
+manner, so that running the parallel MIP solver with the same number of threads
+will always find the same solution. This approach is the one taken by commercial
+MIP solvers. It offers a consistent performance boost, since it is strictly
+superior to the serial MIP solver. However, it requires a lot of careful
+engineering time to implement. The current status of this solver is ``work in
+progress'' and we do not have an expected date for its completion.
 
 Second, we have implemented a non-deterministic concurrent MIP solver. In this
 approach, we start multiple parallel instances of HiGHS in separate threads.
 Each instance uses a different random seed. As the threads find new solutions,
 they share this information between themselves, and the algorithm terminates
 once any thread has found an optimal solution. This approach exploits the
-inherent randomness in how HiGHS's presolve and how it explores the branch and
-bound tree. The downside to this approach is that it is not deterministic;
-repeated runs of the same model are not guaranteed to find the same optimal
-solution. In our preliminary testing, the speed up that can be expected is
-problem-dependent, but, with eight threads, it is common for the speedup to be
-2--5 times faster. The non-deterministic concurrent MIP solver is implemented
-and it will be available in the next release of HiGHS.
+inherent randomness in HiGHS's presolve and MIP solver. The downside to this
+approach is that it is not deterministic; repeated runs of the same model are
+not guaranteed to find the same optimal solution. In our preliminary testing,
+the speed up that can be expected is problem-dependent, but, with eight threads,
+we have seen speedups of 2--5x (although some models are slower). The
+non-deterministic concurrent MIP solver is implemented and it will be available
+in the next release of HiGHS.
 
 ## Other changes
 
