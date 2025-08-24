@@ -178,14 +178,15 @@ speaker = "James Glynn"
 title = "TIMES2JuMP -  Learnings from IEA-ETSAP feasibility study of migrating the TIMES code to Julia JuMP."
 
 [talks.2_15_45]
+speaker = "Harley Mackenzie"
+title = "Lessons from using JuMP in HARD software"
+
+[talks.2_16_00]
 speaker = "Oscar Dowson"
 title = "The life and times of SDDP.jl"
 
-[talks.2_16_00]
-
 [talks.2_16_15]
-title = "Wrap up and thanks"
-type = "organization"
 
 [talks.2_16_30]
+title = "Wrap up and thanks"
 type = "organization"
