@@ -89,12 +89,16 @@ title = "The State of InfiniteOpt.jl"
 [talks.1_15_45]
 
 [talks.1_16_00]
-speaker = "Julian Hall"
-title = "What's new in HiGHS, and thanks to JuMP for its support!"
+speaker = "Oscar Dowson"
+title = "MathOptInterface: a comprehensive overview"
 
 [talks.1_16_15]
 
 [talks.1_16_30]
+
+[talks.1_16_45]
+
+[talks.1_17_00]
 title = "Wrap up"
 type = "organization"
 
@@ -155,14 +159,14 @@ type = "break"
 type = "break"
 
 [talks.2_14_00]
-speaker = "Alexis Montoison"
-title = "Revisiting sparse matrix coloring and bicoloring"
+speaker = "Julian Hall"
+title = "What's new in HiGHS, and thanks to JuMP for its support!"
 
 [talks.2_14_15]
 
 [talks.2_14_30]
-speaker = "Joaquim Dias Garcia"
-title = "Open energy models: benchmarking, profiling and debugging tool for JuMP"
+speaker = "Alexis Montoison"
+title = "Revisiting sparse matrix coloring and bicoloring"
 
 [talks.2_14_45]
 
@@ -174,19 +178,25 @@ type = "break"
 type = "break"
 
 [talks.2_15_30]
+speaker = "Joaquim Dias Garcia"
+title = "Open energy models: benchmarking, profiling and debugging tool for JuMP"
+
+[talks.2_15_45]
+
+[talks.2_16_00]
 speaker = "James Glynn"
 title = "TIMES2JuMP -  Learnings from IEA-ETSAP feasibility study of migrating the TIMES code to Julia JuMP."
 
-[talks.2_15_45]
+[talks.2_16_15]
 speaker = "Harley Mackenzie"
 title = "Lessons from using JuMP in HARD software"
 
-[talks.2_16_00]
+[talks.2_16_30]
 speaker = "Oscar Dowson"
 title = "The life and times of SDDP.jl"
 
-[talks.2_16_15]
+[talks.2_16_45]
 
-[talks.2_16_30]
+[talks.2_17_00]
 title = "Wrap up and thanks"
 type = "organization"
