@@ -8,35 +8,35 @@ title = "Coffee and registration"
 type = "organization"
 
 [talks.1_09_45]
+title = "Introduction and welcome"
+speaker = "Oscar Dowson"
 type = "organization"
 
 [talks.1_10_00]
-title = "Introduction and welcome"
-type = "organization"
-
-[talks.1_10_15]
 speaker = "Miles Lubin"
 title = "The state of JuMP"
 
-[talks.1_10_30]
+[talks.1_10_15]
 
-[talks.1_10_45]
+[talks.1_10_30]
 speaker = "James Foster"
 title = "JuMP on demand: Creating your own compute cluster for solving optimisation problems"
 
+[talks.1_10_45]
+speaker = "Jean-François Baffier"
+title = "AdaptiveProjection.jl: Automating the Speed-Accuracy Trade-off in Random Projection Methods"
+
 [talks.1_11_00]
-speaker = "TBC"
-title = "Optimizing over trained neural networks with MathOptAI.jl"
+speaker = "Julian Hall"
+title = "What's new in HiGHS, and thanks to JuMP for its support!"
 
 [talks.1_11_15]
 
 [talks.1_11_30]
-speaker = "Joaquim Dias Garcia"
-title = "ApplicationDrivenLearning.jl a framework to train forecast models with application-driven cost functions"
+speaker = "Alexis Montoison"
+title = "Revisiting sparse matrix coloring and bicoloring"
 
 [talks.1_11_45]
-speaker = "Jean-François Baffier"
-title = "AdaptiveProjection.jl: Automating the Speed-Accuracy Trade-off in Random Projection Methods"
 
 [talks.1_12_00]
 title = "Lunch"
@@ -110,16 +110,18 @@ type = "organization"
 type = "organization"
 
 [talks.2_10_00]
-speaker = "Jean-François Baffier"
-title = "Bridging the Gap Between Models and Solvers through Constraint Programming"
+speaker = "Robby Parker"
+title = "Optimizing over trained neural networks with MathOptAI.jl"
 
 [talks.2_10_15]
 
 [talks.2_10_30]
-speaker = "Thibaut Cuvelier"
-title = "Unlocking the Power of Google OR-Tools with MathOptInterface.jl"
+speaker = "Joaquim Dias Garcia"
+title = "ApplicationDrivenLearning.jl a framework to train forecast models with application-driven cost functions"
 
 [talks.2_10_45]
+speaker = "Alexis Montoison"
+title = "MadIPM.jl"
 
 [talks.2_11_00]
 speaker = "Michael Saunders"
@@ -159,14 +161,14 @@ type = "break"
 type = "break"
 
 [talks.2_14_00]
-speaker = "Julian Hall"
-title = "What's new in HiGHS, and thanks to JuMP for its support!"
+speaker = "Jean-François Baffier"
+title = "Bridging the Gap Between Models and Solvers through Constraint Programming"
 
 [talks.2_14_15]
 
 [talks.2_14_30]
-speaker = "Alexis Montoison"
-title = "Revisiting sparse matrix coloring and bicoloring"
+speaker = "Thibaut Cuvelier"
+title = "Unlocking the Power of Google OR-Tools with MathOptInterface.jl"
 
 [talks.2_14_45]
 
