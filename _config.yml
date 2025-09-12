@@ -113,18 +113,20 @@ navigation_header:
   url: /
 - title: Documentation
   url: https://jump.dev/JuMP.jl/stable/
-- title: Learn
-  url: /pages/learn/
 - title: Community
   items:
+  - title: Get help
+    url: /forum
+  - title: Developer chatroom
+    url: /chatroom
   - title: Calendar
     url: /pages/calendar
-  - title: Forum
-    url: /forum
-  - title: Chatroom
-    url: /chatroom
-  - title: Ecosystem
+  - title: Ecosystem overview
     url: /pages/code/
+  - title: Learn more
+    url: /pages/learn/
+  - title: Code of Conduct
+    url: code-of-conduct
 - title: Workshops
   items:
    - title: 2025
