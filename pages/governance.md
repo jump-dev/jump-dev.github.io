@@ -14,7 +14,7 @@ for mathematical optimization based on the JuMP modeling language.
 
 ## Code of Conduct
 
-All interactions related to JuMP are moderated by our [Code of Conduct](/code-of-conduct).
+See [Code of Conduct](/code-of-conduct).
 
 ## Entities
 

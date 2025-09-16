@@ -13,4 +13,4 @@ usage questions on our [community forum](/forum).
 Join the Julia community slack by following the link and instructions at
 [https://julialang.org/slack/](https://julialang.org/slack/).
 
-When using the chatroom you must abide by our [Code of Conduct](/code-of-conduct).
+By using the chatroom, you agree to uphold the standards of our community as described in the [Code of Conduct](/code-of-conduct).
