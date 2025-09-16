@@ -14,4 +14,5 @@ back-and-forth discussions!
 
 Join the forum at: [https://discourse.julialang.org/c/domain/opt/13](https://discourse.julialang.org/c/domain/opt/13).
 
-By using the forum, you agree to uphold the standards of our community as described in the [Code of Conduct](/code-of-conduct).
+By using the forum, you agree to uphold the standards of our community as
+described in the [Code of Conduct](/code-of-conduct).
