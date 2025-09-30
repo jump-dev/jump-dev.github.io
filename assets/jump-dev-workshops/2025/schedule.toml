@@ -64,23 +64,22 @@ type = "break"
 type = "break"
 
 [talks.1_14_00]
-speaker = "Dimitri Alston"
-title = "Automatic Generation of JuMP.jl Constraints from ModelingToolkit.jl Models"
+speaker = "Jean-François Baffier"
+title = "Bridging the Gap Between Models and Solvers through Constraint Programming"
 
 [talks.1_14_15]
 
 [talks.1_14_30]
-speaker = "Benoît Legat"
-title = "Large Scale JuMP Models with Constraint Generators"
+speaker = "Thibaut Cuvelier"
+title = "Unlocking the Power of Google OR-Tools with MathOptInterface.jl"
 
 [talks.1_14_45]
 
 [talks.1_15_00]
-title = "Break"
-type = "break"
+speaker = "Axel Navarro"
+title = "JuLS"
 
 [talks.1_15_15]
-type = "break"
 
 [talks.1_15_30]
 speaker = "Joshua Pulsipher"
@@ -110,36 +109,35 @@ type = "organization"
 type = "organization"
 
 [talks.2_10_00]
-speaker = "Robby Parker"
-title = "Optimizing over trained neural networks with MathOptAI.jl"
+speaker = "Benoît Legat"
+title = "Large Scale JuMP Models with Constraint Generators"
 
 [talks.2_10_15]
 
 [talks.2_10_30]
-speaker = "Joaquim Dias Garcia"
-title = "ApplicationDrivenLearning.jl a framework to train forecast models with application-driven cost functions"
+speaker = "Dimitri Alston"
+title = "Automatic Generation of JuMP.jl Constraints from ModelingToolkit.jl Models"
 
 [talks.2_10_45]
-speaker = "Alexis Montoison"
-title = "MadIPM.jl"
 
 [talks.2_11_00]
-speaker = "Michael Saunders"
-title = "GPU Implementation of Algorithm NCL"
+speaker = "Yuwen Chen"
+title = "CuClarabel: GPU Acceleration for a Conic Optimization Solver"
 
 [talks.2_11_15]
 
 [talks.2_11_30]
-speaker = "Yuwen Chen"
-title = "CuClarabel: GPU Acceleration for a Conic Optimization Solver"
+speaker = "Alexis Montoison"
+title = "MadIPM.jl"
 
 [talks.2_11_45]
+speaker = "Michael Saunders"
+title = "GPU Implementation of Algorithm NCL"
 
 [talks.2_12_00]
-title = "Lunch"
-type = "break"
 
 [talks.2_12_15]
+title = "Lunch"
 type = "break"
 
 [talks.2_12_30]
@@ -161,23 +159,23 @@ type = "break"
 type = "break"
 
 [talks.2_14_00]
-speaker = "Jean-François Baffier"
-title = "Bridging the Gap Between Models and Solvers through Constraint Programming"
+type = "break"
 
 [talks.2_14_15]
+speaker = "Joaquim Dias Garcia"
+title = "ApplicationDrivenLearning.jl a framework to train forecast models with application-driven cost functions"
 
 [talks.2_14_30]
-speaker = "Thibaut Cuvelier"
-title = "Unlocking the Power of Google OR-Tools with MathOptInterface.jl"
+speaker = "Robby Parker"
+title = "Optimizing over trained neural networks with MathOptAI.jl"
 
 [talks.2_14_45]
 
 [talks.2_15_00]
-title = "Break"
-type = "break"
+speaker = "Jose Daniel Lara"
+title = "Optimization Problem Surrogates with Graph Transformer Networks and integration within simulation workflows"
 
 [talks.2_15_15]
-type = "break"
 
 [talks.2_15_30]
 speaker = "Joaquim Dias Garcia"
