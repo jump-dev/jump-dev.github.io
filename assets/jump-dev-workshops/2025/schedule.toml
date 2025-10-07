@@ -77,7 +77,7 @@ title = "Unlocking the Power of Google OR-Tools with MathOptInterface.jl"
 
 [talks.1_15_00]
 speaker = "Axel Navarro"
-title = "JuLS"
+title = "JuLS : A Julia Local Search Solver"
 
 [talks.1_15_15]
 
