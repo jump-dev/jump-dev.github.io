@@ -129,6 +129,8 @@ navigation_header:
     url: code-of-conduct
 - title: Workshops
   items:
+   - title: 2026
+     url: /meetings/jumpdev2026
    - title: 2025
      url: /meetings/jumpdev2025
    - title: 2024
