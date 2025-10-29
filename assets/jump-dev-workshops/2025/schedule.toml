@@ -127,17 +127,16 @@ title = "CuClarabel: GPU Acceleration for a Conic Optimization Solver"
 [talks.2_11_15]
 
 [talks.2_11_30]
-speaker = "Alexis Montoison"
-title = "MadIPM.jl"
-
-[talks.2_11_45]
 speaker = "Michael Saunders"
 title = "GPU Implementation of Algorithm NCL"
 
+[talks.2_11_45]
+
 [talks.2_12_00]
+title = "Lunch"
+type = "break"
 
 [talks.2_12_15]
-title = "Lunch"
 type = "break"
 
 [talks.2_12_30]
@@ -159,7 +158,8 @@ type = "break"
 type = "break"
 
 [talks.2_14_00]
-type = "break"
+speaker = "Alexis Montoison"
+title = "MadIPM.jl"
 
 [talks.2_14_15]
 speaker = "Joaquim Dias Garcia"
