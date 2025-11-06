@@ -4,7 +4,7 @@ days = ["Monday 17", "Tuesday 18"]
 [talks]
 
 [talks.1_09_00]
-title = "Coffee and registration"
+title = "Coffee and bagels"
 type = "organization"
 
 [talks.1_09_15]
@@ -43,7 +43,7 @@ title = "What's new in HiGHS, and thanks to JuMP for its support!"
 [talks.1_11_45]
 
 [talks.1_12_00]
-title = "Lunch"
+title = "Self-catered Lunch. There are numerous restaurants and cafes nearby"
 type = "break"
 
 [talks.1_12_15]
@@ -113,7 +113,7 @@ title = "Dinner at Good George"
 type = "organization"
 
 [talks.2_09_00]
-title = "Coffee"
+title = "Coffee and bagels"
 type = "organization"
 
 [talks.2_09_15]
@@ -150,7 +150,7 @@ title = "JuLS : A Julia Local Search Solver"
 [talks.2_11_45]
 
 [talks.2_12_00]
-title = "Lunch"
+title = "Self-catered Lunch. There are numerous restaurants and cafes nearby"
 type = "break"
 
 [talks.2_12_15]
