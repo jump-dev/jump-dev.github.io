@@ -2,7 +2,7 @@ import TOML
 
 get_key(day, time) = replace("$(day):$time", ":" => "_")
 
-function print_table(io, data)
+function print_table(io, data, year)
     talks = data["talks"]
     day_names = data["days"]
     indices = split.([k for k in keys(talks)], "_")
@@ -32,7 +32,7 @@ function print_table(io, data)
                     talk_type = " talk-" * item["type"]
                 end
                 if haskey(item, "slides")
-                    content *= """[<a href="/assets/jump-dev-workshops/2024/$(item["slides"])">slides</a>]"""
+                    content *= """[<a href="/assets/jump-dev-workshops/$year/$(item["slides"])">slides</a>]"""
                 end
                 if haskey(item, "url")
                     content *= """[<a href="$(item["url"])">video</a>]"""
@@ -52,7 +52,7 @@ function build_schedule(year::String)
     data = TOML.parsefile(joinpath(@__DIR__, year, "schedule.toml"))
     filename = joinpath(root, "_includes", "jump-dev-$year-schedule.html")
     open(filename, "w") do io
-        print_table(io, data)
+        print_table(io, data, year)
     end
     return
 end
