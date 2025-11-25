@@ -21,14 +21,17 @@ title = "The state of JuMP"
 [talks.1_10_45]
 speaker = "Joaquim Dias Garcia"
 title = "ApplicationDrivenLearning.jl a framework to train forecast models with application-driven cost functions"
+slides = "talk-joaquim-garcia-learning.pdf"
 
 [talks.1_11_00]
 speaker = "Alexis Montoison"
 title = "Revisiting sparse matrix coloring and bicoloring"
+slides = "talk-alexis-montoison-coloring.pdf"
 
 [talks.1_11_30]
 speaker = "Julian Hall"
 title = "What's new in HiGHS, and thanks to JuMP for its support!"
+slides = "talk-julian-hall.pdf"
 
 [talks.1_12_00]
 title = "Self-catered Lunch. There are numerous restaurants and cafes nearby"
@@ -40,18 +43,22 @@ type = "break"
 [talks.1_14_00]
 speaker = "Yuwen Chen"
 title = "CuClarabel: GPU Acceleration for a Conic Optimization Solver"
+slides = "talk-yuwen-chen.pdf"
 
 [talks.1_14_30]
 speaker = "Alexis Montoison"
 title = "MadIPM.jl"
+slides = "talk-alexis-montoison-madipm.pdf"
 
 [talks.1_15_00]
 speaker = "Michael Saunders"
 title = "GPU Implementation of Algorithm NCL"
+slides = "talk-mike-saunders.pdf"
 
 [talks.1_15_30]
 speaker = "Joaquim Dias Garcia"
 title = "Open energy models: benchmarking, profiling and debugging tool for JuMP"
+slides = "talk-joaquim-garcia-energy.pdf"
 
 [talks.1_16_00]
 speaker = "James Glynn"
@@ -60,6 +67,7 @@ title = "TIMES2JuMP -  Learnings from IEA-ETSAP feasibility study of migrating t
 [talks.1_16_30]
 speaker = "Harley Mackenzie"
 title = "Lessons from using JuMP in HARD software"
+slides = "talk-harley-mackenzie.pdf"
 
 [talks.1_17_00]
 title = "Dinner at Good George"
@@ -72,6 +80,7 @@ type = "organization"
 [talks.2_09_30]
 speaker = "Oscar Dowson"
 title = "The life and times of SDDP.jl"
+slides = "talk-oscar-dowson-sddp.pdf"
 
 [talks.2_10_00]
 speaker = "Benoît Legat"
@@ -80,6 +89,7 @@ title = "Large Scale JuMP Models with Constraint Generators"
 [talks.2_10_30]
 speaker = "Dimitri Alston"
 title = "Automatic Generation of JuMP.jl Constraints from ModelingToolkit.jl Models"
+slides = "talk-dimitri-alston.pdf"
 
 [talks.2_11_00]
 speaker = "Thibaut Cuvelier"
@@ -92,6 +102,7 @@ title = "JuLS : A Julia Local Search Solver"
 [talks.2_12_00]
 speaker = "Robby Parker"
 title = "Optimizing over trained neural networks with MathOptAI.jl"
+slides = "talk-robby-parker.pdf"
 
 [talks.2_12_30]
 title = "Self-catered Lunch. There are numerous restaurants and cafes nearby"
@@ -100,14 +111,17 @@ type = "break"
 [talks.2_14_00]
 speaker = "James Foster"
 title = "JuMP on demand: Creating your own compute cluster for solving optimisation problems"
+slides = "talk-james-foster.pdf"
 
 [talks.2_14_30]
 speaker = "Joshua Pulsipher"
 title = "The State of InfiniteOpt.jl"
+slides = "talk-josh-pulsipher.pdf"
 
 [talks.2_15_00]
 speaker = "Oscar Dowson"
 title = "MathOptInterface: a comprehensive overview"
+slides = "talk-oscar-dowson-moi.pdf"
 
 [talks.2_15_30]
 
