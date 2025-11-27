@@ -17,21 +17,25 @@ speaker = "Oscar Dowson"
 [talks.1_10_15]
 speaker = "Miles Lubin"
 title = "The state of JuMP"
+url = "https://youtu.be/mbIbjj2waxE"
 
 [talks.1_10_45]
 speaker = "Joaquim Dias Garcia"
 title = "ApplicationDrivenLearning.jl a framework to train forecast models with application-driven cost functions"
 slides = "talk-joaquim-garcia-learning.pdf"
+url = "https://youtu.be/zdnfaUwjATE"
 
 [talks.1_11_00]
 speaker = "Alexis Montoison"
 title = "Revisiting sparse matrix coloring and bicoloring"
 slides = "talk-alexis-montoison-coloring.pdf"
+url = "https://youtu.be/xjUmNqfoXy4"
 
 [talks.1_11_30]
 speaker = "Julian Hall"
 title = "What's new in HiGHS, and thanks to JuMP for its support!"
 slides = "talk-julian-hall.pdf"
+# url = "https://youtu.be/cId5a81wrVw"
 
 [talks.1_12_00]
 title = "Self-catered Lunch. There are numerous restaurants and cafes nearby"
@@ -44,30 +48,36 @@ type = "break"
 speaker = "Yuwen Chen"
 title = "CuClarabel: GPU Acceleration for a Conic Optimization Solver"
 slides = "talk-yuwen-chen.pdf"
+url = "https://youtu.be/RX-QDKxAv6Q"
 
 [talks.1_14_30]
 speaker = "Alexis Montoison"
 title = "MadIPM.jl"
 slides = "talk-alexis-montoison-madipm.pdf"
+url = "https://youtu.be/1qEwygP0nxo"
 
 [talks.1_15_00]
 speaker = "Michael Saunders"
 title = "GPU Implementation of Algorithm NCL"
 slides = "talk-mike-saunders.pdf"
+url = "https://youtu.be/J1Rj22LQ2rs"
 
 [talks.1_15_30]
 speaker = "Joaquim Dias Garcia"
 title = "Open energy models: benchmarking, profiling and debugging tool for JuMP"
 slides = "talk-joaquim-garcia-energy.pdf"
+url = "https://youtu.be/QgPXOZ3SPUY"
 
 [talks.1_16_00]
 speaker = "James Glynn"
 title = "TIMES2JuMP -  Learnings from IEA-ETSAP feasibility study of migrating the TIMES code to Julia JuMP."
+url = "https://youtu.be/WIyMbZ31By4"
 
 [talks.1_16_30]
 speaker = "Harley Mackenzie"
 title = "Lessons from using JuMP in HARD software"
 slides = "talk-harley-mackenzie.pdf"
+url = "https://youtu.be/seqc_kH-jIw"
 
 [talks.1_17_00]
 title = "Dinner at Good George"
@@ -81,28 +91,34 @@ type = "organization"
 speaker = "Oscar Dowson"
 title = "The life and times of SDDP.jl"
 slides = "talk-oscar-dowson-sddp.pdf"
+url = "https://youtu.be/YOeoGm9H2kw"
 
 [talks.2_10_00]
 speaker = "Benoît Legat"
 title = "Large Scale JuMP Models with Constraint Generators"
+url = "https://youtu.be/RpmuPESfSl8"
 
 [talks.2_10_30]
 speaker = "Dimitri Alston"
 title = "Automatic Generation of JuMP.jl Constraints from ModelingToolkit.jl Models"
 slides = "talk-dimitri-alston.pdf"
+url = "https://youtu.be/PO9dvwOfo5g"
 
 [talks.2_11_00]
 speaker = "Thibaut Cuvelier"
 title = "Unlocking the Power of Google OR-Tools with MathOptInterface.jl"
+# url = "https://youtu.be/L7Zvj2xwqYs"
 
 [talks.2_11_30]
 speaker = "Axel Navarro"
 title = "JuLS : A Julia Local Search Solver"
+# url = "https://youtu.be/BpgAPVHjwiY"
 
 [talks.2_12_00]
 speaker = "Robby Parker"
 title = "Optimizing over trained neural networks with MathOptAI.jl"
 slides = "talk-robby-parker.pdf"
+url = "https://youtu.be/cYBvJ158c5M"
 
 [talks.2_12_30]
 title = "Self-catered Lunch. There are numerous restaurants and cafes nearby"
@@ -112,16 +128,19 @@ type = "break"
 speaker = "James Foster"
 title = "JuMP on demand: Creating your own compute cluster for solving optimisation problems"
 slides = "talk-james-foster.pdf"
+# url = "https://youtu.be/u0jfHNxIsIo"
 
 [talks.2_14_30]
 speaker = "Joshua Pulsipher"
 title = "The State of InfiniteOpt.jl"
 slides = "talk-josh-pulsipher.pdf"
+url = "https://youtu.be/oug8ttdzc2g"
 
 [talks.2_15_00]
 speaker = "Oscar Dowson"
 title = "MathOptInterface: a comprehensive overview"
 slides = "talk-oscar-dowson-moi.pdf"
+url = "https://youtu.be/M31xoZGyj9w"
 
 [talks.2_15_30]
 
