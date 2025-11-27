@@ -35,7 +35,7 @@ url = "https://youtu.be/xjUmNqfoXy4"
 speaker = "Julian Hall"
 title = "What's new in HiGHS, and thanks to JuMP for its support!"
 slides = "talk-julian-hall.pdf"
-# url = "https://youtu.be/cId5a81wrVw"
+url = "https://youtu.be/cId5a81wrVw"
 
 [talks.1_12_00]
 title = "Self-catered Lunch. There are numerous restaurants and cafes nearby"
