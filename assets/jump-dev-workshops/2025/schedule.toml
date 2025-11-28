@@ -107,12 +107,14 @@ url = "https://youtu.be/PO9dvwOfo5g"
 [talks.2_11_00]
 speaker = "Thibaut Cuvelier"
 title = "Unlocking the Power of Google OR-Tools with MathOptInterface.jl"
+slides = "talk-thibaut-cuvelier.pdf"
 # url = "https://youtu.be/L7Zvj2xwqYs"
 
 [talks.2_11_30]
 speaker = "Axel Navarro"
 title = "JuLS : A Julia Local Search Solver"
-# url = "https://youtu.be/BpgAPVHjwiY"
+slides = "talk-axel-navarro.pdf"
+# url: Axel has asked not to share the video because of Amazon approvals
 
 [talks.2_12_00]
 speaker = "Robby Parker"
