@@ -3,7 +3,7 @@ title:  "Community forum"
 ---
 
 JuMP uses the "Optimization (Mathematical)" section of the
-[Julia community Discourse]((https://discourse.julialang.org/c/domain/opt/13))
+[Julia community Discourse](https://discourse.julialang.org/c/domain/opt/13)
 as our community forum.
 
 Use the forum to ask usage questions related to JuMP, or to search for past
