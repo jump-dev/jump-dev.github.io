@@ -96,6 +96,7 @@ url = "https://youtu.be/YOeoGm9H2kw"
 [talks.2_10_00]
 speaker = "Benoît Legat"
 title = "Large Scale JuMP Models with Constraint Generators"
+slides = "talk-legat.html"
 url = "https://youtu.be/RpmuPESfSl8"
 
 [talks.2_10_30]
