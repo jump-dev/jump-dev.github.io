@@ -109,7 +109,7 @@ url = "https://youtu.be/PO9dvwOfo5g"
 speaker = "Thibaut Cuvelier"
 title = "Unlocking the Power of Google OR-Tools with MathOptInterface.jl"
 slides = "talk-thibaut-cuvelier.pdf"
-# url = "https://youtu.be/L7Zvj2xwqYs"
+url = "https://youtu.be/L7Zvj2xwqYs"
 
 [talks.2_11_30]
 speaker = "Axel Navarro"
@@ -131,7 +131,7 @@ type = "break"
 speaker = "James Foster"
 title = "JuMP on demand: Creating your own compute cluster for solving optimisation problems"
 slides = "talk-james-foster.pdf"
-# url = "https://youtu.be/u0jfHNxIsIo"
+url = "https://youtu.be/u0jfHNxIsIo"
 
 [talks.2_14_30]
 speaker = "Joshua Pulsipher"
