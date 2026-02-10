@@ -16,8 +16,8 @@ title = "Calculating carbon intensity signals on the power grid"
 speaker = "Noah Rhodes"
 
 [talks.1_09_30]
-title = "Antipode JuMPing - How Norwegian authorities use JADE.jl for better decision making"
-speaker = "Jarand Hole"
+title = "High Frequency Battery Optimization with JuMP"
+speaker = "Mario Souto"
 
 [talks.1_09_45]
 title = "Optimal Planning for Steel Industry Decarbonization: A Mixed-Integer Linear Programming Approach in Julia"
@@ -59,8 +59,8 @@ title = "Lunch (provided on-site)"
 type = "break"
 
 [talks.1_14_00]
-title = "High Frequency Battery Optimization with JuMP"
-speaker = "Mario Souto"
+title = "Antipode JuMPing - How Norwegian authorities use JADE.jl for better decision making"
+speaker = "Jarand Hole"
 
 [talks.1_14_15]
 title = "Automatic Decomposition of JuMP Models using TimeStructDecomposition.jl"
