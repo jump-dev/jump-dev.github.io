@@ -94,14 +94,14 @@ title = "Adding array support for JuMP’s Automatic Differentiation"
 speaker = "Sophie Lequeu"
 
 [talks.1_16_15]
+title = "Can ExaModels Power JuMP on GPUs?"
+speaker = "Sungho Shin"
+
+[talks.1_16_30]
 title = "UnoSolver.jl, a unified SQP/barrier solver for nonlinearly constrained optimization"
 speaker = "Charlie Vanaret"
 
-[talks.1_16_30]
-
 [talks.1_16_45]
-title = "Wrap up"
-type = "organization"
 
 [talks.1_17_00]
 title = "Dinner"
@@ -196,8 +196,6 @@ title = "JuMP's macros: a comprehensive overview"
 speaker = "Oscar Dowson"
 
 [talks.2_16_45]
-title = "Wrap up"
-type = "organization"
 
 [talks.2_17_00]
 type = "organization"
@@ -237,8 +235,6 @@ type = "break"
 title = "HiGHS Workshop"
 
 [talks.3_16_45]
-title = "Wrap up"
-type = "organization"
 
 [talks.3_17_00]
 type = "organization"
