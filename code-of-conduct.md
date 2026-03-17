@@ -2,18 +2,10 @@
 title:  "Code of Conduct"
 ---
 
-The JuMP community strongly values inclusivity and diversity. Everyone should
-treat others with the utmost respect. Everyone in the community must adhere to
-the [NumFOCUS Code of Conduct](https://numfocus.org/code-of-conduct) and the
-[Julia Community Standards](https://julialang.org/community/standards/), which
-reflect the values of our community. Both these links have information on how to
-confidentially report a violation.
-
-## Julia Community Standards
-
-You can find the whole document here https://julialang.org/community/standards/.
-
 ## NumFOCUS Code of Conduct
+
+The NumFOCUS Code of Conduct applies in all spaces managed by JuMP, such as our
+GitHub repositories and events such as JuMP-dev.
 
 You can find the whole document here https://numfocus.org/code-of-conduct.
 
@@ -53,3 +45,11 @@ other organization.
 
 You can learn more about the current group members, as well as the reporting
 procedure [HERE](https://numfocus.org/code-of-conduct).
+
+## Julia Community Standards
+
+JuMP community interactions often take place in spaces moderated by the Julia
+Community, such as our [community forum](/forum) and [chatroom](/chatroom). In
+these spaces, the Julia Community Standards apply.
+
+You can find the whole document here https://julialang.org/community/standards/.
