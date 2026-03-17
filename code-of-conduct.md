@@ -4,8 +4,8 @@ title:  "Code of Conduct"
 
 ## NumFOCUS Code of Conduct
 
-The NumFOCUS Code of Conduct applies in all spaces managed by JuMP, such as our
-GitHub repositories and events such as JuMP-dev.
+The NumFOCUS Code of Conduct applies in all spaces managed by JuMP, such as 
+JuMP GitHub repositories and JuMP-organized events.
 
 You can find the whole document here https://numfocus.org/code-of-conduct.
 
