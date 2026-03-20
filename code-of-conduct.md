@@ -7,7 +7,7 @@ title:  "Code of Conduct"
 The NumFOCUS Code of Conduct applies in all spaces managed by JuMP, such as 
 JuMP GitHub repositories and JuMP-organized events.
 
-You can find the whole document here https://numfocus.org/code-of-conduct.
+You can find the whole document here [https://numfocus.org/code-of-conduct](https://numfocus.org/code-of-conduct).
 
 ### The short version
 
@@ -29,7 +29,7 @@ Thank you for helping make this a welcoming, friendly community for all.
 ### The long version
 
 You can find the long version of the Code of Conduct on the NumFOCUS website
-https://numfocus.org/code-of-conduct
+[https://numfocus.org/code-of-conduct](https://numfocus.org/code-of-conduct).
 
 ### How to report
 
@@ -52,4 +52,4 @@ JuMP community interactions often take place in spaces moderated by the Julia
 Community, such as our [community forum](/forum) and [chatroom](/chatroom). In
 these spaces, the Julia Community Standards apply.
 
-You can find the whole document here https://julialang.org/community/standards/.
+You can find the whole document here [https://julialang.org/community/standards/](https://julialang.org/community/standards/).
