@@ -28,8 +28,8 @@ title = "Optimize Your Fleet with Odoo and JuMP"
 speaker = "Benoît Legat"
 
 [talks.1_10_15]
-title = "Can ExaModels Power JuMP on GPUs?"
-speaker = "Sungho Shin"
+title = "DuckDB as backend to build optimization models in JuMP.jl"
+speaker = "Abel Siqueira"
 
 [talks.1_10_30]
 title = "Morning tea"
@@ -94,8 +94,8 @@ title = "Adding array support for JuMP’s Automatic Differentiation"
 speaker = "Sophie Lequeu"
 
 [talks.1_16_15]
-title = "DuckDB as backend to build optimization models in JuMP.jl"
-speaker = "Diego Tejada"
+title = "Can ExaModels Power JuMP on GPUs?"
+speaker = "Sungho Shin"
 
 [talks.1_16_30]
 title = "<b>Invited talk:</b> Linopy"
