@@ -1,5 +1,5 @@
 
-days = ["Sunday 31 (JuMP)", "Monday 1 (JuMP)", "Monday 1 (HiGHS)"]
+days = ["Sunday 31", "Monday 1"]
 
 [talks]
 
@@ -16,20 +16,20 @@ title = "Calculating carbon intensity signals on the power grid"
 speaker = "Noah Rhodes"
 
 [talks.1_09_30]
-title = "High Frequency Battery Optimization with JuMP"
-speaker = "Mario Souto"
-
-[talks.1_09_45]
 title = "Optimal Planning for Steel Industry Decarbonization: A Mixed-Integer Linear Programming Approach in Julia"
 speaker = "Vinícius Justen Pinto"
 
-[talks.1_10_00]
+[talks.1_09_45]
 title = "Optimize Your Fleet with Odoo and JuMP"
 speaker = "Benoît Legat"
 
-[talks.1_10_15]
+[talks.1_10_00]
 title = "DuckDB as backend to build optimization models in JuMP.jl"
 speaker = "Abel Siqueira"
+
+[talks.1_10_15]
+title = "Batched optimization solvers: a tour d'horizon"
+speaker = "François Pacaud"
 
 [talks.1_10_30]
 title = "Morning tea"
@@ -112,24 +112,25 @@ title = "Coffee"
 type = "organization"
 
 [talks.2_09_00]
+type = "organization"
+
+[talks.2_09_15]
 title = "DiffOpt: Now Nonlinear and Streamlined"
 speaker = "Joaquim Dias Garcia"
 
 [talks.2_09_30]
-title = "DisjunctiveProgramming.jl’s New Suite of Solution Methods"
-speaker = "Daniel Nguyen"
 
 [talks.2_09_45]
-title = "Advanced Model Composition in ApplicationDrivenLearning.jl"
-speaker = "Giovanni Amorim"
+title = "DisjunctiveProgramming.jl’s New Suite of Solution Methods"
+speaker = "Daniel Nguyen"
 
 [talks.2_10_00]
 title = "DisjunctiveNet.jl: Neural Symbolic Learning via Differentiable Convexified Optimization Layers"
 speaker = "Can Li"
 
 [talks.2_10_15]
-title = "Batched optimization solvers: a tour d'horizon"
-speaker = "François Pacaud"
+title = "Advanced Model Composition in ApplicationDrivenLearning.jl"
+speaker = "Giovanni Amorim"
 
 [talks.2_10_30]
 title = "Morning tea"
@@ -200,42 +201,3 @@ speaker = "Oscar Dowson"
 [talks.2_17_00]
 type = "organization"
 title = "Workshop ends"
-
-[talks.3_08_30]
-title = "Coffee"
-type = "organization"
-
-[talks.3_09_00]
-title = "HiGHS Workshop"
-
-[talks.3_10_30]
-title = "Morning tea"
-type = "break"
-
-[talks.3_10_45]
-type = "break"
-
-[talks.3_11_00]
-title = "HiGHS Workshop"
-
-[talks.3_12_30]
-title = "Lunch (provided on-site)"
-type = "break"
-
-[talks.3_14_00]
-title = "HiGHS Workshop"
-
-[talks.3_15_30]
-title = "Afternoon tea"
-type = "break"
-
-[talks.3_15_45]
-type = "break"
-
-[talks.3_16_00]
-title = "HiGHS Workshop"
-
-[talks.3_16_45]
-
-[talks.3_17_00]
-type = "organization"
