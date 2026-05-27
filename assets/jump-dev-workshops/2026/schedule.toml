@@ -1,5 +1,5 @@
 
-days = ["Sunday 31", "Monday 1"]
+days = ["Sunday 31", "Monday 1 (JuMP)", " Monday 1 (HiGHS)"]
 
 [talks]
 
@@ -199,5 +199,81 @@ speaker = "Oscar Dowson"
 [talks.2_16_45]
 
 [talks.2_17_00]
+type = "organization"
+title = "Workshop ends"
+
+[talks.3_08_30]
+title = "Coffee"
+type = "organization"
+
+[talks.3_09_00]
+type = "organization"
+
+[talks.3_09_15]
+type = "organization"
+
+[talks.3_09_30]
+speaker = "Julian Hall"
+title = "What's new in HiGHS"
+
+[talks.3_10_00]
+speaker = "Yanyu Zhou"
+title = "HiPDLP: A PDLP solver for HiGHS"
+
+[talks.3_10_30]
+title = "Morning tea"
+type = "break"
+
+[talks.3_10_45]
+type = "break"
+
+[talks.3_11_00]
+speaker = "Lucas Biton"
+title = "Tallarium"
+
+[talks.3_11_30]
+type = "break"
+
+[talks.3_11_45]
+type = "break"
+
+[talks.3_12_00]
+speaker = "Ivona Gjeroska and Bárbara Cotrim Rodrigues"
+title = "Optimisation Problems at Edinburgh Airport"
+
+[talks.3_12_30]
+title = "Lunch (provided on-site)"
+type = "break"
+
+[talks.3_14_00]
+speaker = "Siddharth Krishna"
+title = "Open Energy Benchmark: 2025 results, HiPO performance, and call for benchmarks"
+
+[talks.3_14_30]
+speaker = "Filippo Zanetti"
+title = "Recent developments and future plans for HiPO"
+
+[talks.3_15_00]
+speaker = "Mark Turner"
+title = "A parallel MIP solver for HiGHS!"
+
+[talks.3_15_30]
+title = "Afternoon tea"
+type = "break"
+
+[talks.3_15_45]
+type = "break"
+
+[talks.3_16_00]
+speaker = "Ben Champion"
+title = "Local heuristics for the HiGHS MIP solver"
+
+[talks.3_16_30]
+type = "break"
+
+[talks.3_16_45]
+type = "break"
+
+[talks.3_17_00]
 type = "organization"
 title = "Workshop ends"
