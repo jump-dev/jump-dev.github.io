@@ -59,7 +59,7 @@ title = "Lunch (provided on-site)"
 type = "break"
 
 [talks.1_14_00]
-title = "Antipode JuMPing - How Norwegian authorities use JADE.jl for better decision making"
+title = "Antipode JuMPing - How Norwegian authorities can use JADE.jl for better decision making"
 speaker = "Jarand Hole"
 
 [talks.1_14_15]
