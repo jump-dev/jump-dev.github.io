@@ -1,5 +1,5 @@
 
-days = ["Sunday 31", "Monday 1 (JuMP)", " Monday 1 (HiGHS)"]
+days = ["Sunday 31 (Prestonfield)", "Monday 1 (Prestonfield)", " Monday 1 (Holyrood)"]
 
 [talks]
 
@@ -71,8 +71,8 @@ title = "PowerModelsADA: A Distributed Optimization Library for Optimal Power Fl
 speaker = "Mohannad Alkhraijah"
 
 [talks.1_14_45]
-title = "Decentralized Network Expansion Planning Under Uncertainty Using a Nested Dual Decomposition Technique"
-speaker = "Alireza Shefaei"
+title = "Advanced Model Composition in ApplicationDrivenLearning.jl"
+speaker = "Giovanni Amorim"
 
 [talks.1_15_00]
 title = "An ADMM framework for solving actor‑decomposed energy system models"
@@ -115,22 +115,21 @@ type = "organization"
 type = "organization"
 
 [talks.2_09_15]
+type = "organization"
+
+[talks.2_09_30]
 title = "DiffOpt: Now Nonlinear and Streamlined"
 speaker = "Joaquim Dias Garcia"
 
-[talks.2_09_30]
-
 [talks.2_09_45]
+
+[talks.2_10_00]
 title = "DisjunctiveProgramming.jl’s New Suite of Solution Methods"
 speaker = "Daniel Nguyen"
 
-[talks.2_10_00]
+[talks.2_10_15]
 title = "DisjunctiveNet.jl: Neural Symbolic Learning via Differentiable Convexified Optimization Layers"
 speaker = "Can Li"
-
-[talks.2_10_15]
-title = "Advanced Model Composition in ApplicationDrivenLearning.jl"
-speaker = "Giovanni Amorim"
 
 [talks.2_10_30]
 title = "Morning tea"
@@ -232,10 +231,10 @@ speaker = "Lucas Biton"
 title = "Tallarium"
 
 [talks.3_11_30]
-type = "break"
+speaker = "Soren Little"
+title = "Prescriptive Analytics ought to be in the database"
 
 [talks.3_11_45]
-type = "break"
 
 [talks.3_12_00]
 speaker = "Ivona Gjeroska and Bárbara Cotrim Rodrigues"
@@ -246,7 +245,7 @@ title = "Lunch (provided on-site)"
 type = "break"
 
 [talks.3_14_00]
-speaker = "Siddharth Krishna"
+speaker = "Daniele Lerede"
 title = "Open Energy Benchmark: 2025 results, HiPO performance, and call for benchmarks"
 
 [talks.3_14_30]
