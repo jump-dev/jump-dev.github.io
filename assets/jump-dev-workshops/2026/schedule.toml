@@ -8,28 +8,27 @@ title = "Coffee"
 type = "organization"
 
 [talks.1_09_00]
+type = "organization"
+
+[talks.1_09_15]
 title = "Introduction and welcome"
 speaker = "Oscar Dowson"
 
-[talks.1_09_15]
+[talks.1_09_30]
 title = "Calculating carbon intensity signals on the power grid"
 speaker = "Noah Rhodes"
 
-[talks.1_09_30]
+[talks.1_09_45]
 title = "Optimal Planning for Steel Industry Decarbonization: A Mixed-Integer Linear Programming Approach in Julia"
 speaker = "Vinícius Justen Pinto"
 
-[talks.1_09_45]
+[talks.1_10_00]
 title = "Optimize Your Fleet with Odoo and JuMP"
 speaker = "Benoît Legat"
 
-[talks.1_10_00]
+[talks.1_10_15]
 title = "DuckDB as backend to build optimization models in JuMP.jl"
 speaker = "Abel Siqueira"
-
-[talks.1_10_15]
-title = "Batched optimization solvers: a tour d'horizon"
-speaker = "François Pacaud"
 
 [talks.1_10_30]
 title = "Morning tea"
@@ -59,28 +58,28 @@ title = "Lunch (provided on-site)"
 type = "break"
 
 [talks.1_14_00]
+title = "Batched optimization solvers: a tour d'horizon"
+speaker = "François Pacaud"
+
+[talks.1_14_15]
 title = "Antipode JuMPing - How Norwegian authorities can use JADE.jl for better decision making"
 speaker = "Jarand Hole"
 
-[talks.1_14_15]
+[talks.1_14_30]
 title = "Automatic Decomposition of JuMP Models using TimeStructDecomposition.jl"
 speaker = "Truls Flatberg"
-
-[talks.1_14_30]
-title = "PowerModelsADA: A Distributed Optimization Library for Optimal Power Flow"
-speaker = "Mohannad Alkhraijah"
 
 [talks.1_14_45]
 title = "Advanced Model Composition in ApplicationDrivenLearning.jl"
 speaker = "Giovanni Amorim"
 
 [talks.1_15_00]
-title = "An ADMM framework for solving actor‑decomposed energy system models"
-speaker = "Stefan Strömer"
-
-[talks.1_15_15]
 title = "Modelling and Solving Mathematical Programs with Complementarity Constraints."
 speaker = "Anton Edvinovich Pozharskiy"
+
+[talks.1_15_15]
+title = "Adding array support for JuMP’s Automatic Differentiation"
+speaker = "Sophie Lequeu"
 
 [talks.1_15_30]
 title = "Afternoon tea"
@@ -90,16 +89,14 @@ type = "break"
 type = "break"
 
 [talks.1_16_00]
-title = "Adding array support for JuMP’s Automatic Differentiation"
-speaker = "Sophie Lequeu"
-
-[talks.1_16_15]
 title = "Can ExaModels Power JuMP on GPUs?"
 speaker = "Sungho Shin"
 
-[talks.1_16_30]
+[talks.1_16_15]
 title = "<b>Invited talk:</b> Linopy"
 speaker = "Fabian Hofmann"
+
+[talks.1_16_30]
 
 [talks.1_16_45]
 
