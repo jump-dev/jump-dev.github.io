@@ -50,16 +50,15 @@ speaker = "Robert Parker"
 [talks.1_11_45]
 
 [talks.1_12_00]
-title = "Why Your Model Works in Test but Fails at 4 AM: Production Lessons from Energy Dispatch"
-speaker = "Harley Mackenzie"
+title = "Batched optimization solvers: a tour d'horizon"
+speaker = "François Pacaud"
 
 [talks.1_12_30]
 title = "Lunch (provided on-site)"
 type = "break"
 
 [talks.1_14_00]
-title = "Batched optimization solvers: a tour d'horizon"
-speaker = "François Pacaud"
+type = "break"
 
 [talks.1_14_15]
 title = "Antipode JuMPing - How Norwegian authorities can use JADE.jl for better decision making"
@@ -93,8 +92,8 @@ title = "Can ExaModels Power JuMP on GPUs?"
 speaker = "Sungho Shin"
 
 [talks.1_16_15]
-title = "<b>Invited talk:</b> Linopy"
-speaker = "Fabian Hofmann"
+title = "JuMP's macros: why are they needed?"
+speaker = "Oscar Dowson"
 
 [talks.1_16_30]
 
@@ -185,12 +184,13 @@ type = "break"
 type = "break"
 
 [talks.2_16_00]
+type = "break"
+
+[talks.2_16_15]
 title = "The 2026 JuMP-dev prize"
 speaker = "The JuMP developers"
 
-[talks.2_16_15]
-title = "JuMP's macros: why are they needed?"
-speaker = "Oscar Dowson"
+[talks.2_16_30]
 
 [talks.2_16_45]
 
@@ -263,6 +263,9 @@ type = "break"
 [talks.3_16_00]
 speaker = "Ben Champion"
 title = "Local heuristics for the HiGHS MIP solver"
+
+[talks.3_16_15]
+type = "break"
 
 [talks.3_16_30]
 type = "break"
