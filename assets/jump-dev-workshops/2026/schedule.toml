@@ -29,6 +29,7 @@ speaker = "Benoît Legat"
 [talks.1_10_15]
 title = "DuckDB as backend to build optimization models in JuMP.jl"
 speaker = "Abel Siqueira"
+slides = "slides_abel.pdf"
 
 [talks.1_10_30]
 title = "Morning tea"
@@ -40,6 +41,7 @@ type = "break"
 [talks.1_11_00]
 title = "UnoSolver.jl, a unified SQP/barrier solver for nonlinearly constrained optimization"
 speaker = "Charlie Vanaret"
+slides = "slides_charlie.pdf"
 
 [talks.1_11_15]
 
@@ -126,6 +128,7 @@ speaker = "Daniel Nguyen"
 [talks.2_10_15]
 title = "DisjunctiveNet.jl: Neural Symbolic Learning via Differentiable Convexified Optimization Layers"
 speaker = "Can Li"
+slides = "slides_can.pdf"
 
 [talks.2_10_30]
 title = "Morning tea"
@@ -141,6 +144,7 @@ speaker = "Chelsea Sidrane"
 [talks.2_11_15]
 title = "InfiniteMathOptAI.jl: Embedding Surrogates for Infinite-Dimensional Optimization"
 speaker = "Joshua Pulsipher"
+slides = "slides_josh.pdf"
 
 [talks.2_11_30]
 title = "Optimization Problem Surrogates with Graph Transformer Networks and integration within simulation workflows"
@@ -167,14 +171,17 @@ speaker = "Charles van Hees"
 [talks.2_14_30]
 title = "First-order Convex (mixed-integer) optimization: FrankWolfe.jl and Boscia.jl"
 speaker = "Deborah Hendrych"
+slides = "slides_deborah.pdf"
 
 [talks.2_14_45]
 title = "TenSolver.jl: A tensor network based QUBO solver with JuMP integration"
 speaker = "Iago Leal de Freitas"
+slides = "slides_iago.pdf"
 
 [talks.2_15_00]
 title = "PEPit.jl: Computer-Assisted Worst-Case Analysis of First-Order Optimization Algorithms in Julia"
 speaker = "Shuvomoy Das Gupta"
+slides = "slides_shuvomoy.pdf"
 
 [talks.2_15_30]
 title = "Afternoon tea"
