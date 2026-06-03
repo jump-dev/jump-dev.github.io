@@ -69,6 +69,7 @@ speaker = "Jarand Hole"
 [talks.1_14_30]
 title = "Automatic Decomposition of JuMP Models using TimeStructDecomposition.jl"
 speaker = "Truls Flatberg"
+slides = "slides_truls.pdf"
 
 [talks.1_14_45]
 title = "Advanced Model Composition in ApplicationDrivenLearning.jl"
@@ -81,6 +82,7 @@ speaker = "Anton Edvinovich Pozharskiy"
 [talks.1_15_15]
 title = "Adding array support for JuMP’s Automatic Differentiation"
 speaker = "Sophie Lequeu"
+slides = "slides_sophie.pdf"
 
 [talks.1_15_30]
 title = "Afternoon tea"
@@ -96,6 +98,7 @@ speaker = "Sungho Shin"
 [talks.1_16_15]
 title = "JuMP's macros: why are they needed?"
 speaker = "Oscar Dowson"
+slides = "slides_oscar.pdf"
 
 [talks.1_16_30]
 
@@ -167,6 +170,7 @@ speaker = "Benoît Legat"
 [talks.2_14_15]
 title = "GraphsOfConvexSets.jl: Optimisation over Graphs of Convex Sets with JuMP"
 speaker = "Charles van Hees"
+slides = "slides_charles.pdf"
 
 [talks.2_14_30]
 title = "First-order Convex (mixed-integer) optimization: FrankWolfe.jl and Boscia.jl"
