@@ -15,8 +15,9 @@ title = "Introduction and welcome"
 speaker = "Oscar Dowson"
 
 [talks.1_09_30]
-title = "Calculating carbon intensity signals on the power grid"
+title = "ElectricityEmissions.jl: Calculating carbon intensity signals on the power grid"
 speaker = "Noah Rhodes"
+slides = "slides_noah.pdf"
 
 [talks.1_09_45]
 title = "Optimal Planning for Steel Industry Decarbonization: A Mixed-Integer Linear Programming Approach in Julia"
