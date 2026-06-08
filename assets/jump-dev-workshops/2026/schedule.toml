@@ -129,6 +129,7 @@ speaker = "Joaquim Dias Garcia"
 [talks.2_10_00]
 title = "DisjunctiveProgramming.jl’s New Suite of Solution Methods"
 speaker = "Daniel Nguyen"
+slides = "slides_daniel.pdf"
 
 [talks.2_10_15]
 title = "DisjunctiveNet.jl: Neural Symbolic Learning via Differentiable Convexified Optimization Layers"
