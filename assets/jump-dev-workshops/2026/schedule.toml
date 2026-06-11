@@ -18,20 +18,24 @@ speaker = "Oscar Dowson"
 title = "ElectricityEmissions.jl: Calculating carbon intensity signals on the power grid"
 speaker = "Noah Rhodes"
 slides = "slides_noah.pdf"
+url = "https://youtu.be/fmvyd0OoKWw"
 
 [talks.1_09_45]
 title = "Optimal Planning for Steel Industry Decarbonization: A Mixed-Integer Linear Programming Approach in Julia"
 speaker = "Vinícius Justen Pinto"
 slides = "slides_vinicius.pdf"
+url = "https://youtu.be/tq_I3iNWW88"
 
 [talks.1_10_00]
 title = "Optimize Your Fleet with Odoo and JuMP"
 speaker = "Benoît Legat"
+url = "https://youtu.be/hxph7NR6JeM"
 
 [talks.1_10_15]
 title = "DuckDB as backend to build optimization models in JuMP.jl"
 speaker = "Abel Siqueira"
 slides = "slides_abel.pdf"
+url = "https://youtu.be/8mmYRna_c-U"
 
 [talks.1_10_30]
 title = "Morning tea"
@@ -44,18 +48,21 @@ type = "break"
 title = "UnoSolver.jl, a unified SQP/barrier solver for nonlinearly constrained optimization"
 speaker = "Charlie Vanaret"
 slides = "slides_charlie.pdf"
+url = "https://youtu.be/hDPCVBQm8TE"
 
 [talks.1_11_15]
 
 [talks.1_11_30]
 title = "Reduced-space nonlinear optimization via the implicit function theorem"
 speaker = "Robert Parker"
+url = "https://youtu.be/lz4Xj_V47nM"
 
 [talks.1_11_45]
 
 [talks.1_12_00]
 title = "Batched optimization solvers: a tour d'horizon"
 speaker = "François Pacaud"
+url = "https://youtu.be/dU0-UpvWK6Q"
 
 [talks.1_12_30]
 title = "Lunch (provided on-site)"
@@ -67,25 +74,30 @@ type = "break"
 [talks.1_14_15]
 title = "Antipode JuMPing - How Norwegian authorities can use JADE.jl for better decision making"
 speaker = "Jarand Hole"
+url = "https://youtu.be/dGgAxpKQoQ4"
 
 [talks.1_14_30]
 title = "Automatic Decomposition of JuMP Models using TimeStructDecomposition.jl"
 speaker = "Truls Flatberg"
 slides = "slides_truls.pdf"
+url = "https://youtu.be/hcOkx8W9C1k"
 
 [talks.1_14_45]
 title = "Advanced Model Composition in ApplicationDrivenLearning.jl"
 speaker = "Giovanni Amorim"
 slides = "slides_giovanni.pdf"
+url = "https://youtu.be/pFW62ID4Nuw"
 
 [talks.1_15_00]
 title = "Modelling and Solving Mathematical Programs with Complementarity Constraints."
 speaker = "Anton Edvinovich Pozharskiy"
+url = "https://youtu.be/bPLfogxz6s4"
 
 [talks.1_15_15]
 title = "Adding array support for JuMP’s Automatic Differentiation"
 speaker = "Sophie Lequeu"
 slides = "slides_sophie.pdf"
+url = "https://youtu.be/1M0g0sTY0a0"
 
 [talks.1_15_30]
 title = "Afternoon tea"
@@ -97,11 +109,13 @@ type = "break"
 [talks.1_16_00]
 title = "Can ExaModels Power JuMP on GPUs?"
 speaker = "Sungho Shin"
+url = "https://youtu.be/67-_Xmgxf1c"
 
 [talks.1_16_15]
 title = "JuMP's macros: why are they needed?"
 speaker = "Oscar Dowson"
 slides = "slides_oscar.pdf"
+url = ""
 
 [talks.1_16_30]
 
@@ -122,8 +136,9 @@ type = "organization"
 type = "organization"
 
 [talks.2_09_30]
-title = "DiffOpt: Now Nonlinear and Streamlined"
+title = "DiffOpt.jl: Differentiable optimization for JuMP"
 speaker = "Joaquim Dias Garcia"
+url = "https://youtu.be/HnFFdVB94js"
 
 [talks.2_09_45]
 
@@ -131,11 +146,13 @@ speaker = "Joaquim Dias Garcia"
 title = "DisjunctiveProgramming.jl’s New Suite of Solution Methods"
 speaker = "Daniel Nguyen"
 slides = "slides_daniel.pdf"
+url = "https://youtu.be/vYXdQUb9Fbc"
 
 [talks.2_10_15]
 title = "DisjunctiveNet.jl: Neural Symbolic Learning via Differentiable Convexified Optimization Layers"
 speaker = "Can Li"
 slides = "slides_can.pdf"
+url = "https://youtu.be/z-4ROIzWrPY"
 
 [talks.2_10_30]
 title = "Morning tea"
@@ -152,6 +169,7 @@ speaker = "Chelsea Sidrane"
 title = "InfiniteMathOptAI.jl: Embedding Surrogates for Infinite-Dimensional Optimization"
 speaker = "Joshua Pulsipher"
 slides = "slides_josh.pdf"
+url = "https://youtu.be/YPVmHQl1qws"
 
 [talks.2_11_30]
 title = "Optimization Problem Surrogates with Graph Transformer Networks and integration within simulation workflows"
@@ -160,6 +178,7 @@ speaker = "Jose Daniel Lara"
 [talks.2_12_00]
 title = "Toward Extending EAGO.jl for Exploiting GPU Parallelism"
 speaker = "Dimitri Alston"
+url = "https://youtu.be/xXW7xn2vp-U"
 
 [talks.2_12_15]
 
@@ -170,26 +189,31 @@ type = "break"
 [talks.2_14_00]
 title = "Second-Order GPU solver for Burer-Monteiro"
 speaker = "Benoît Legat"
+url = "https://youtu.be/mk1NDX2wMNY"
 
 [talks.2_14_15]
 title = "GraphsOfConvexSets.jl: Optimisation over Graphs of Convex Sets with JuMP"
 speaker = "Charles van Hees"
 slides = "slides_charles.pdf"
+url = "https://youtu.be/rKaM6qjoobU"
 
 [talks.2_14_30]
 title = "First-order Convex (mixed-integer) optimization: FrankWolfe.jl and Boscia.jl"
 speaker = "Deborah Hendrych"
 slides = "slides_deborah.pdf"
+url = "https://youtu.be/aeCucIGKhzE"
 
 [talks.2_14_45]
 title = "TenSolver.jl: A tensor network based QUBO solver with JuMP integration"
 speaker = "Iago Leal de Freitas"
 slides = "slides_iago.pdf"
+url = "https://youtu.be/nvbv1NzMRMg"
 
 [talks.2_15_00]
 title = "PEPit.jl: Computer-Assisted Worst-Case Analysis of First-Order Optimization Algorithms in Julia"
 speaker = "Shuvomoy Das Gupta"
 slides = "slides_shuvomoy.pdf"
+url = "https://youtu.be/2vp65pXp5Xk"
 
 [talks.2_15_30]
 title = "Afternoon tea"
