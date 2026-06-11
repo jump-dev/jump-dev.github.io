@@ -48,7 +48,7 @@ slides = "slides_charlie.pdf"
 [talks.1_11_15]
 
 [talks.1_11_30]
-title = "MathProgIncidence.jl: Graph theoretical tools for inspecting and debugging optimization problems"
+title = "Reduced-space nonlinear optimization via the implicit function theorem"
 speaker = "Robert Parker"
 
 [talks.1_11_45]
@@ -76,6 +76,7 @@ slides = "slides_truls.pdf"
 [talks.1_14_45]
 title = "Advanced Model Composition in ApplicationDrivenLearning.jl"
 speaker = "Giovanni Amorim"
+slides = "slides_giovanni.pdf"
 
 [talks.1_15_00]
 title = "Modelling and Solving Mathematical Programs with Complementarity Constraints."
