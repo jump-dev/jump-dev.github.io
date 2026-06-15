@@ -18,20 +18,25 @@ speaker = "Oscar Dowson"
 title = "ElectricityEmissions.jl: Calculating carbon intensity signals on the power grid"
 speaker = "Noah Rhodes"
 slides = "slides_noah.pdf"
+url = "https://youtu.be/fmvyd0OoKWw"
 
 [talks.1_09_45]
 title = "Optimal Planning for Steel Industry Decarbonization: A Mixed-Integer Linear Programming Approach in Julia"
 speaker = "Vinícius Justen Pinto"
 slides = "slides_vinicius.pdf"
+url = "https://youtu.be/tq_I3iNWW88"
 
 [talks.1_10_00]
 title = "Optimize Your Fleet with Odoo and JuMP"
 speaker = "Benoît Legat"
+slides = "slides_benoit.pdf"
+url = "https://youtu.be/hxph7NR6JeM"
 
 [talks.1_10_15]
 title = "DuckDB as backend to build optimization models in JuMP.jl"
 speaker = "Abel Siqueira"
 slides = "slides_abel.pdf"
+url = "https://youtu.be/8mmYRna_c-U"
 
 [talks.1_10_30]
 title = "Morning tea"
@@ -44,6 +49,7 @@ type = "break"
 title = "UnoSolver.jl, a unified SQP/barrier solver for nonlinearly constrained optimization"
 speaker = "Charlie Vanaret"
 slides = "slides_charlie.pdf"
+url = "https://youtu.be/hDPCVBQm8TE"
 
 [talks.1_11_15]
 
