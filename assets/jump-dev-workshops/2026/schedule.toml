@@ -87,6 +87,7 @@ slides = "slides_giovanni.pdf"
 [talks.1_15_00]
 title = "Modelling and Solving Mathematical Programs with Complementarity Constraints."
 speaker = "Anton Edvinovich Pozharskiy"
+slides = "slides_anton.pdf"
 
 [talks.1_15_15]
 title = "Adding array support for JuMP’s Automatic Differentiation"
@@ -130,6 +131,7 @@ type = "organization"
 [talks.2_09_30]
 title = "DiffOpt: Now Nonlinear and Streamlined"
 speaker = "Joaquim Dias Garcia"
+slides = "slides_joaquim.pdf"
 
 [talks.2_09_45]
 
@@ -166,6 +168,7 @@ speaker = "Jose Daniel Lara"
 [talks.2_12_00]
 title = "Toward Extending EAGO.jl for Exploiting GPU Parallelism"
 speaker = "Dimitri Alston"
+slides = "slides_dimitri.pdf"
 
 [talks.2_12_15]
 
@@ -176,6 +179,7 @@ type = "break"
 [talks.2_14_00]
 title = "Second-Order GPU solver for Burer-Monteiro"
 speaker = "Benoît Legat"
+slides = "slides_benoit_gpu.html"
 
 [talks.2_14_15]
 title = "GraphsOfConvexSets.jl: Optimisation over Graphs of Convex Sets with JuMP"
