@@ -56,12 +56,14 @@ url = "https://youtu.be/hDPCVBQm8TE"
 [talks.1_11_30]
 title = "Reduced-space nonlinear optimization via the implicit function theorem"
 speaker = "Robert Parker"
+url = "https://youtu.be/lz4Xj_V47nM"
 
 [talks.1_11_45]
 
 [talks.1_12_00]
 title = "Batched optimization solvers: a tour d'horizon"
 speaker = "François Pacaud"
+url = "https://youtu.be/dU0-UpvWK6Q"
 
 [talks.1_12_30]
 title = "Lunch (provided on-site)"
@@ -73,16 +75,19 @@ type = "break"
 [talks.1_14_15]
 title = "Antipode JuMPing - How Norwegian authorities can use JADE.jl for better decision making"
 speaker = "Jarand Hole"
+url = "https://youtu.be/dGgAxpKQoQ4"
 
 [talks.1_14_30]
 title = "Automatic Decomposition of JuMP Models using TimeStructDecomposition.jl"
 speaker = "Truls Flatberg"
 slides = "slides_truls.pdf"
+url = "https://youtu.be/hcOkx8W9C1k"
 
 [talks.1_14_45]
 title = "Advanced Model Composition in ApplicationDrivenLearning.jl"
 speaker = "Giovanni Amorim"
 slides = "slides_giovanni.pdf"
+url = "https://youtu.be/pFW62ID4Nuw"
 
 [talks.1_15_00]
 title = "Modelling and Solving Mathematical Programs with Complementarity Constraints."
@@ -129,7 +134,7 @@ type = "organization"
 type = "organization"
 
 [talks.2_09_30]
-title = "DiffOpt: Now Nonlinear and Streamlined"
+title = "DiffOpt.jl: Differentiable optimization for JuMP"
 speaker = "Joaquim Dias Garcia"
 slides = "slides_joaquim.pdf"
 
