@@ -63,6 +63,7 @@ url = "https://youtu.be/lz4Xj_V47nM"
 [talks.1_12_00]
 title = "Batched optimization solvers: a tour d'horizon"
 speaker = "François Pacaud"
+slides = "slides_francois.pdf"
 url = "https://youtu.be/dU0-UpvWK6Q"
 
 [talks.1_12_30]
@@ -93,11 +94,13 @@ url = "https://youtu.be/pFW62ID4Nuw"
 title = "Modelling and Solving Mathematical Programs with Complementarity Constraints."
 speaker = "Anton Edvinovich Pozharskiy"
 slides = "slides_anton.pdf"
+url = "https://youtu.be/bPLfogxz6s4"
 
 [talks.1_15_15]
 title = "Adding array support for JuMP’s Automatic Differentiation"
 speaker = "Sophie Lequeu"
 slides = "slides_sophie.pdf"
+url = "https://youtu.be/1M0g0sTY0a0"
 
 [talks.1_15_30]
 title = "Afternoon tea"
@@ -109,6 +112,7 @@ type = "break"
 [talks.1_16_00]
 title = "Can ExaModels Power JuMP on GPUs?"
 speaker = "Sungho Shin"
+url = "https://youtu.be/67-_Xmgxf1c"
 
 [talks.1_16_15]
 title = "JuMP's macros: why are they needed?"
@@ -241,10 +245,12 @@ type = "organization"
 [talks.3_09_30]
 speaker = "Julian Hall"
 title = "What's new in HiGHS"
+slides = "slides_julian.pdf"
 
 [talks.3_10_00]
 speaker = "Yanyu Zhou"
 title = "HiPDLP: A PDLP solver for HiGHS"
+slides = "slides_yanyu.pdf"
 
 [talks.3_10_30]
 title = "Morning tea"
@@ -278,10 +284,12 @@ title = "Open Energy Benchmark: 2025 results, HiPO performance, and call for ben
 [talks.3_14_30]
 speaker = "Filippo Zanetti"
 title = "Recent developments and future plans for HiPO"
+slides = "slides_filippo.pdf"
 
 [talks.3_15_00]
 speaker = "Mark Turner"
 title = "A parallel MIP solver for HiGHS!"
+slides = "slides_mark.pdf"
 
 [talks.3_15_30]
 title = "Afternoon tea"
@@ -293,6 +301,7 @@ type = "break"
 [talks.3_16_00]
 speaker = "Ben Champion"
 title = "Local heuristics for the HiGHS MIP solver"
+slides = "slides_ben.pdf"
 
 [talks.3_16_15]
 type = "break"
