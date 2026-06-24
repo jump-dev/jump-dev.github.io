@@ -118,6 +118,7 @@ url = "https://youtu.be/67-_Xmgxf1c"
 title = "JuMP's macros: why are they needed?"
 speaker = "Oscar Dowson"
 slides = "slides_oscar.pdf"
+url = "https://youtu.be/7eCB6-RGxWw"
 
 [talks.1_16_30]
 
@@ -280,6 +281,7 @@ type = "break"
 [talks.3_14_00]
 speaker = "Daniele Lerede"
 title = "Open Energy Benchmark: 2025 results, HiPO performance, and call for benchmarks"
+slides = "slides_daniele.pdf"
 
 [talks.3_14_30]
 speaker = "Filippo Zanetti"
