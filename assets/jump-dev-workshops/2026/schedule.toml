@@ -76,6 +76,7 @@ type = "break"
 [talks.1_14_15]
 title = "Antipode JuMPing - How Norwegian authorities can use JADE.jl for better decision making"
 speaker = "Jarand Hole"
+slides = "slides_jarand.pdf"
 url = "https://youtu.be/dGgAxpKQoQ4"
 
 [talks.1_14_30]
@@ -142,6 +143,7 @@ type = "organization"
 title = "DiffOpt.jl: Differentiable optimization for JuMP"
 speaker = "Joaquim Dias Garcia"
 slides = "slides_joaquim.pdf"
+url = "https://youtu.be/HnFFdVB94js"
 
 [talks.2_09_45]
 
