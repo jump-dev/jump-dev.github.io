@@ -6,6 +6,8 @@ categories: [open-energy-modeling]
 author: "Oscar Dowson"
 ---
 
+_Updated: 3 July, 2026._
+
 In July 2024, we held [JuMP-dev 2024](/meetings/jumpdev2024/), the seventh edition
 of our annual developer workshop. As part of the workshop, we sought talks
 from a number of groups who use JuMP to build open energy models.
@@ -15,6 +17,8 @@ I started writing this report as a summary of my notes from watching the energy-
 talks at JuMP-dev 2024, but, based on the [community feedback during the writing of this post](https://github.com/jump-dev/jump-dev.github.io/pull/156),
 I extended the scope to talks about energy system modeling in previous years as
 well.
+
+Edit: I've since extended this blog post to include energy-related talks from the 2025 and 2026 workshops.
 
 ## Summary
 
@@ -72,7 +76,7 @@ improve JuMP in the context of energy modeling:
    help users debug and test JuMP models.
 
 To summarize, JuMP is a powerful tool for energy system modeling. The insights
-from JuMP-dev 2024 will help guide future developments, particularly in areas
+from JuMP-dev will help guide future developments, particularly in areas
 like debugging, physical units, and sparse variable support.
 
 ## Contents
@@ -80,30 +84,283 @@ like debugging, physical units, and sparse variable support.
 This post ended up being pretty long, so here is a table of contents if you want
 to JuMP (if you will) around:
 
- 1.  [[2024] Applied optimization with JuMP at SINTEF](#2024-applied-optimization-with-jump-at-sintef)
- 2.  [[2024] Introduction to TulipaEnergyModel.jl](#2024-introduction-to-tulipaenergymodeljl)
- 3.  [[2024] SpineOpt.jl: A highly adaptable modelling framework for multi-energy systems](#2024-spineoptjl-a-highly-adaptable-modelling-framework-for-multi-energy-systems)
- 4.  [[2024] Solving the Market-to-Market Problem in Large Scale Power Systems](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems)
- 5.  [[2024] PiecewiseAffineApprox.jl](#2024-piecewiseaffineapproxjl)
- 6.  [[2023] How JuMP Enables Abstract Energy System Models](#2023-how-jump-enables-abstract-energy-system-models)
- 7.  [[2023] TimeStruct.jl: Multi Horizon Time Modelling in JuMP](#2023-timestructjl-multi-horizon-time-modelling-in-jump)
- 8.  [[2023] Designing a Flexible Energy System Model Using Multiple Dispatch](#2023-designing-a-flexible-energy-system-model-using-multiple-dispatch)
- 9.  [[2022] UnitJuMP: Automatic Unit Handling in JuMP](#2022-unitjump-automatic-unit-handling-in-jump)
- 10. [[2022] SparseVariables.jl: Efficient Sparse Modelling with JuMP](#2022-sparsevariablesjl-efficient-sparse-modelling-with-jump)
- 11. [[2022] Benchmarking Nonlinear Optimization with AC Optimal Power Flow](#2022-benchmarking-nonlinear-optimization-with-ac-optimal-power-flow)
- 12. [[2021] Modelling Australia's National Electricity Market with JuMP](#2021-modelling-australias-national-electricity-market-with-jump)
- 13. [[2021] AnyMOD.jl: A Julia package for creating energy system models](#2021-anymodjl-a-julia-package-for-creating-energy-system-models)
- 14. [[2021] Power Market Tool (POMATO)](#2021-power-market-tool-pomato)
- 15. [[2021] UnitCommitment.jl Security-Constrained Unit Commitment in JuMP](#2021-unitcommitmentjl-security-constrained-unit-commitment-in-jump)
- 16. [[2021] A Brief Introduction to InfrastructureModels](#2021-a-brief-introduction-to-infrastructuremodels)
- 17. [[2019] PowerSimulations.jl](#2019-powersimulationsjl)
- 18. [[2017] Stochastic programming in energy systems](#2017-stochastic-programming-in-energy-systems)
- 19. [[2017] PowerModels.jl: a Brief Introduction](#2017-powermodelsjl-a-brief-introduction)
+ 1.  [[2026] ElectricityEmissions.jl: Calculating carbon intensity signals on the power grid](#2026-electricityemissionsjl-calculating-carbon-intensity-signals-on-the-power-grid)
+ 2.  [[2026] Optimal Planning for Steel Industry Decarbonization](#2026-optimal-planning-for-steel-industry-decarbonization)
+ 3.  [[2026] DuckDB as backend to build optimization models in JuMP.jl](#2026-duckdb-as-backend-to-build-optimization-models-in-jumpjl)
+ 4.  [[2026] Antipode JuMPing: How Norwegian authorities can use JADE.jl for better decision making](#2026-antipode-jumping-how-norwegian-authorities-can-use-jadejl-for-better-decision-making)
+ 5.  [[2026] Automatic Decomposition of JuMP Models using TimeStructDecomposition.jl](#2026-automatic-decomposition-of-jump-models-using-timestructdecompositionjl)
+ 6.  [[2025] The life and times of SDDP.jl](#2025-the-life-and-times-of-sddpjl)
+ 7.  [[2025] Lessons from using JuMP in HARD software](#2025-lessons-from-using-jump-in-hard-software)
+ 8.  [[2025] TIMES2JuMP - Learnings from IEA-ETSAP feasibility study of migrating the TIMES code to Julia JuMP](#2025-times2jump---learnings-from-iea-etsap-feasibility-study-of-migrating-the-times-code-to-julia-jump)
+ 9.  [[2025] Open energy models: benchmarking, profiling and debugging tool for JuMP](#2025-open-energy-models-benchmarking-profiling-and-debugging-tool-for-jump)
+ 10. [[2024] Applied optimization with JuMP at SINTEF](#2024-applied-optimization-with-jump-at-sintef)
+ 11. [[2024] Introduction to TulipaEnergyModel.jl](#2024-introduction-to-tulipaenergymodeljl)
+ 12. [[2024] SpineOpt.jl: A highly adaptable modelling framework for multi-energy systems](#2024-spineoptjl-a-highly-adaptable-modelling-framework-for-multi-energy-systems)
+ 13. [[2024] Solving the Market-to-Market Problem in Large Scale Power Systems](#2024-solving-the-market-to-market-problem-in-large-scale-power-systems)
+ 14. [[2024] PiecewiseAffineApprox.jl](#2024-piecewiseaffineapproxjl)
+ 15. [[2023] How JuMP Enables Abstract Energy System Models](#2023-how-jump-enables-abstract-energy-system-models)
+ 16. [[2023] TimeStruct.jl: Multi Horizon Time Modelling in JuMP](#2023-timestructjl-multi-horizon-time-modelling-in-jump)
+ 17. [[2023] Designing a Flexible Energy System Model Using Multiple Dispatch](#2023-designing-a-flexible-energy-system-model-using-multiple-dispatch)
+ 18. [[2022] UnitJuMP: Automatic Unit Handling in JuMP](#2022-unitjump-automatic-unit-handling-in-jump)
+ 19. [[2022] SparseVariables.jl: Efficient Sparse Modelling with JuMP](#2022-sparsevariablesjl-efficient-sparse-modelling-with-jump)
+ 20. [[2022] Benchmarking Nonlinear Optimization with AC Optimal Power Flow](#2022-benchmarking-nonlinear-optimization-with-ac-optimal-power-flow)
+ 21. [[2021] Modelling Australia's National Electricity Market with JuMP](#2021-modelling-australias-national-electricity-market-with-jump)
+ 22. [[2021] AnyMOD.jl: A Julia package for creating energy system models](#2021-anymodjl-a-julia-package-for-creating-energy-system-models)
+ 23. [[2021] Power Market Tool (POMATO)](#2021-power-market-tool-pomato)
+ 24. [[2021] UnitCommitment.jl Security-Constrained Unit Commitment in JuMP](#2021-unitcommitmentjl-security-constrained-unit-commitment-in-jump)
+ 25. [[2021] A Brief Introduction to InfrastructureModels](#2021-a-brief-introduction-to-infrastructuremodels)
+ 26. [[2019] PowerSimulations.jl](#2019-powersimulationsjl)
+ 27. [[2017] Stochastic programming in energy systems](#2017-stochastic-programming-in-energy-systems)
+ 28. [[2017] PowerModels.jl: a Brief Introduction](#2017-powermodelsjl-a-brief-introduction)
 
 There are also a few related JuliaCon talks
 
- 20. [[2020] Crash Course in Energy Systems Modeling & Analysis with Julia](#2020-crash-course-in-energy-systems-modeling--analysis-with-julia)
- 21. [[2019] Open Source Power System Production Cost Modeling in Julia](#2019-open-source-power-system-production-cost-modeling-in-julia)
+ 29. [[2020] Crash Course in Energy Systems Modeling & Analysis with Julia](#2020-crash-course-in-energy-systems-modeling--analysis-with-julia)
+ 30. [[2019] Open Source Power System Production Cost Modeling in Julia](#2019-open-source-power-system-production-cost-modeling-in-julia)
+
+## [2026] ElectricityEmissions.jl: Calculating carbon intensity signals on the power grid
+
+_Speaker: Noah Rhodes_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fmvyd0OoKWw?si=VZJHWQ7FemfiWlmz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Noah's talk was nice, in that it was a more applied talk about using
+optimization in energy markets. I'd like to see more talks at JuMP-dev like
+this one.
+
+Noa's topic was carbon intensity metrics for the power grid, and specifically
+the tension between _average_ and _marginal_ measures. Average carbon
+intensity—what scope 2 carbon accounting requires—divides total grid emissions
+by total power produced and assigns the same value to every consumer in a
+region. Locational marginal carbon intensity is different: it measures the
+sensitivity of total system emissions to a marginal change in consumption at a
+specific node and time. These two metrics can point in opposite directions.
+
+Noah's main example was a data center that shifts computation across time and
+location to reduce its reported carbon footprint. When the data center followed
+average carbon intensity (as required by scope 2 accounting), its reported
+emissions fell by 6%—but total system carbon emissions _increased_ by 0.3%. When
+it followed the locational marginal metric instead, total system emissions
+genuinely fell. The uncomfortable implication is that a company acting in good
+faith under the current regulatory framework can make the grid worse.
+
+`ElectricityEmissions.jl` computes these metrics by solving an optimal power
+flow problem in JuMP and extracting dual variables and active sets from the
+solution. Noah specifically mentioned that JuMP makes this extraction
+straightforward. This is a good illustration of why a rich modelling environment
+is valuable for research.
+
+[_Back to contents_](#contents)
+
+## [2026] Optimal Planning for Steel Industry Decarbonization
+
+_Speaker: Vinícius Justen Pinto_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tq_I3iNWW88?si=ChbUTEs87oPb24x4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Vinícius presented CarbSteeler, an optimization model developed at [PSR](https://psr-inc.com)
+with financial support from the UK's BECCS programme.
+
+The steel industry accounts for almost 7% of global CO₂ emissions, which makes
+it a critical sector for any credible decarbonization plan. CarbSteeler uses
+mixed-integer linear programming in JuMP, solved with HiGHS, to model investment
+decisions, technology selection, and operational choices across a multi-plant,
+multi-year horizon. The Brazilian case study involved 32 plants representing the
+entire national steel production, 141 active and candidate processes, and around
+200,000 variables (30,000 binary) and 200,000 constraints.
+
+Vinícius shared a very practical lesson: for larger instances, HiGHS struggled
+to solve the problem until they rescaled the model using process capacities,
+after which solve performance improved significantly. This echoes what Truls
+described at the [2024 workshop](#2024-applied-optimization-with-jump-at-sintef):
+seemingly cosmetic modeling choices—like the units in which you express physical
+quantities—can have large effects on solver performance. It reinforces the case
+for the kind of numerical analysis tooling that Joaquim is developing with
+[MathOptAnalyzer.jl](https://github.com/jump-dev/MathOptAnalyzer.jl).
+
+[_Back to contents_](#contents)
+
+## [2026] DuckDB as backend to build optimization models in JuMP.jl
+
+_Speaker: Abel Siqueira_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8mmYRna_c-U?si=eJhWSqzX8agh0bYB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Abel presented work done together with Diego Tejada at TNO on [TulipaEnergyModel.jl](https://github.com/TulipaEnergy/TulipaEnergyModel.jl).
+Diego, who gave the [Tulipa talk at JuMP-dev 2024](#2024-introduction-to-tulipaenergymodeljl),
+could not attend in person, so he sent Abel in his place.
+
+The talk builds directly on the approach Diego described at JuMP-dev 2024, where
+Tulipa switched to using DataFrames to pre-compute the sparse index sets that
+arise in their network flow model, achieving a 3.2x performance improvement.
+Abel mentioned that this approach was itself inspired by a suggestion I made on
+the Julia Discourse forum. The new step is to replace DataFrames with
+[DuckDB](https://duckdb.org) as the in-process database backend.
+
+This talk reinforces a theme I have noticed across multiple energy modeling
+projects: managing the sparse, graph-structured index sets that arise in energy
+network models is one of the most practically important problems in this space.
+
+[_Back to contents_](#contents)
+
+## [2026] Antipode JuMPing: How Norwegian authorities can use JADE.jl for better decision making
+
+_Speaker: Jarand Hole_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dGgAxpKQoQ4?si=3jitM9esMvmdpLxC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Jarand's talk was about how the Norwegian Water Resources and Energy Directorate
+(NVE) can use like [JADE](https://www.emi.ea.govt.nz/Wholesale/Tools/JADE)—the
+JuMP-based hydrothermal scheduling model used by the New Zealand Electricity
+Authority. See also my [2025 talk on SDDP.jl](#2025-the-life-and-times-of-sddpjl).
+
+Jarand showed how JuMP and [ParametricOptInterface.jl](https://github.com/jump-dev/ParametricOptInterface.jl)
+make it easy to modify JADE to add stochastic fuel prices. He also highlighted
+how the irreducible infeasible subsystem (IIS) is useful for debugging models.
+
+[_Back to contents_](#contents)
+
+## [2026] Automatic Decomposition of JuMP Models using TimeStructDecomposition.jl
+
+_Speaker: Truls Flatberg @trulsf_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hcOkx8W9C1k?si=H6C10AqKZT0yEwkb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Truls gave his fourth talk at JuMP-dev—having previously presented
+[UnitJuMP.jl](#2022-unitjump-automatic-unit-handling-in-jump),
+[TimeStruct.jl](#2023-timestructjl-multi-horizon-time-modelling-in-jump), and
+the [SINTEF applied optimization overview](#2024-applied-optimization-with-jump-at-sintef).
+This time, Truls presented TimeStructDecomposition.jl, a package which builds
+automatic Benders decomposition on top of TimeStruct.jl.
+
+The key idea is appealing: if a model is built using TimeStruct.jl's multi-level
+time hierarchy, with strategic decisions at the top level and operational
+decisions below, then the model carries enough structure that a decomposition
+can be set up automatically. The user does not need to write any decomposition
+code—they simply build their model using the standard TimeStruct.jl iterators,
+and the package classifies each variable and constraint as belonging to either
+the master problem or a subproblem.
+
+The package supports multiple decomposition backends: a custom multi-threaded
+Benders implementation loosely following the approach in the
+[JuMP Benders decomposition tutorial](https://jump.dev/JuMP.jl/stable/tutorials/algorithms/benders_decomposition/),
+and an integration with the Benders solver in [Plasmo.jl](https://github.com/plasmo-dev/Plasmo.jl)
+On a test case that Truls acknowledged was ideal for Benders, both backends
+showed strong speedups relative to solving monolithically; the speed advantage
+of the custom implementation over Plasmo.jl was largely explained by
+multi-threaded subproblem solves.
+
+[_Back to contents_](#contents)
+
+## [2025] The life and times of SDDP.jl
+
+_Speaker: Oscar Dowson @odow_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YOeoGm9H2kw?si=YEfC_WEwazeGORo3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In this talk, Oscar presented [SDDP.jl](https://sddp.dev). SDDP.jl is used by
+multiple organizations to model and solve multistage stochastic optimization
+problems. Key users include the [Electric Power Optimization Centre](https://epoc.org.nz),
+the [New Zealand Electricity Authority](https://www.emi.ea.govt.nz/wholesale/Tools/JADE),
+[Contact Energy](https://contact.co.nz), and [PSR](https://psr-inc.com). SDDP.jl
+is a great example of how JuMP can be used to build decomposition algorithms in
+Julia.
+
+[_Back to contents_](#contents)
+
+## [2025] Lessons from using JuMP in HARD software
+
+_Speaker: Harley Mackenzie_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/seqc_kH-jIw?si=MvDYw2seOtKIOUx7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+HARD Software is a small Australian company of about six people that builds
+trading and optimization software for renewable energy assets in the Australian
+electricity market. Their main optimization product, Optigen, is a battery
+dispatch optimizer for solar and battery systems. The Australian market runs on
+five-minute dispatch intervals with no day-ahead market, which creates real-time
+constraints: the optimizer needs to produce control signals quickly enough to
+influence the next dispatch interval. Optigen currently manages a number of
+battery systems in production. The core JuMP model solves in under one second.
+
+Harley's reasons for choosing JuMP and HiGHS were mainly about cost and openness
+rather than performance. A typical co-located solar and battery system might
+produce five megawatts—small enough that a $14,000 commercial solver license is
+prohibitive. The rest of the Optigen stack is Python (the team's primary
+language), and the JuMP optimizer is a module that communicates with the rest of
+the system via MQTT message passing. This modular architecture lets the JuMP
+component be updated independently of the rest of the system, and allows
+multiple optimizer instances to run concurrently on a single server for
+different client sites.
+
+[_Back to contents_](#contents)
+
+## [2025] TIMES2JuMP - Learnings from IEA-ETSAP feasibility study of migrating the TIMES code to Julia JuMP
+
+_Speaker: James Glynn_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WIyMbZ31By4?si=G3CzuKYrz6oeGdYV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+James's talk discussed a proposal to migrate the [TIMES](https://iea-etsap.org/index.php/etsap-tools/model-generators/times)
+modeling framework from GAMS to JuMP. TIMES is developed and maintained by the
+Energy Technology Systems Analysis Programme (ETSAP) of the International Energy
+Agency. TIMES is used for energy planning at global, regional, national, and
+city level by universities, governments, and international organizations across
+dozens of countries. It has been under active development for nearly 50 years,
+
+There are a number of pros and cons to migrating TIMES from GAMS to JuMP. The
+main reasons in favor are technical: free and open-source licensing, being
+embedded in a programming language can simplify some of the data handling that
+is required before the model is passed to GAMS, and the opportunity for better
+testing and software engineering. The main downsides are social: it would be a
+large change to the software stack of TIMES, and there is a risk of non-delivery,
+which would fracture the TIMES community.
+
+[_Back to contents_](#contents)
+
+## [2025] Open energy models: benchmarking, profiling and debugging tool for JuMP
+
+_Speaker: Joaquim Dias Garcia @joaqumg_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QgPXOZ3SPUY?si=iO2efkVYnp4TVg8R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Joaquim's 2025 talk is directly connected to the
+[Open Energy Modeling project](/announcements/open-energy-modeling/2024/09/16/oem/)
+that originally motivated this blog post. Since JuMP-dev 2024, he has been
+leading the development of a benchmark suite for energy models in the
+[jump-dev/open-energy-modeling-benchmarks](https://github.com/jump-dev/open-energy-modeling-benchmarks)
+repository, and this talk was a progress report.
+
+The benchmark suite now contains 68 instances in MPS format drawn from six open
+nergy models: GenX, Sienna, TulipaEnergyModel, SpineOpt, PowerModels, and
+UnitCommitment.jl. A subset was submitted to the MIPLIB 2024 benchmark library.
+One striking finding: an estimated 78% of the energy model instances would fail
+the numeric quality checks required for inclusion in MIPLIB, due to large
+coefficients, wide dynamic ranges, or variables appearing only as bounds rather
+than as proper constraint entries. This suggests that energy models are a
+qualitatively different challenge from the problems that solver developers
+typically benchmark against, and it is one of the reasons I think this benchmark
+repository is so valuable.
+
+The practical impact has already been substantial. By profiling the energy
+models in detail, we identified inefficiencies in how each model was using JuMP,
+and working with the respective developers to address them led to significant
+improvements: TulipaEnergyModel.jl now builds models 30% faster, GenX is around
+2× faster with 70% fewer memory allocations, and Sienna is also around 2× faster.
+Some of these improvements were also fed back into JuMP and MathOptInterface
+itself—for example, improvements to mutable arithmetic in the model-building
+path that benefit all users who hit those code paths.
+
+Joaquim also introduced [MathOptAnalyzer.jl](https://github.com/jump-dev/MathOptAnalyzer.jl),
+a new package that provides tools for analysing optimization problems. It
+ncludes a numerical analyzer (checking for large coefficients, wide dynamic
+ranges, and variables not appearing in any constraint), a feasibility analyzer
+(checking whether a given primal point violates any constraints), and an
+infeasibility analyzer (computing an irreducible infeasible subsystem). The IIS
+functionality is already integrated into [HiGHS.jl](https://github.com/jump-dev/HiGHS.jl),
+so users of HiGHS get access to it automatically.
+
+[_Back to contents_](#contents)
 
 ## [2024] Applied optimization with JuMP at SINTEF
 
