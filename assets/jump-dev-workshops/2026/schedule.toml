@@ -214,11 +214,13 @@ url = "https://youtu.be/aeCucIGKhzE"
 title = "TenSolver.jl: A tensor network based QUBO solver with JuMP integration"
 speaker = "Iago Leal de Freitas"
 slides = "slides_iago.pdf"
+url = "https://youtu.be/nvbv1NzMRMg"
 
 [talks.2_15_00]
 title = "PEPit.jl: Computer-Assisted Worst-Case Analysis of First-Order Optimization Algorithms in Julia"
 speaker = "Shuvomoy Das Gupta"
 slides = "slides_shuvomoy.pdf"
+url = "https://youtu.be/2vp65pXp5Xk"
 
 [talks.2_15_30]
 title = "Afternoon tea"
