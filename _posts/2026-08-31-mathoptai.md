@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MathOptAI.jl v1.0 is released"
-date:   2026-08-30
+date:   2026-08-31
 categories: [releases]
 author: "Oscar Dowson, Gökhan Kof, Robert Parker"
 ---
@@ -38,17 +38,19 @@ libraries, including Flux.jl, Lux.jl, and PyTorch.
 MathOptAI.jl supports three different ways of embedding neural networks:
 
 1. the _full-space_ formulation adds new variables and constraints for each
-   layer in the neural network
+   layer in the neural network. This is the default.
 2. the _reduced-space_ formulation embeds `predictor(x)` as a large nonlinear
    expression (using `JuMP.@expression`) without adding any new variables or
-   constraints
-3. the _gray-box_ formulation uses [`MOI.VectorNonlinearOracle`](https://jump.dev/JuMP.jl/stable/moi/reference/standard_form/#MathOptInterface.VectorNonlinearOracle)
+   constraints. Pass `; reduced_space = true` to `add_predictor` to enable this
+   formulation.
+4. the _gray-box_ formulation uses [`MOI.VectorNonlinearOracle`](https://jump.dev/JuMP.jl/stable/moi/reference/standard_form/#MathOptInterface.VectorNonlinearOracle)
    to add the constraint `predictor(x) - y == 0` and automatically sets up
-   callbacks to evaluate the function, and gradient, and Hessian of
-   `predictor(x)`.
+   callbacks to evaluate the function, gradient, and Hessian of
+   `predictor(x)`. Pass `; gray_box = true` to `add_predictor` to enable this
+   formulation.
 
-The gray-box support is particularly useful when combined with PyTorch. Given a
-trained PyTorch model, use `torch.save(model, "filename.pt")` to save the model
+The gray-box formulation is particularly useful when combined with PyTorch. Given
+a trained PyTorch model, use `torch.save(model, "filename.pt")` to save the model
 structure and weights to disk. Then, from Julia do:
 ```julia
 using JuMP, MathOptAI, PythonCall, Ipopt
@@ -77,7 +79,7 @@ As one example, ReLU can be implemented as an epigraph formulation with a
 non-negative variable `y >= 0` and the inequality constraint `y - x >= 0`
 ([MathOptAI.ReLUEpigraph](https://lanl-ansi.github.io/MathOptAI.jl/stable/api/#ReLUEpigraph)),
 instead of the non-smooth nonlinear constraint `y = max(0, x)`
-([MathOptAI.ReLU](https://lanl-ansi.github.io/MathOptAI.jl/stable/api/#ReLU))
+([MathOptAI.ReLU](https://lanl-ansi.github.io/MathOptAI.jl/stable/api/#ReLU)),
 or MIP formulations like [MathOptAI.ReLUSOS1](https://lanl-ansi.github.io/MathOptAI.jl/stable/api/#ReLUSOS1).
 
 Find out more by reading [Input Convex Neural Networks with Flux.jl](https://lanl-ansi.github.io/MathOptAI.jl/stable/tutorials/input_convex/).
