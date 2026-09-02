@@ -8,7 +8,12 @@ title = "Coffee and registration"
 type = "organization"
 
 [talks.1_09_30]
-title = "Invited talks"
+title = "The state of JuMP"
+speaker = "The JuMP developers"
+
+[talks.1_10_00]
+title = "The state of CVXPY"
+speaker = "The CVXPY developers"
 
 [talks.1_10_30]
 title = "Morning tea"
@@ -29,7 +34,11 @@ title = "Afternoon tea"
 type = "break"
 
 [talks.1_16_00]
-title = "Invited talks"
+title = "Invited talk"
+
+[talks.1_16_30]
+title = "The Linopy modeling language"
+speaker = "Fabian Hofmann"
 
 [talks.1_17_00]
 title = "Dinner"
@@ -62,7 +71,10 @@ type = "organization"
 type = "organization"
 
 [talks.3_09_30]
-title = "Invited talks"
+title = "Invited talk"
+
+[talks.3_10_00]
+title = "Invited talk"
 
 [talks.3_10_30]
 type = "break"
@@ -80,9 +92,9 @@ title = "Contributed JuMP talks"
 type = "break"
 
 [talks.3_16_00]
-title = "Invited talks"
+title = "Invited talk"
 
-[talks.3_16_45]
+[talks.3_16_30]
 title = "Prizegiving"
 
 [talks.3_17_00]
