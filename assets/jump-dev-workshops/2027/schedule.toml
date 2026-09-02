@@ -20,14 +20,14 @@ title = "Morning tea"
 type = "break"
 
 [talks.1_11_00]
-title = "Contributed JuMP talks"
+title = "Contributed talks"
 
 [talks.1_12_30]
 title = "Lunch"
 type = "break"
 
 [talks.1_14_00]
-title = "Contributed JuMP talks"
+title = "Contributed talks"
 
 [talks.1_15_30]
 title = "Afternoon tea"
@@ -52,13 +52,13 @@ type = "organization"
 type = "break"
 
 [talks.2_11_00]
-title = "Contributed CVXPY talks"
+title = "Contributed talks"
 
 [talks.2_12_30]
 type = "break"
 
 [talks.2_14_00]
-title = "Contributed CVXPY talks"
+title = "Contributed talks"
 
 [talks.2_15_30]
 type = "break"
@@ -71,22 +71,20 @@ type = "organization"
 type = "organization"
 
 [talks.3_09_30]
-title = "Invited talk"
-
-[talks.3_10_00]
-title = "Invited talk"
+title = "The state of HiGHS"
+speaker = "The HiGHS developers"
 
 [talks.3_10_30]
 type = "break"
 
 [talks.3_11_00]
-title = "Contributed JuMP talks"
+title = "Contributed talks"
 
 [talks.3_12_30]
 type = "break"
 
 [talks.3_14_00]
-title = "Contributed JuMP talks"
+title = "Contributed talks"
 
 [talks.3_15_30]
 type = "break"
@@ -109,13 +107,13 @@ type = "organization"
 type = "break"
 
 [talks.4_11_00]
-title = "Contributed CVXPY talks"
+title = "Contributed talks"
 
 [talks.4_12_30]
 type = "break"
 
 [talks.4_14_00]
-title = "Contributed CVXPY talks"
+title = "Contributed talks"
 
 [talks.4_15_30]
 type = "break"
