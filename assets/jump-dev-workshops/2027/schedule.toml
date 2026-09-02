@@ -65,21 +65,18 @@ type = "organization"
 title = "Invited talks"
 
 [talks.3_10_30]
-title = "Morning tea"
 type = "break"
 
 [talks.3_11_00]
 title = "Contributed JuMP talks"
 
 [talks.3_12_30]
-title = "Lunch"
 type = "break"
 
 [talks.3_14_00]
 title = "Contributed JuMP talks"
 
 [talks.3_15_30]
-title = "Afternoon tea"
 type = "break"
 
 [talks.3_16_00]
@@ -103,7 +100,6 @@ type = "break"
 title = "Contributed CVXPY talks"
 
 [talks.4_12_30]
-title = "Lunch"
 type = "break"
 
 [talks.4_14_00]
