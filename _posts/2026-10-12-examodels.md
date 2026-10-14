@@ -158,9 +158,9 @@ ExaModels will not always be faster. The speed-up is largest for big models
 with lots of repeated structure, which is the common case for problems like
 AC-OPF and optimal control. For small models, or models without much repeated
 structure, the time it takes to detect the patterns can outweigh the benefits,
-and `Ipopt.Optimizer` is likely to be as fast or faster.
+and `Ipopt.Optimizer` is likely to be faster.
 
-THe code we ran was:
+The code we ran was:
 ```julia
 using JuMP
 import Downloads, ExaModels, Ipopt, NLPModelsIpopt, PowerModels
@@ -213,7 +213,7 @@ set_attribute(model, "tol", 1e-7)
 set_attribute(model, "bound_relax_factor", 1e-7)
 ```
 
-See the [MadNLP GPU tutorial](https://madnlp.github.io/MadNLP.jl/stable/tutorials/gpu/)
+See the [MadNLP GPU tutorial](https://madsuite.org/MadNLP.jl/stable/tutorials/gpu/T)
 for details on the trade-offs.
 
 On an NVIDIA RTX PRO 1000, with MadNLP v0.10.1 and cuDSS v0.8.0, the GPU was
