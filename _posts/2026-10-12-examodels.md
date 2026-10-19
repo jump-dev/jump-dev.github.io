@@ -216,20 +216,28 @@ set_attribute(model, "bound_relax_factor", 1e-7)
 See the [MadNLP GPU tutorial](https://madsuite.org/MadNLP.jl/stable/tutorials/gpu/T)
 for details on the trade-offs.
 
-On an NVIDIA RTX PRO 1000, with MadNLP v0.10.1 and cuDSS v0.8.0, the GPU was
-approximately 8 times faster than the CPU:
+On an NVIDIA RTX PRO 1000, with MadNLP v0.10.1 and cuDSS v0.8.0, we got the
+following times:
 
 | Method                             | Iterations | Time (s) | Objective |
 | :--------------------------------- | ---------: | -------: | --------: |
 | `MadNLP` (default)                 |        147 |       20 | 1.113e+06 |
-| `MadNLP` (1e-7)                    |        147 |       20 | 1.113e+06 |
+| `MadNLP` (1e-7)                    |        152 |      167 | 1.142e+06 |
+
+The default setting was significantly faster than the CPU solves (20 sec vs ~200
+sec), but the lower tolerance meant that the solution it converged to was
+different to the CPU solves. When we decreased the tolerance we obtained the
+same local solution with objective `1.142e+06` but the runtime was nearly
+identical to the CPU solves. (That both were 167 seconds is a coincidence; the
+CPU and GPU runs were done on different hardware.)
 
 ## Can ExaModels power JuMP on GPUs?
 
 The answer to Sungho's question is now "Yes!" If you have a large, structured,
 continuous nonlinear program, to try solving your existing JuMP model on the
-GPU. Even without a GPU, `ExaModels.Optimizer` can give a meaningful speed-up
-over `Ipopt.Optimizer` on large problems like AC-OPF.
+GPU, although you need to be mindful of the different default solution
+tolerances. Even without a GPU, `ExaModels.Optimizer` can give a meaningful
+speed-up over `Ipopt.Optimizer` on large problems like AC-OPF.
 
 If you try it out, we'd love to hear about your experience. Please post on the
 [community forum](https://discourse.julialang.org/c/domain/opt/13).
