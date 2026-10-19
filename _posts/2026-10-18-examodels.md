@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ExaModels and JuMP"
-date:   2026-10-12
+date:   2026-10-18
 categories: [open-energy-modeling]
 author: "The JuMP developers"
 ---
