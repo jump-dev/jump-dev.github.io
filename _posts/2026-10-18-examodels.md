@@ -222,14 +222,12 @@ following times:
 | Method                             | Iterations | Time (s) | Objective |
 | :--------------------------------- | ---------: | -------: | --------: |
 | `MadNLP` (default)                 |        147 |       20 | 1.113e+06 |
-| `MadNLP` (1e-7)                    |        152 |      167 | 1.142e+06 |
+| `MadNLP` (1e-7)                    |        152 |       23 | 1.142e+06 |
 
 The default setting was significantly faster than the CPU solves (20 sec vs ~200
 sec), but the lower tolerance meant that the solution it converged to was
 different to the CPU solves. When we decreased the tolerance we obtained the
-same local solution with objective `1.142e+06` but the runtime was nearly
-identical to the CPU solves. (That both were 167 seconds is a coincidence; the
-CPU and GPU runs were done on different hardware.)
+same local solution with objective `1.142e+06`.
 
 ## Can ExaModels power JuMP on GPUs?
 
